@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "capital_mode:blocks/capital_tree_planks",
+    "particle": "capital_mode:blocks/capital_tree_planks"
+  }
+}

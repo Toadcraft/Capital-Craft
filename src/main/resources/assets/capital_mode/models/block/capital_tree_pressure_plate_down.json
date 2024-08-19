@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "capital_mode:blocks/capital_tree_planks"
+  }
+}

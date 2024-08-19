@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "capital_mode:item/capital_outils_axe"
+  }
+}

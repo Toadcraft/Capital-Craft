@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "def"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bucket"
+    },
+    "b": {
+      "item": "capital_mode:capital"
+    },
+    "c": {
+      "item": "capital_mode:batterie"
+    },
+    "d": {
+      "item": "minecraft:water_bucket"
+    },
+    "e": {
+      "item": "minecraft:milk_bucket"
+    },
+    "f": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "capital_mode:dynamo",
+    "count": 1
+  }
+}

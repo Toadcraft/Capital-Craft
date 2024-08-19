@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "capital_mode:capitale_armor_helmet"
+  },
+  "addition": {
+    "item": "capital_mode:sugilite"
+  },
+  "result": {
+    "item": "capital_mode:sugilite_armor_helmet"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/grass_block_side",
+    "up": "capital_mode:block/grass_block_side",
+    "north": "capital_mode:block/grass_block_side",
+    "east": "capital_mode:block/grass_block_side",
+    "south": "capital_mode:block/grass_block_side",
+    "west": "capital_mode:block/grass_block_side",
+    "particle": "capital_mode:block/grass_block_side"
+  },
+  "render_type": "solid"
+}

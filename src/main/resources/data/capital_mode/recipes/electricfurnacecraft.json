@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "faf"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:capital"
+    },
+    "b": {
+      "item": "minecraft:blast_furnace"
+    },
+    "c": {
+      "item": "minecraft:furnace"
+    },
+    "d": {
+      "item": "capital_mode:batterie"
+    },
+    "e": {
+      "item": "minecraft:smoker"
+    },
+    "f": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "result": {
+    "item": "capital_mode:electricfurnace",
+    "count": 1
+  }
+}

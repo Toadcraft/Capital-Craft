@@ -1,0 +1,82 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_overworld",
+          "text": "Overworld",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Tpoverworld"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 177,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_nether",
+          "text": "Nether",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Tpnether"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 186,
+          "y": 87
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_end",
+          "text": "End",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Tpend"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 195,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_demon_world",
+          "text": "Demon World",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "TpDemonWorld"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 174,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

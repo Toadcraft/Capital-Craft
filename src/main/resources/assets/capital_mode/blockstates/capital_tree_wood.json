@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "capital_mode:block/capital_tree_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "capital_mode:block/capital_tree_wood"
+    },
+    "axis=z": {
+      "model": "capital_mode:block/capital_tree_wood",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "capital_mode:custom/electrical_cable_f",
+  "textures": {
+    "all": "capital_mode:block/electrical_cable",
+    "particle": "capital_mode:block/electrical_cable",
+    "cable": "capital_mode:block/electrical_cable"
+  },
+  "render_type": "cutout"
+}

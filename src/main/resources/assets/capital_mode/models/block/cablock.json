@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/capitalblock",
+    "up": "capital_mode:block/capitalblock",
+    "north": "capital_mode:block/capitalblock",
+    "east": "capital_mode:block/capitalblock",
+    "south": "capital_mode:block/capitalblock",
+    "west": "capital_mode:block/capitalblock",
+    "particle": "capital_mode:block/capitalblock"
+  },
+  "render_type": "solid"
+}

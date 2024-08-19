@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "capital_mode:dixeuro"
+    }
+  ],
+  "result": {
+    "item": "capital_mode:un_eu",
+    "count": 10
+  }
+}

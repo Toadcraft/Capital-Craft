@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:capital"
+    },
+    "b": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "capital_mode:capitalapple",
+    "count": 1
+  }
+}

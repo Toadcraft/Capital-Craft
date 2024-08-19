@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "capital_mode:iridiumpowder"
+    },
+    {
+      "item": "capital_mode:dolomiteingot"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    }
+  ],
+  "result": {
+    "item": "capital_mode:iridiumseed",
+    "count": 1
+  }
+}

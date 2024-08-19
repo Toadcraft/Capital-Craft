@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/vide",
+    "up": "capital_mode:block/vide",
+    "north": "capital_mode:block/vide",
+    "east": "capital_mode:block/vide",
+    "south": "capital_mode:block/vide",
+    "west": "capital_mode:block/vide",
+    "particle": "capital_mode:block/vide"
+  },
+  "render_type": "solid"
+}

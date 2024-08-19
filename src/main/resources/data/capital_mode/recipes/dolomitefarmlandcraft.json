@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "minecraft:dirt"
+    },
+    {
+      "item": "capital_mode:dolomiteingot"
+    }
+  ],
+  "result": {
+    "item": "capital_mode:dolomite_farmland",
+    "count": 1
+  }
+}

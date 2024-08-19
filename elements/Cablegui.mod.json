@@ -1,0 +1,75 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 146,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cable",
+          "text": {
+            "fixedValue": "Cable"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_transferer_de_lenergie",
+          "text": "Transférer de l'énergie",
+          "isUndecorated": false,
+          "width": 145,
+          "height": 20,
+          "x": 140,
+          "y": 137
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Ecrire ici la quantité d'énergie que vous souhiatez transferer",
+          "name": "Quantite_energie_cable_sortie",
+          "width": 120,
+          "height": 20,
+          "x": 151,
+          "y": 84
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_energy_fe",
+          "text": {
+            "fixedValue": "<energy> FE"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 238,
+          "y": 51
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

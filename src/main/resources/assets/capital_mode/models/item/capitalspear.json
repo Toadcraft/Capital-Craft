@@ -1,0 +1,10 @@
+{
+  "parent": "capital_mode:custom/capital_spear",
+  "textures": {
+    "0": "capital_mode:block/capitalspearface0",
+    "1": "capital_mode:block/capitalspearface1",
+    "2": "capital_mode:block/capitalspearface1",
+    "3": "capital_mode:block/capitalspearface2",
+    "particle": "capital_mode:item/capitalspear"
+  }
+}

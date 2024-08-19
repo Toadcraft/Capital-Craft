@@ -1,0 +1,76 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 230,
+    "height": 130,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_mineur",
+          "text": "MINEUR",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Openmineur"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 108,
+          "y": 147
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_paysan",
+          "text": "PAYSAN",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Openpaysan"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 184,
+          "y": 147
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_guerrier",
+          "text": "GUERRIER",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Openguerrier"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 256,
+          "y": 147
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobs_texture.png",
+          "use1Xscale": true,
+          "x": 96,
+          "y": 54
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cac",
+    "ada"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:cobalt"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    },
+    "c": {
+      "item": "minecraft:redstone"
+    },
+    "d": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "capital_mode:demon_hears",
+    "count": 1
+  }
+}

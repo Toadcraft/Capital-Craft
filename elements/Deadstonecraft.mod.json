@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.SKULL#1"
+      },
+      {
+        "value": "Blocks.NETHERITE_BLOCK"
+      },
+      {
+        "value": "Blocks.SKULL#1"
+      },
+      {
+        "value": "CUSTOM:Bigsword"
+      },
+      {
+        "value": "CUSTOM:Ultimastone"
+      },
+      {
+        "value": "CUSTOM:Bigsword"
+      },
+      {
+        "value": "Blocks.WITHER_ROSE"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "Blocks.WITHER_ROSE"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Deadstone"
+    },
+    "name": "deadstonecraft",
+    "namespace": "mod"
+  }
+}

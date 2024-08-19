@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "capital_mode:block/blecapitale4",
+    "particle": "capital_mode:block/blecapitale4"
+  },
+  "render_type": "cutout_mipped"
+}

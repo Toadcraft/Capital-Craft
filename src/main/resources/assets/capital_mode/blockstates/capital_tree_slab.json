@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "capital_mode:block/capital_tree_slab"
+    },
+    "type=top": {
+      "model": "capital_mode:block/capital_tree_slab_top"
+    },
+    "type=double": {
+      "model": "capital_mode:block/capital_tree_slab_full"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "capital_mode:block/cable_lc"
+    },
+    "facing=east": {
+      "model": "capital_mode:block/cable_lc",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "capital_mode:block/cable_lc",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "capital_mode:block/cable_lc",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "capital_mode:block/cable_lc",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "capital_mode:block/cable_lc",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "capital_mode:block/capital_tree_pressure_plate"
+    },
+    "powered=true": {
+      "model": "capital_mode:block/capital_tree_pressure_plate_down"
+    }
+  }
+}

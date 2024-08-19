@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:ameliorateurlvl_5"
+    },
+    "b": {
+      "item": "minecraft:emerald_block"
+    },
+    "c": {
+      "item": "capital_mode:ameliorateurniv_6item"
+    }
+  },
+  "result": {
+    "item": "capital_mode:ameliorateurlvl_7",
+    "count": 1
+  }
+}

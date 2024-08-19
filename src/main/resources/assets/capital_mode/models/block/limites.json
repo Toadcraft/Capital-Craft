@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/auteldemoniaque",
+    "up": "capital_mode:block/auteldemoniaque",
+    "north": "capital_mode:block/auteldemoniaque",
+    "east": "capital_mode:block/auteldemoniaque",
+    "south": "capital_mode:block/auteldemoniaque",
+    "west": "capital_mode:block/auteldemoniaque",
+    "particle": "capital_mode:block/auteldemoniaque"
+  },
+  "render_type": "solid"
+}

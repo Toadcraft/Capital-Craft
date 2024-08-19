@@ -1,0 +1,112 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1eu",
+          "text": "1€",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Donner1e"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 141,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_10eu",
+          "text": "10€",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Donner10e"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 249,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_100eu",
+          "text": "100€",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Donner100e"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 141,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1000eu",
+          "text": "1000€",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Donner1000e"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 240,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_vous_voulez_retirer",
+          "text": {
+            "fixedValue": "Vous voulez retirer :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_retour",
+          "text": "Retour",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OuvrirATM"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 186,
+          "y": 170
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

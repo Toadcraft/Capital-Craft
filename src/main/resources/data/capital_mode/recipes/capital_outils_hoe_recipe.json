@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    " b",
+    " b"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:capital"
+    },
+    "b": {
+      "item": "capital_mode:capitalstick"
+    }
+  },
+  "result": {
+    "item": "capital_mode:capital_outils_hoe",
+    "count": 1
+  }
+}

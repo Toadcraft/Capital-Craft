@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "capital_mode:capital_outils_hoe"
+  },
+  "addition": {
+    "item": "capital_mode:sugilite"
+  },
+  "result": {
+    "item": "capital_mode:sugilite_hoe"
+  }
+}

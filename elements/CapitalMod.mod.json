@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Capital Mod",
+    "icon": {
+      "value": "CUSTOM:Capital"
+    },
+    "showSearch": false
+  }
+}

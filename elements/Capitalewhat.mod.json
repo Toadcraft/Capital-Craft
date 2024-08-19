@@ -1,0 +1,97 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 500,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_la_capitale_est_le_centre_du_ser",
+          "text": {
+            "fixedValue": "La capitale est le centre du serveur, quand elle évolue,"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 69,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_certains_paliers_des_recompen",
+          "text": {
+            "fixedValue": "A certains paliers, des récompenses peuvent être attribuées et "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_le_spawn_augmente_de_niveau",
+          "text": {
+            "fixedValue": "le spawn augmente de niveau. "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_de_nouveaux_itemsblocs_peuvent",
+          "text": {
+            "fixedValue": "de nouveaux items/blocs peuvent être obtenus !"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_deposer",
+          "text": "Déposer",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenCapitalDepose"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 177,
+          "y": 107
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

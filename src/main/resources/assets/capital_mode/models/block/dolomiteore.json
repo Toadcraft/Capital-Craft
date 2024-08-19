@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/dirtite_ore",
+    "up": "capital_mode:block/dirtite_ore",
+    "north": "capital_mode:block/dirtite_ore",
+    "east": "capital_mode:block/dirtite_ore",
+    "south": "capital_mode:block/dirtite_ore",
+    "west": "capital_mode:block/dirtite_ore",
+    "particle": "capital_mode:block/dirtite_ore"
+  },
+  "render_type": "solid"
+}

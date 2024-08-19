@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:blocks/capital_machinefacetrois",
+    "up": "capital_mode:blocks/capital_machinefacetrois",
+    "north": "capital_mode:blocks/capital_machinefacetrois",
+    "east": "capital_mode:blocks/capital_machinefacetrois",
+    "south": "capital_mode:blocks/capital_machinefacetrois",
+    "west": "capital_mode:blocks/capital_machinefacetrois",
+    "particle": "capital_mode:blocks/capital_machinefacetrois"
+  }
+}

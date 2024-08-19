@@ -1,0 +1,34 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "sugilite_axe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Iridium Axe",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:CapitalMod"
+    },
+    "harvestLevel": 15,
+    "efficiency": 15.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 20.0,
+    "usageCount": 5000,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:Sugilite"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

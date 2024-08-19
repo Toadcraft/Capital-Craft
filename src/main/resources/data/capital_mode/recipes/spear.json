@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:speed_sword"
+    },
+    "b": {
+      "item": "capital_mode:capitalstick"
+    }
+  },
+  "result": {
+    "item": "capital_mode:capitalspear",
+    "count": 1
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_warps",
+          "text": {
+            "fixedValue": "Warps"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 193,
+          "y": 54
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_spawn",
+          "text": "Spawn",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "TP"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 183,
+          "y": 86
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_nether",
+          "text": "Nether",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Warpnether"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 181,
+          "y": 122
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_random_tp",
+          "text": "Random TP",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Rtpprocedure"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 176,
+          "y": 157
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

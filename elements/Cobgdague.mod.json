@@ -1,0 +1,37 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "cobaltdague",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Cobalt dague",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:CapitalMod"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 100.0,
+    "enchantability": 16,
+    "damageVsEntity": 4.0,
+    "usageCount": 2100,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:Ruby"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "CobgdagueLorsqueLoutilEstDansLaMain"
+    }
+  }
+}

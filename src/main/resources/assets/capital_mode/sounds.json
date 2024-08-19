@@ -1,0 +1,34 @@
+{
+  "mouette": {
+    "sounds": [
+      {
+        "name": "capital_mode:mouette1",
+        "stream": false
+      }
+    ]
+  },
+  "mouette2": {
+    "sounds": [
+      {
+        "name": "capital_mode:mouette2",
+        "stream": false
+      }
+    ]
+  },
+  "mouette3": {
+    "sounds": [
+      {
+        "name": "capital_mode:mouette3",
+        "stream": false
+      }
+    ]
+  },
+  "mouette4": {
+    "sounds": [
+      {
+        "name": "capital_mode:mouette4",
+        "stream": false
+      }
+    ]
+  }
+}

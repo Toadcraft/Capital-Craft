@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/capital_ore",
+    "up": "capital_mode:block/capital_ore",
+    "north": "capital_mode:block/capital_ore",
+    "east": "capital_mode:block/capital_ore",
+    "south": "capital_mode:block/capital_ore",
+    "west": "capital_mode:block/capital_ore",
+    "particle": "capital_mode:block/capital_ore"
+  },
+  "render_type": "solid"
+}

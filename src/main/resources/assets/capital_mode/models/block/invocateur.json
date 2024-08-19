@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "capital_mode:block/capital_machinefacetrois",
+    "particle": "capital_mode:block/capital_machinefacetrois"
+  },
+  "render_type": "solid"
+}

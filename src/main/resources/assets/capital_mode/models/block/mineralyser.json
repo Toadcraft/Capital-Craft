@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/fonderiedace2",
+    "up": "capital_mode:block/fonderiedace2",
+    "north": "capital_mode:block/fonderiedace2",
+    "east": "capital_mode:block/fonderiedace2",
+    "south": "capital_mode:block/fonderiedace2",
+    "west": "capital_mode:block/fonderiedace2",
+    "particle": "capital_mode:block/fonderiedace2"
+  },
+  "render_type": "solid"
+}

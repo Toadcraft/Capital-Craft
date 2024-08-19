@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Capital"
+      },
+      {
+        "value": "Blocks.BLAST_FURNACE"
+      },
+      {
+        "value": "CUSTOM:Capital"
+      },
+      {
+        "value": "Blocks.FURNACE"
+      },
+      {
+        "value": "CUSTOM:Batterie"
+      },
+      {
+        "value": "Blocks.SMOKER"
+      },
+      {
+        "value": "Items.COAL"
+      },
+      {
+        "value": "CUSTOM:Capital"
+      },
+      {
+        "value": "Items.COAL"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Electricfurnace"
+    },
+    "name": "electricfurnacecraft",
+    "namespace": "mod"
+  }
+}

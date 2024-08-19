@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Ameliorateurlvl7"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      },
+      {
+        "value": "CUSTOM:Sugilite"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Ameliorateurlvl8"
+    },
+    "name": "ameliorateurniv_8",
+    "namespace": "mod"
+  }
+}

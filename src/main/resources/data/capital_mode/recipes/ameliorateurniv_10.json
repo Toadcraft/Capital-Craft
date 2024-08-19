@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:ameliorateurlvl_9"
+    }
+  },
+  "result": {
+    "item": "capital_mode:ameliorateurlvl_10",
+    "count": 1
+  }
+}

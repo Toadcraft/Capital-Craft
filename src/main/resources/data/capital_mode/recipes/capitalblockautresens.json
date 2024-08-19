@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "capital_mode:cablock"
+    }
+  ],
+  "result": {
+    "item": "capital_mode:capital",
+    "count": 9
+  }
+}

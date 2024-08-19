@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "capital_mode:item/iridium_speed_pickaxe"
+  }
+}

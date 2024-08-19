@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "efe"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "b": {
+      "item": "minecraft:netherite_block"
+    },
+    "c": {
+      "item": "capital_mode:bigsword"
+    },
+    "d": {
+      "item": "capital_mode:ultimastone"
+    },
+    "e": {
+      "item": "minecraft:wither_rose"
+    },
+    "f": {
+      "item": "capital_mode:sugilite"
+    }
+  },
+  "result": {
+    "item": "capital_mode:deadstone",
+    "count": 1
+  }
+}

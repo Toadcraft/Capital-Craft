@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "capital_mode:block/cobalt_plant4",
+    "particle": "capital_mode:block/cobalt_plant4"
+  },
+  "render_type": "cutout_mipped"
+}

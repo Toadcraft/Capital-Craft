@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/condensedstone",
+    "up": "capital_mode:block/condensedstone",
+    "north": "capital_mode:block/condensedstone",
+    "east": "capital_mode:block/condensedstone",
+    "south": "capital_mode:block/condensedstone",
+    "west": "capital_mode:block/condensedstone",
+    "particle": "capital_mode:block/condensedstone"
+  },
+  "render_type": "solid"
+}

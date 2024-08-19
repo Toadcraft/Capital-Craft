@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "capital_mode:sugilite_block"
+    }
+  ],
+  "result": {
+    "item": "capital_mode:sugilite",
+    "count": 9
+  }
+}

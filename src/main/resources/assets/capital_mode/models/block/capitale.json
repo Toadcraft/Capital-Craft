@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/tank_test",
+    "up": "capital_mode:block/tank_test",
+    "north": "capital_mode:block/tank_test",
+    "east": "capital_mode:block/tank_test",
+    "south": "capital_mode:block/tank_test",
+    "west": "capital_mode:block/tank_test",
+    "particle": "capital_mode:block/tank_test"
+  },
+  "render_type": "cutout"
+}

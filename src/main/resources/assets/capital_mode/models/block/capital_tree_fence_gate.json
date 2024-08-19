@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate",
+  "textures": {
+    "texture": "capital_mode:blocks/capital_tree_planks"
+  }
+}

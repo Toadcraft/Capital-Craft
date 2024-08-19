@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "beach",
+    "stony_shore"
+  ],
+  "spawners": {
+    "type": "capital_mode:mouette",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

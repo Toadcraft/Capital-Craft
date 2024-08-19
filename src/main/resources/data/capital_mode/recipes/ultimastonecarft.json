@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "fff"
+  ],
+  "key": {
+    "a": {
+      "item": "capital_mode:dolomiteingot"
+    },
+    "b": {
+      "item": "capital_mode:cablock"
+    },
+    "c": {
+      "item": "minecraft:emerald_block"
+    },
+    "d": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "e": {
+      "item": "capital_mode:coblock"
+    },
+    "f": {
+      "item": "capital_mode:demon_hears"
+    }
+  },
+  "result": {
+    "item": "capital_mode:ultimastone",
+    "count": 1
+  }
+}

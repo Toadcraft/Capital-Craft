@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:netherite_block"
+    },
+    "b": {
+      "item": "capital_mode:ameliorateurlvl_5"
+    }
+  },
+  "result": {
+    "item": "capital_mode:ameliorateurniv_6item",
+    "count": 1
+  }
+}

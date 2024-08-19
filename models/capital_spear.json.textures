@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "capitalspearface0",
+        "1": "capitalspearface1",
+        "2": "capitalspearface1",
+        "3": "capitalspearface2"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "capital_mode:block/demonworld_portal_ew"
+    },
+    "axis=x": {
+      "model": "capital_mode:block/demonworld_portal_ns"
+    }
+  }
+}

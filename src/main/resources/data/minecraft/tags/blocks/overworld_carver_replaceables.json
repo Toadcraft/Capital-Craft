@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "capital_mode:ultracondensed",
+    "minecraft:mycelium",
+    "minecraft:dirt"
+  ]
+}

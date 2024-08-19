@@ -1,0 +1,39 @@
+{
+  "_fv": 57,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Jus d'Opale",
+    "splashName": "Splash Jus d'Opale",
+    "lingeringName": "Lingering Jus d'Opale",
+    "arrowName": "Arrow of Jus d'Opale",
+    "effects": [
+      {
+        "effect": {
+          "value": "MINING_FATIGUE"
+        },
+        "duration": 3600,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "STRENGTH"
+        },
+        "duration": 3600,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "HUNGER"
+        },
+        "duration": 3600,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

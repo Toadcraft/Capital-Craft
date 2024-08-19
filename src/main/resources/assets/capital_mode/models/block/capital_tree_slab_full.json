@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "capital_mode:blocks/capital_tree_planks",
+    "top": "capital_mode:blocks/capital_tree_planks",
+    "side": "capital_mode:blocks/capital_tree_planks"
+  }
+}

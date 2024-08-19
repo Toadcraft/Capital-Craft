@@ -1,0 +1,7 @@
+{
+  "_fv": 57,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"220\" y=\"94\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"call_procedure\"><field name=\"procedure\">CableModelUpdaterMain</field><comment pinned=\"false\" h=\"32\" w=\"175\">Cable Model Updater Main</comment><next><block type=\"call_procedure\"><field name=\"procedure\">CableForgeEnergyMain</field><comment pinned=\"false\" h=\"32\" w=\"183\">Cable Forge Energy Main</comment></block></next></block></next></block></xml>"
+  }
+}

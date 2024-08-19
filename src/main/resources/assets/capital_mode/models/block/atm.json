@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/atm_bas",
+    "up": "capital_mode:block/atm_cote_1",
+    "north": "capital_mode:block/atm_face",
+    "east": "capital_mode:block/atm_cote_1",
+    "south": "capital_mode:block/atm_back",
+    "west": "capital_mode:block/atm_cote_2",
+    "particle": "capital_mode:block/atm_bas"
+  },
+  "render_type": "solid"
+}

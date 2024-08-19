@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "capital_mode:blocks/capital_tree_planks"
+  }
+}

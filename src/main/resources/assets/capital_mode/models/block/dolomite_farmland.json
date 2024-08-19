@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "capital_mode:block/deathstone",
+    "up": "capital_mode:block/deathstone",
+    "north": "capital_mode:block/deathstone",
+    "east": "capital_mode:block/deathstone",
+    "south": "capital_mode:block/deathstone",
+    "west": "capital_mode:block/deathstone",
+    "particle": "capital_mode:block/deathstone"
+  },
+  "render_type": "solid"
+}
