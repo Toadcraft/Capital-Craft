@@ -9,5 +9,5 @@
     "west": "capital_mode:block/auteldemoniaque",
     "particle": "capital_mode:block/autel_demon_bottom"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }
