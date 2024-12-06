@@ -17,8 +17,8 @@ import net.mcreator.capitalmode.client.renderer.DemonRenderer;
 public class CapitalModeModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerEntityRenderer(CapitalModeModEntities.MOUETTE.get(), MouetteRenderer::new);
 		event.registerEntityRenderer(CapitalModeModEntities.DEMON.get(), DemonRenderer::new);
 		event.registerEntityRenderer(CapitalModeModEntities.GARDIENDEMONIAQUE.get(), GardiendemoniaqueRenderer::new);
-		event.registerEntityRenderer(CapitalModeModEntities.MOUETTE.get(), MouetteRenderer::new);
 	}
 }

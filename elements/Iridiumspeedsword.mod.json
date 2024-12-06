@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -12,22 +12,24 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
-    "harvestLevel": 15,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "efficiency": 15.0,
     "attackSpeed": 100.0,
     "enchantability": 25,
     "damageVsEntity": 12.0,
     "usageCount": 5000,
-    "blocksAffected": [],
     "repairItems": [
       {
         "value": "CUSTOM:Sugilite"
       }
     ],
     "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": true,
     "damageOnCrafting": false
   }

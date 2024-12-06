@@ -34,7 +34,6 @@ public class CapitalModeModTabs {
 				tabData.accept(CapitalModeModItems.CAPITALE_ARMOR_CHESTPLATE.get());
 				tabData.accept(CapitalModeModItems.CAPITALE_ARMOR_LEGGINGS.get());
 				tabData.accept(CapitalModeModItems.CAPITALE_ARMOR_BOOTS.get());
-				tabData.accept(CapitalModeModItems.CAPITALFONDU_BUCKET.get());
 				tabData.accept(CapitalModeModItems.CAPITALAPPLE.get());
 				tabData.accept(CapitalModeModItems.DEMON_HEARS.get());
 				tabData.accept(CapitalModeModItems.COBALT.get());
@@ -50,7 +49,6 @@ public class CapitalModeModTabs {
 				tabData.accept(CapitalModeModItems.CAPITALSTICK.get());
 				tabData.accept(CapitalModeModBlocks.CABLOCK.get().asItem());
 				tabData.accept(CapitalModeModBlocks.COBLOCK.get().asItem());
-				tabData.accept(CapitalModeModBlocks.FONDERIE.get().asItem());
 				tabData.accept(CapitalModeModItems.UN_EU.get());
 				tabData.accept(CapitalModeModItems.DIXEURO.get());
 				tabData.accept(CapitalModeModItems.CINQUANNTE_EU.get());
@@ -69,32 +67,30 @@ public class CapitalModeModTabs {
 				tabData.accept(CapitalModeModItems.CAPITALWAND.get());
 				tabData.accept(CapitalModeModItems.ULTIMASTONE.get());
 				tabData.accept(CapitalModeModItems.BIGSWORD.get());
-				tabData.accept(CapitalModeModItems.COBALTBIGWORD.get());
-				tabData.accept(CapitalModeModItems.COBALTSPEEDSWORD.get());
 				tabData.accept(CapitalModeModItems.AMELIORATEURNIV_6ITEM.get());
-				tabData.accept(CapitalModeModItems.COBALTSPEEDPICKAXE.get());
 				tabData.accept(CapitalModeModItems.COBALT_HAMMER.get());
+				tabData.accept(CapitalModeModItems.COBALTSPEEDSWORD.get());
+				tabData.accept(CapitalModeModItems.COBALTBIGWORD.get());
+				tabData.accept(CapitalModeModItems.COBALTSPEEDPICKAXE.get());
 				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_7.get());
-				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_8.get());
 				tabData.accept(CapitalModeModItems.MILLEEURO.get());
-				tabData.accept(CapitalModeModItems.SUGILITE.get());
+				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_9.get());
+				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_8.get());
 				tabData.accept(CapitalModeModBlocks.SUGILITE_BLOCK.get().asItem());
 				tabData.accept(CapitalModeModItems.SUGILITE_PICKAXE.get());
-				tabData.accept(CapitalModeModItems.SUGILITE_AXE.get());
-				tabData.accept(CapitalModeModItems.SUGILITE_SWORD.get());
 				tabData.accept(CapitalModeModItems.SUGILITE_SHOVEL.get());
-				tabData.accept(CapitalModeModItems.SUGILITE_HOE.get());
+				tabData.accept(CapitalModeModItems.SUGILITE_AXE.get());
+				tabData.accept(CapitalModeModItems.SUGILITE.get());
 				tabData.accept(CapitalModeModItems.SUGILITE_ARMOR_HELMET.get());
 				tabData.accept(CapitalModeModItems.SUGILITE_ARMOR_CHESTPLATE.get());
 				tabData.accept(CapitalModeModItems.SUGILITE_ARMOR_LEGGINGS.get());
 				tabData.accept(CapitalModeModItems.SUGILITE_ARMOR_BOOTS.get());
-				tabData.accept(CapitalModeModItems.BATONIRIDUIM.get());
-				tabData.accept(CapitalModeModItems.IRIDIUMBIGSWORD.get());
-				tabData.accept(CapitalModeModItems.IRIDIUMSPEEDSWORD.get());
-				tabData.accept(CapitalModeModItems.IRIDIUMHAMMER.get());
-				tabData.accept(CapitalModeModItems.IRIDIUMSPEEDPICKAXE.get());
-				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_9.get());
+				tabData.accept(CapitalModeModItems.SUGILITE_SWORD.get());
+				tabData.accept(CapitalModeModItems.SUGILITE_HOE.get());
 				tabData.accept(CapitalModeModItems.AMELIORATEURLVL_10.get());
+				tabData.accept(CapitalModeModBlocks.FONDERIE.get().asItem());
+				tabData.accept(CapitalModeModItems.CAPITALFONDU_BUCKET.get());
+				tabData.accept(CapitalModeModItems.BATONIRIDUIM.get());
 				tabData.accept(CapitalModeModItems.ACHATCHUNK.get());
 				tabData.accept(CapitalModeModItems.PERFECT_COAL.get());
 				tabData.accept(CapitalModeModBlocks.CONDENSEDSTONE.get().asItem());
@@ -109,24 +105,28 @@ public class CapitalModeModTabs {
 				tabData.accept(CapitalModeModItems.COBGDAGUE.get());
 				tabData.accept(CapitalModeModItems.CAPITALDAGUE.get());
 				tabData.accept(CapitalModeModItems.FIRESTONE.get());
+				tabData.accept(CapitalModeModItems.IRIDIUMSPEEDSWORD.get());
 				tabData.accept(CapitalModeModItems.CAPITALSPEAR.get());
-				tabData.accept(CapitalModeModItems.ROUEDUGARDIEN.get());
+				tabData.accept(CapitalModeModItems.IRIDIUMHAMMER.get());
+				tabData.accept(CapitalModeModItems.IRIDIUMSPEEDPICKAXE.get());
 				tabData.accept(CapitalModeModItems.RELIQUEEAU.get());
 				tabData.accept(CapitalModeModItems.RELIQUEBOOF.get());
 				tabData.accept(CapitalModeModItems.RELIQUESAC.get());
 				tabData.accept(CapitalModeModItems.RELIQUEFIRE.get());
 				tabData.accept(CapitalModeModItems.RELIQUEPVP.get());
+				tabData.accept(CapitalModeModItems.ROUEDUGARDIEN.get());
 				tabData.accept(CapitalModeModItems.JOUETMARTEAU.get());
+				tabData.accept(CapitalModeModItems.IRIDIUMBIGSWORD.get());
 				tabData.accept(CapitalModeModBlocks.INVOCATEUR.get().asItem());
 				tabData.accept(CapitalModeModItems.DEMONWORLD.get());
 				tabData.accept(CapitalModeModItems.CAPITALSEED.get());
-				tabData.accept(CapitalModeModBlocks.DOLOMITEORE.get().asItem());
 				tabData.accept(CapitalModeModItems.DOLOMITEINGOT.get());
-				tabData.accept(CapitalModeModItems.SOUL_SWORD.get());
 				tabData.accept(CapitalModeModItems.INVISIBLEARMOR_HELMET.get());
 				tabData.accept(CapitalModeModItems.INVISIBLEARMOR_CHESTPLATE.get());
 				tabData.accept(CapitalModeModItems.INVISIBLEARMOR_LEGGINGS.get());
 				tabData.accept(CapitalModeModItems.INVISIBLEARMOR_BOOTS.get());
+				tabData.accept(CapitalModeModBlocks.DOLOMITEORE.get().asItem());
+				tabData.accept(CapitalModeModItems.SOUL_SWORD.get());
 				tabData.accept(CapitalModeModBlocks.ELECTRICFURNACE.get().asItem());
 				tabData.accept(CapitalModeModItems.SUPER_COBALT_OLD_SWORD.get());
 				tabData.accept(CapitalModeModBlocks.PANNEAUSOLAIR.get().asItem());
@@ -161,9 +161,10 @@ public class CapitalModeModTabs {
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+
 			tabData.accept(CapitalModeModItems.MOUETTE_SPAWN_EGG.get());
+
 		}
 	}
 }

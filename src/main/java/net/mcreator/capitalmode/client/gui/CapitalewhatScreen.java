@@ -63,21 +63,11 @@ public class CapitalewhatScreen extends AbstractContainerScreen<CapitalewhatMenu
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser"), 105, 156, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalewhat.label_a_certains_paliers_des_recompen"), 87, 192, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalewhat.label_le_spawn_augmente_de_niveau"), 168, 174, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalewhat.label_de_nouveaux_itemsblocs_peuvent"), 123, 210, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

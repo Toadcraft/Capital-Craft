@@ -14,7 +14,7 @@ public class GiverreliqueEvenementAuClicDroitDansLairnewversionProcedure {
 			return;
 		if (Math.random() < 0.2) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEEAU.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEEAU.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -23,7 +23,7 @@ public class GiverreliqueEvenementAuClicDroitDansLairnewversionProcedure {
 		}
 		if (Math.random() < 0.2) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEBOOF.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEBOOF.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -32,7 +32,7 @@ public class GiverreliqueEvenementAuClicDroitDansLairnewversionProcedure {
 		}
 		if (Math.random() < 0.2) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUESAC.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUESAC.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -41,7 +41,7 @@ public class GiverreliqueEvenementAuClicDroitDansLairnewversionProcedure {
 		}
 		if (Math.random() < 0.2) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEFIRE.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEFIRE.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -50,7 +50,7 @@ public class GiverreliqueEvenementAuClicDroitDansLairnewversionProcedure {
 		}
 		if (Math.random() < 0.2) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEPVP.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.RELIQUEPVP.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)

@@ -74,18 +74,23 @@ import net.mcreator.capitalmode.CapitalModeMod;
 public class CapitalModeModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, CapitalModeMod.MODID);
 	public static final RegistryObject<Block> CAPITAL_ORE = REGISTRY.register("capital_ore", () -> new CapitaloreBlock());
-	public static final RegistryObject<Block> CAPITALFONDU = REGISTRY.register("capitalfondu", () -> new CapitalfonduBlock());
 	public static final RegistryObject<Block> CABLOCK = REGISTRY.register("cablock", () -> new CablockBlock());
 	public static final RegistryObject<Block> COBLOCK = REGISTRY.register("coblock", () -> new CoblockBlock());
-	public static final RegistryObject<Block> FONDERIE = REGISTRY.register("fonderie", () -> new FonderieBlock());
 	public static final RegistryObject<Block> CAPITAL_MACHINE = REGISTRY.register("capital_machine", () -> new CapitalMachineBlock());
 	public static final RegistryObject<Block> SUGILITE_BLOCK = REGISTRY.register("sugilite_block", () -> new SugiliteBlockBlock());
+	public static final RegistryObject<Block> FONDERIE = REGISTRY.register("fonderie", () -> new FonderieBlock());
+	public static final RegistryObject<Block> CAPITALFONDU = REGISTRY.register("capitalfondu", () -> new CapitalfonduBlock());
 	public static final RegistryObject<Block> CONDENSEDSTONE = REGISTRY.register("condensedstone", () -> new CondensedstoneBlock());
 	public static final RegistryObject<Block> ULTRACONDENSED = REGISTRY.register("ultracondensed", () -> new UltracondensedBlock());
 	public static final RegistryObject<Block> COBALTFONDU = REGISTRY.register("cobaltfondu", () -> new CobaltfonduBlock());
 	public static final RegistryObject<Block> IRIDFONDU = REGISTRY.register("iridfondu", () -> new IridfonduBlock());
 	public static final RegistryObject<Block> INVOCATEUR = REGISTRY.register("invocateur", () -> new InvocateurBlock());
 	public static final RegistryObject<Block> DEMONWORLD_PORTAL = REGISTRY.register("demonworld_portal", () -> new DemonworldPortalBlock());
+	public static final RegistryObject<Block> FANDECAPITAL = REGISTRY.register("fandecapital", () -> new FandecapitalBlock());
+	public static final RegistryObject<Block> CAPITALPLANT = REGISTRY.register("capitalplant", () -> new CapitalplantBlock());
+	public static final RegistryObject<Block> CAPITALPLANT_2 = REGISTRY.register("capitalplant_2", () -> new Capitalplant2Block());
+	public static final RegistryObject<Block> CAPITALPLANT_3 = REGISTRY.register("capitalplant_3", () -> new Capitalplant3Block());
+	public static final RegistryObject<Block> CAPITALPLANT_4 = REGISTRY.register("capitalplant_4", () -> new Capitalplant4Block());
 	public static final RegistryObject<Block> DOLOMITEORE = REGISTRY.register("dolomiteore", () -> new DolomiteoreBlock());
 	public static final RegistryObject<Block> ELECTRICFURNACE = REGISTRY.register("electricfurnace", () -> new ElectricfurnaceBlock());
 	public static final RegistryObject<Block> PANNEAUSOLAIR = REGISTRY.register("panneausolair", () -> new PanneausolairBlock());
@@ -96,18 +101,6 @@ public class CapitalModeModBlocks {
 	public static final RegistryObject<Block> BATTERIE = REGISTRY.register("batterie", () -> new BatterieBlock());
 	public static final RegistryObject<Block> AUTEL_DEMONIAQUE = REGISTRY.register("autel_demoniaque", () -> new AutelDemoniaqueBlock());
 	public static final RegistryObject<Block> ATM = REGISTRY.register("atm", () -> new ATMBlock());
-	public static final RegistryObject<Block> DOLOMITE_FARMLAND = REGISTRY.register("dolomite_farmland", () -> new DolomiteFarmlandBlock());
-	public static final RegistryObject<Block> QUARRY = REGISTRY.register("quarry", () -> new QuarryBlock());
-	public static final RegistryObject<Block> LIMITES = REGISTRY.register("limites", () -> new LimitesBlock());
-	public static final RegistryObject<Block> CAPITALE = REGISTRY.register("capitale", () -> new CapitaleBlock());
-	public static final RegistryObject<Block> BUEGRASS = REGISTRY.register("buegrass", () -> new BuegrassBlock());
-	public static final RegistryObject<Block> CABLE = REGISTRY.register("cable", () -> new CableBlock());
-	public static final RegistryObject<Block> LUMIERE = REGISTRY.register("lumiere", () -> new LumiereBlock());
-	public static final RegistryObject<Block> FANDECAPITAL = REGISTRY.register("fandecapital", () -> new FandecapitalBlock());
-	public static final RegistryObject<Block> CAPITALPLANT = REGISTRY.register("capitalplant", () -> new CapitalplantBlock());
-	public static final RegistryObject<Block> CAPITALPLANT_2 = REGISTRY.register("capitalplant_2", () -> new Capitalplant2Block());
-	public static final RegistryObject<Block> CAPITALPLANT_3 = REGISTRY.register("capitalplant_3", () -> new Capitalplant3Block());
-	public static final RegistryObject<Block> CAPITALPLANT_4 = REGISTRY.register("capitalplant_4", () -> new Capitalplant4Block());
 	public static final RegistryObject<Block> COBALTPLANT = REGISTRY.register("cobaltplant", () -> new CobaltplantBlock());
 	public static final RegistryObject<Block> COBALTPLANT_2 = REGISTRY.register("cobaltplant_2", () -> new Cobaltplant2Block());
 	public static final RegistryObject<Block> COBALTPLANT_3 = REGISTRY.register("cobaltplant_3", () -> new Cobaltplant3Block());
@@ -116,6 +109,12 @@ public class CapitalModeModBlocks {
 	public static final RegistryObject<Block> IRIDIUMPLANT_2 = REGISTRY.register("iridiumplant_2", () -> new Iridiumplant2Block());
 	public static final RegistryObject<Block> IRIDIUMPLANT_3 = REGISTRY.register("iridiumplant_3", () -> new Iridiumplant3Block());
 	public static final RegistryObject<Block> IRIDIUMPLANT_4 = REGISTRY.register("iridiumplant_4", () -> new Iridiumplant4Block());
+	public static final RegistryObject<Block> DOLOMITE_FARMLAND = REGISTRY.register("dolomite_farmland", () -> new DolomiteFarmlandBlock());
+	public static final RegistryObject<Block> QUARRY = REGISTRY.register("quarry", () -> new QuarryBlock());
+	public static final RegistryObject<Block> LIMITES = REGISTRY.register("limites", () -> new LimitesBlock());
+	public static final RegistryObject<Block> CAPITALE = REGISTRY.register("capitale", () -> new CapitaleBlock());
+	public static final RegistryObject<Block> BUEGRASS = REGISTRY.register("buegrass", () -> new BuegrassBlock());
+	public static final RegistryObject<Block> CABLE = REGISTRY.register("cable", () -> new CableBlock());
 	public static final RegistryObject<Block> CABLEE = REGISTRY.register("cablee", () -> new CableeBlock());
 	public static final RegistryObject<Block> CABLEI = REGISTRY.register("cablei", () -> new CableiBlock());
 	public static final RegistryObject<Block> CABLEL = REGISTRY.register("cablel", () -> new CablelBlock());
@@ -132,4 +131,7 @@ public class CapitalModeModBlocks {
 	public static final RegistryObject<Block> CABLE_XC = REGISTRY.register("cable_xc", () -> new CableXCBlock());
 	public static final RegistryObject<Block> CABLE_F = REGISTRY.register("cable_f", () -> new CableFBlock());
 	public static final RegistryObject<Block> CABLE_S = REGISTRY.register("cable_s", () -> new CableSBlock());
+	public static final RegistryObject<Block> LUMIERE = REGISTRY.register("lumiere", () -> new LumiereBlock());
+	// Start of user code block custom blocks
+	// End of user code block custom blocks
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "capital_ore",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Capital ore",
     "specialInformation": {
       "fixedValue": []
@@ -41,9 +42,11 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": "CUSTOM:Capital"
@@ -104,7 +107,7 @@
     },
     "luminance": 15,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",

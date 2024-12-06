@@ -21,7 +21,7 @@ public class FurnaceproProcedure {
 				ItemStack _setstack = (world instanceof Level _lvlSmeltResult
 						? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SimpleContainer((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)), _lvlSmeltResult)
 								.map(recipe -> recipe.getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-						: ItemStack.EMPTY);
+						: ItemStack.EMPTY).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

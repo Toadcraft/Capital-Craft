@@ -192,7 +192,7 @@ public class WhenblockisbrockenProcedure {
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == CapitalModeModBlocks.CAPITAL_ORE.get()
 				&& (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_06 == 1) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITAL.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITAL.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

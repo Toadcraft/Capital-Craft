@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -33,12 +33,15 @@
     },
     "enableIgniter": true,
     "igniterName": "Demon World Key",
+    "igniterRarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
-    "igniterTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "texture": "serpe",
     "portalTexture": "cobaltfondu1",
     "enablePortal": true

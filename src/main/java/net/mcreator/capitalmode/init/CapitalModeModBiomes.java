@@ -51,21 +51,23 @@ public class CapitalModeModBiomes {
 				// Inject biomes to biome source
 				if (chunkGenerator.getBiomeSource() instanceof MultiNoiseBiomeSource noiseSource) {
 					List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters().values());
-					parameters.add(new Pair<>(
-							new Climate.ParameterPoint(Climate.Parameter.span(0.7133333333f, 0.7533333333f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
-									Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.2470045459f, -0.2070045459f), 0),
-							biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")))));
-					parameters.add(new Pair<>(
-							new Climate.ParameterPoint(Climate.Parameter.span(0.7133333333f, 0.7533333333f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
-									Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.2470045459f, -0.2070045459f), 0),
-							biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")))));
-					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+					addParameterPoint(parameters,
+							new Pair<>(
+									new Climate.ParameterPoint(Climate.Parameter.span(0.7133333333f, 0.7533333333f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+											Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.2470045459f, -0.2070045459f), 0),
+									biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")))));
+					addParameterPoint(parameters,
+							new Pair<>(
+									new Climate.ParameterPoint(Climate.Parameter.span(0.7133333333f, 0.7533333333f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+											Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.2470045459f, -0.2070045459f), 0),
+									biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
 							Climate.Parameter.point(0.0f), Climate.Parameter.span(0.0244756484f, 0.0644756484f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "blue_biome")))));
-					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
 							Climate.Parameter.point(1.0f), Climate.Parameter.span(0.0244756484f, 0.0644756484f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "blue_biome")))));
-					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
 							Climate.Parameter.point(0.0f), Climate.Parameter.span(0.7203951874f, 0.7603951874f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infected")))));
-					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.02f, 0.02f), Climate.Parameter.span(-1.02f, -0.98f), Climate.Parameter.span(0.49f, 0.53f), Climate.Parameter.span(0.78f, 0.82f),
 							Climate.Parameter.point(1.0f), Climate.Parameter.span(0.7203951874f, 0.7603951874f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infected")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers
@@ -77,11 +79,11 @@ public class CapitalModeModBiomes {
 					SurfaceRules.RuleSource currentRuleSource = noiseGeneratorSettings.surfaceRule();
 					if (currentRuleSource instanceof SurfaceRules.SequenceRuleSource sequenceRuleSource) {
 						List<SurfaceRules.RuleSource> surfaceRules = new ArrayList<>(sequenceRuleSource.sequence());
-						surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")), Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(),
+						addSurfaceRule(surfaceRules, 1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infinibiome")), Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(),
 								Blocks.CLAY.defaultBlockState()));
-						surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "blue_biome")), CapitalModeModBlocks.BUEGRASS.get().defaultBlockState(), Blocks.DIRT.defaultBlockState(),
-								Blocks.DIRT.defaultBlockState()));
-						surfaceRules.add(1,
+						addSurfaceRule(surfaceRules, 1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "blue_biome")), CapitalModeModBlocks.BUEGRASS.get().defaultBlockState(),
+								Blocks.DIRT.defaultBlockState(), Blocks.DIRT.defaultBlockState()));
+						addSurfaceRule(surfaceRules, 1,
 								preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("capital_mode", "infected")), Blocks.MYCELIUM.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.DIRT.defaultBlockState()));
 						NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(), noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(),
 								noiseGeneratorSettings.noiseRouter(), SurfaceRules.sequence(surfaceRules.toArray(SurfaceRules.RuleSource[]::new)), noiseGeneratorSettings.spawnTarget(), noiseGeneratorSettings.seaLevel(),
@@ -100,5 +102,15 @@ public class CapitalModeModBiomes {
 								SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, false, 0, CaveSurface.FLOOR),
 										SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.waterBlockCheck(-1, 0), SurfaceRules.state(groundBlock)), SurfaceRules.state(underwaterBlock))),
 								SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(undergroundBlock)))));
+	}
+
+	private static void addParameterPoint(List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters, Pair<Climate.ParameterPoint, Holder<Biome>> point) {
+		if (!parameters.contains(point))
+			parameters.add(point);
+	}
+
+	private static void addSurfaceRule(List<SurfaceRules.RuleSource> surfaceRules, int index, SurfaceRules.RuleSource rule) {
+		if (!surfaceRules.contains(rule))
+			surfaceRules.add(index, rule);
 	}
 }

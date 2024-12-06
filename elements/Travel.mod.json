@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,9 +22,11 @@
     "onBootsTick": {
       "name": "TravelEvenementDeTickDesBottes"
     },
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "armorTextureFile": "travel",
     "helmetName": "Casque Travel",
     "bodyName": "Plastron Travel",

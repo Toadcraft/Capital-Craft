@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "fluid",
   "definition": {
     "name": "Cobalt fondu",
@@ -23,9 +23,11 @@
     "type": "LAVA",
     "generateBucket": true,
     "textureBucket": "",
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "emptySound": {
       "value": ""
     },

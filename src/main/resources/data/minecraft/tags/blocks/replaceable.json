@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "capital_mode:iridfondu",
+    "capital_mode:cobaltfondu",
+    "capital_mode:capitalfondu"
+  ]
+}

@@ -3,19 +3,15 @@ package net.mcreator.capitalmode.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 
 import net.mcreator.capitalmode.procedures.CapitalFauxQuandUneEntiteVivanteEstFrappeeAvecLoutilProcedure;
 import net.mcreator.capitalmode.procedures.CapitalFauxLorsqueLoutilEstDansLaMainProcedure;
-
-import java.util.List;
 
 public class CapitalFauxItem extends SwordItem {
 	public CapitalFauxItem() {
@@ -29,11 +25,11 @@ public class CapitalFauxItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return -2f;
+				return -4f;
 			}
 
 			public int getLevel() {
-				return 10;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {
@@ -51,11 +47,6 @@ public class CapitalFauxItem extends SwordItem {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
 		CapitalFauxQuandUneEntiteVivanteEstFrappeeAvecLoutilProcedure.execute(entity);
 		return retval;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

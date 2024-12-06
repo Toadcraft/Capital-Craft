@@ -64,17 +64,7 @@ public class ATMguiScreen extends AbstractContainerScreen<ATMguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "capital_mode:batterieexterne",
+    "capital_mode:iridiumspeedpickaxe",
+    "capital_mode:iridiumhammer",
+    "capital_mode:sugilite_pickaxe",
+    "capital_mode:cobaltspeedpickaxe",
+    "capital_mode:cobalt_hammer",
+    "capital_mode:capitalwand",
+    "capital_mode:capitalhammer",
+    "capital_mode:speedpickaxe",
+    "capital_mode:rubi_pickaxe",
+    "capital_mode:capital_outils_pickaxe"
+  ]
+}

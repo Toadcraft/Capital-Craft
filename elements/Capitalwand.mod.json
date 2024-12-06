@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
     "toolType": "MultiTool",
@@ -12,16 +12,16 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
-    "harvestLevel": 10,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "efficiency": 20.0,
     "attackSpeed": 1.0,
     "enchantability": 20,
     "damageVsEntity": 10.0,
     "usageCount": 3000,
-    "blocksAffected": [],
     "glowCondition": {
       "fixedValue": true
     },
@@ -31,6 +31,8 @@
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "la_mort": {
+    "la_mort_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

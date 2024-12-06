@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "lvl_10": {
+    "lvl_10_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

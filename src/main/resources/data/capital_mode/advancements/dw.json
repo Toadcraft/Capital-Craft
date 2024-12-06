@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "dw": {
+    "dw_0": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
         "to": "capital_mode:demonworld"

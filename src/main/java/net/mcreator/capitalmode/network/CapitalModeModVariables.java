@@ -324,8 +324,8 @@ public class CapitalModeModVariables {
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		public void readNBT(Tag tag) {
+			CompoundTag nbt = (CompoundTag) tag;
 			xp_mineur = nbt.getDouble("xp_mineur");
 			lvl_mineur = nbt.getDouble("lvl_mineur");
 			xp_paysan = nbt.getDouble("xp_paysan");

@@ -43,8 +43,8 @@ import net.mcreator.capitalmode.CapitalModeMod;
 
 public class CapitalModeModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, CapitalModeMod.MODID);
-	public static final RegistryObject<BlockEntityType<?>> FONDERIE = register("fonderie", CapitalModeModBlocks.FONDERIE, FonderieBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CAPITAL_MACHINE = register("capital_machine", CapitalModeModBlocks.CAPITAL_MACHINE, CapitalMachineBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> FONDERIE = register("fonderie", CapitalModeModBlocks.FONDERIE, FonderieBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ELECTRICFURNACE = register("electricfurnace", CapitalModeModBlocks.ELECTRICFURNACE, ElectricfurnaceBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> PANNEAUSOLAIR = register("panneausolair", CapitalModeModBlocks.PANNEAUSOLAIR, PanneausolairBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DIMENSIONALMACHINE = register("dimensionalmachine", CapitalModeModBlocks.DIMENSIONALMACHINE, DimensionalmachineBlockEntity::new);
@@ -72,6 +72,8 @@ public class CapitalModeModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> CABLE_F = register("cable_f", CapitalModeModBlocks.CABLE_F, CableFBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CABLE_S = register("cable_s", CapitalModeModBlocks.CABLE_S, CableSBlockEntity::new);
 
+	// Start of user code block custom block entities
+	// End of user code block custom block entities
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}

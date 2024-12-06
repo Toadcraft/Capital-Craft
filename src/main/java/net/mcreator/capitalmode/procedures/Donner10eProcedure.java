@@ -23,7 +23,7 @@ public class Donner10eProcedure {
 				});
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.DIXEURO.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.DIXEURO.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

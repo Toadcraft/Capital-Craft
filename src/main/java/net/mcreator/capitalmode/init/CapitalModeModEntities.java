@@ -24,17 +24,19 @@ import net.mcreator.capitalmode.CapitalModeMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CapitalModeModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CapitalModeMod.MODID);
+	public static final RegistryObject<EntityType<MouetteEntity>> MOUETTE = register("mouette",
+			EntityType.Builder.<MouetteEntity>of(MouetteEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MouetteEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DemonEntity>> DEMON = register("demon",
 			EntityType.Builder.<DemonEntity>of(DemonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DemonEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GardiendemoniaqueEntity>> GARDIENDEMONIAQUE = register("gardiendemoniaque", EntityType.Builder.<GardiendemoniaqueEntity>of(GardiendemoniaqueEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(GardiendemoniaqueEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<MouetteEntity>> MOUETTE = register("mouette",
-			EntityType.Builder.<MouetteEntity>of(MouetteEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MouetteEntity::new)
 
-					.sized(0.6f, 1.8f));
-
+	// Start of user code block custom entities
+	// End of user code block custom entities
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
@@ -42,16 +44,16 @@ public class CapitalModeModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			MouetteEntity.init();
 			DemonEntity.init();
 			GardiendemoniaqueEntity.init();
-			MouetteEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(MOUETTE.get(), MouetteEntity.createAttributes().build());
 		event.put(DEMON.get(), DemonEntity.createAttributes().build());
 		event.put(GARDIENDEMONIAQUE.get(), GardiendemoniaqueEntity.createAttributes().build());
-		event.put(MOUETTE.get(), MouetteEntity.createAttributes().build());
 	}
 }

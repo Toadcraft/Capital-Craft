@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
     "toolType": "Spade",
@@ -12,22 +12,24 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
-    "harvestLevel": 1000,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "efficiency": 15.0,
     "attackSpeed": 1.0,
     "enchantability": 25,
     "damageVsEntity": 4.0,
     "usageCount": 5000,
-    "blocksAffected": [],
     "repairItems": [
       {
         "value": "CUSTOM:Sugilite"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

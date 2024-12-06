@@ -52,7 +52,7 @@ public class QuandlejoueurspawnProcedure {
 		}
 		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_10 == 1) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.PETITSSOINS.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.PETITSSOINS.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

@@ -16,8 +16,8 @@ public class BourredeflechesItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.literal("Vous donne acc\u00E8s \u00E0 la commande /arrow qui vous donne 64 fl\u00E8ches"));
 	}
 }

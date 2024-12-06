@@ -32,7 +32,7 @@ public class CapitalModeModFluids {
 	public static final RegistryObject<FlowingFluid> FLOWING_IRIDFONDU = REGISTRY.register("flowing_iridfondu", () -> new IridfonduFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
+	public static class FluidsClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(CAPITALFONDU.get(), RenderType.translucent());

@@ -59,18 +59,8 @@ public class BatterieguiScreen extends AbstractContainerScreen<BatterieguiMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.batteriegui.label_energy_1_000_000_000_fe"), 78, 70, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

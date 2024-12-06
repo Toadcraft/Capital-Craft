@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "demond": {
+    "demond_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

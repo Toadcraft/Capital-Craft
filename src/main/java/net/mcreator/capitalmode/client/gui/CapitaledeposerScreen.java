@@ -66,21 +66,11 @@ public class CapitaledeposerScreen extends AbstractContainerScreen<Capitaledepos
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitaledeposer.label_le_spawn_est_actuellement_niveau"), 42, 138, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitaledeposer.label_il_y_a_varargent_spawneu_dans"), 42, 156, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitaledeposer.label_vous_avez_varargenteu"), 42, 174, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitaledeposer.label_vous_voulez_deposer"), 195, 210, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

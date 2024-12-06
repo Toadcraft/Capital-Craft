@@ -120,7 +120,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.SPEED_SWORD.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.SPEED_SWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -240,7 +240,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTSPEEDSWORD.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTSPEEDSWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -360,7 +360,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.SPEEDPICKAXE.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.SPEEDPICKAXE.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -480,7 +480,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTSPEEDPICKAXE.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTSPEEDPICKAXE.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -600,7 +600,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALHAMMER.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALHAMMER.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -720,7 +720,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALT_HAMMER.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALT_HAMMER.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -840,7 +840,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALWAND.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALWAND.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -960,7 +960,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.BIGSWORD.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.BIGSWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1080,7 +1080,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTBIGWORD.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTBIGWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1200,7 +1200,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITAL_FAUX.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITAL_FAUX.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1320,7 +1320,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBGDAGUE.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBGDAGUE.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1440,7 +1440,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALDAGUE.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALDAGUE.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1560,7 +1560,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.PERFECT_COAL.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.PERFECT_COAL.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1680,7 +1680,7 @@ public class CapmachineproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.IRIDIUMSPEEDSWORD.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.IRIDIUMSPEEDSWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);

@@ -16,7 +16,7 @@ public class GivearrowProcedure {
 			return;
 		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_02 == 1) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Items.ARROW);
+				ItemStack _setstack = new ItemStack(Items.ARROW).copy();
 				_setstack.setCount(64);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

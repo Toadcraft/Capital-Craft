@@ -67,18 +67,8 @@ public class ATMretireScreen extends AbstractContainerScreen<ATMretireMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.at_mretire.label_vous_voulez_retirer"), 6, 43, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

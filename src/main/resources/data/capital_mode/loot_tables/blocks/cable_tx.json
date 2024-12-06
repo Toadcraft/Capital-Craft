@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "capital_mode:blocks/cable_tx",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "capital_mode:cable"
+        }
+      ]
+    }
+  ]
+}

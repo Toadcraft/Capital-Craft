@@ -35,7 +35,7 @@ public class TpendProcedure {
 				return _retval.get();
 			}
 		}.getEnergyStored(world, BlockPos.containing(x, y, z)) >= 10000
-				&& ((entity.level().dimension()) == Level.OVERWORLD || (entity.level().dimension()) == Level.NETHER || (entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("capital_mode:demonworld"))))) {
+				&& ((entity.level().dimension()) == Level.OVERWORLD || (entity.level().dimension()) == Level.NETHER || (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("capital_mode:demonworld")))) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				int _amount = 10000;

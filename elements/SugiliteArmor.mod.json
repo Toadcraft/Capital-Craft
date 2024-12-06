@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,9 +10,11 @@
     "textureLeggings": "sugilite_leggings",
     "enableBoots": true,
     "textureBoots": "sugilite_boots",
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "armorTextureFile": "sugilite",
     "helmetName": "Iridium Helmet",
     "bodyName": "Iridium Chestplate",

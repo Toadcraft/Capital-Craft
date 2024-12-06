@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.capitalmode.world.inventory.CableguiMenu;
 
@@ -72,14 +73,16 @@ public class CableguiScreen extends AbstractContainerScreen<CableguiMenu> {
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_cable"), 72, 14, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_energy_fe"), 112, 4, -12829636, false);
+	public void resize(Minecraft minecraft, int width, int height) {
+		String Quantite_energie_cable_sortieValue = Quantite_energie_cable_sortie.getValue();
+		super.resize(minecraft, width, height);
+		Quantite_energie_cable_sortie.setValue(Quantite_energie_cable_sortieValue);
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
+	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_cable"), 72, 14, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_energy_fe"), 112, 4, -12829636, false);
 	}
 
 	@Override

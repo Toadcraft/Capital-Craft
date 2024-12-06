@@ -23,7 +23,7 @@
       "item": "minecraft:smoker"
     },
     "f": {
-      "tag": "minecraft:coals"
+      "item": "minecraft:air"
     }
   },
   "result": {

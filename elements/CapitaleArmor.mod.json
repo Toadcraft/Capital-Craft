@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,9 +10,11 @@
     "textureLeggings": "capitale_leggings",
     "enableBoots": true,
     "textureBoots": "capitale_boots",
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "armorTextureFile": "layer_2.png",
     "helmetName": "Capital Helmet",
     "bodyName": "Capital Chestplate",

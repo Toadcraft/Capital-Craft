@@ -64,20 +64,10 @@ public class CapitaleguiScreen extends AbstractContainerScreen<CapitaleguiMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalegui.label_le_spawn_est_actuellement_niveau"), 141, 147, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalegui.label_il_y_a_varargent_spawneu_dans"), 159, 165, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.capitalegui.label_vous_avez_varargenteu"), 204, 183, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

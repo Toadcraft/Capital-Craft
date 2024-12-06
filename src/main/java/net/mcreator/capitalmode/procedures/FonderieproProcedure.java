@@ -120,7 +120,7 @@ public class FonderieproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALFONDU_BUCKET.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.CAPITALFONDU_BUCKET.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -240,7 +240,7 @@ public class FonderieproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTFONDU_BUCKET.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.COBALTFONDU_BUCKET.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -360,7 +360,7 @@ public class FonderieproProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 3;
-					final ItemStack _setstack = new ItemStack(CapitalModeModItems.IRIDFONDU_BUCKET.get());
+					final ItemStack _setstack = new ItemStack(CapitalModeModItems.IRIDFONDU_BUCKET.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);

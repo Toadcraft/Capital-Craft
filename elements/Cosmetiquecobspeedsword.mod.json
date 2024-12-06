@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -14,18 +14,20 @@
         "Cosmétique commun"
       ]
     },
-    "creativeTab": {
-      "value": "CUSTOM:CapitalMod"
-    },
-    "harvestLevel": 4,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:CapitalMod"
+      }
+    ],
     "efficiency": 9.5,
     "attackSpeed": 100.0,
     "enchantability": 16,
     "damageVsEntity": 7.0,
     "usageCount": 2100,
-    "blocksAffected": [],
     "repairItems": [],
     "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": true,
     "damageOnCrafting": false
   }

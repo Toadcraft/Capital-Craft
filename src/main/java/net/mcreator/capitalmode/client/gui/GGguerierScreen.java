@@ -69,20 +69,10 @@ public class GGguerierScreen extends AbstractContainerScreen<GGguerierMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.g_gguerier.label_vous_etes_passez_level_varlvl"), 15, 43, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.g_gguerier.label_recompense"), 35, 64, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.g_gguerier.label_xvarlvl_guerrier"), 114, 65, -12829636, false);
-	}
-
-	@Override
-	public void onClose() {
-		super.onClose();
 	}
 
 	@Override

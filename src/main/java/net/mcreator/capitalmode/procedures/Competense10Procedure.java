@@ -34,7 +34,7 @@ public class Competense10Procedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("VOUS AVEZ OBTENUE \"KABOOM!\""), false);
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CapitalModeModItems.PETITSSOINS.get());
+				ItemStack _setstack = new ItemStack(CapitalModeModItems.PETITSSOINS.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

@@ -92,7 +92,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_PORKCHOP);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_PORKCHOP).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -142,7 +142,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_BEEF);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -192,7 +192,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_CHICKEN);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_CHICKEN).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -242,7 +242,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.BAKED_POTATO);
+						final ItemStack _setstack = new ItemStack(Items.BAKED_POTATO).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -292,7 +292,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_COD);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_COD).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -342,7 +342,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_SALMON);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_SALMON).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -392,7 +392,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_RABBIT);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_RABBIT).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -442,7 +442,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COOKED_MUTTON);
+						final ItemStack _setstack = new ItemStack(Items.COOKED_MUTTON).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -492,7 +492,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.DRIED_KELP);
+						final ItemStack _setstack = new ItemStack(Items.DRIED_KELP).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -542,7 +542,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_INGOT);
+						final ItemStack _setstack = new ItemStack(Items.IRON_INGOT).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -592,7 +592,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_INGOT);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_INGOT).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -642,7 +642,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.GLASS);
+						final ItemStack _setstack = new ItemStack(Blocks.GLASS).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -692,7 +692,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.STONE);
+						final ItemStack _setstack = new ItemStack(Blocks.STONE).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -742,7 +742,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.BRICK);
+						final ItemStack _setstack = new ItemStack(Items.BRICK).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -792,7 +792,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.NETHER_BRICKS);
+						final ItemStack _setstack = new ItemStack(Blocks.NETHER_BRICKS).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -842,7 +842,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -892,7 +892,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.CRACKED_STONE_BRICKS);
+						final ItemStack _setstack = new ItemStack(Blocks.CRACKED_STONE_BRICKS).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -942,7 +942,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.WHITE_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.WHITE_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -992,7 +992,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.ORANGE_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.ORANGE_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1042,7 +1042,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.MAGENTA_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.MAGENTA_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1092,7 +1092,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1142,7 +1142,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.YELLOW_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.YELLOW_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1192,7 +1192,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.LIME_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.LIME_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1242,7 +1242,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.PINK_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.PINK_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1292,7 +1292,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.GRAY_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.GRAY_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1342,7 +1342,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1392,7 +1392,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.CYAN_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.CYAN_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1442,7 +1442,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.PURPLE_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.PURPLE_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1492,7 +1492,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.BLUE_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.BLUE_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1542,7 +1542,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.BROWN_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.BROWN_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1592,7 +1592,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.GREEN_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.GREEN_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1642,7 +1642,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.RED_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.RED_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1692,7 +1692,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.BLACK_GLAZED_TERRACOTTA);
+						final ItemStack _setstack = new ItemStack(Blocks.BLACK_GLAZED_TERRACOTTA).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1742,7 +1742,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.DIAMOND);
+						final ItemStack _setstack = new ItemStack(Items.DIAMOND).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1792,7 +1792,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.LAPIS_LAZULI);
+						final ItemStack _setstack = new ItemStack(Items.LAPIS_LAZULI).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1842,7 +1842,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.REDSTONE);
+						final ItemStack _setstack = new ItemStack(Items.REDSTONE).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1892,7 +1892,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.COAL);
+						final ItemStack _setstack = new ItemStack(Items.COAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1942,7 +1942,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.EMERALD);
+						final ItemStack _setstack = new ItemStack(Items.EMERALD).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -1992,7 +1992,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.QUARTZ);
+						final ItemStack _setstack = new ItemStack(Items.QUARTZ).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2042,7 +2042,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2092,7 +2092,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2142,7 +2142,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2192,7 +2192,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2242,7 +2242,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2292,7 +2292,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2342,7 +2342,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2392,7 +2392,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2442,7 +2442,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2492,7 +2492,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2542,7 +2542,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2592,7 +2592,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2642,7 +2642,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2692,7 +2692,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.IRON_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2742,7 +2742,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2792,7 +2792,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2842,7 +2842,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2892,7 +2892,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2942,7 +2942,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -2992,7 +2992,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3042,7 +3042,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3092,7 +3092,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3142,7 +3142,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3192,7 +3192,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET);
+						final ItemStack _setstack = new ItemStack(Items.GOLD_NUGGET).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3242,7 +3242,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.GREEN_DYE);
+						final ItemStack _setstack = new ItemStack(Items.GREEN_DYE).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3292,7 +3292,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Blocks.SPONGE);
+						final ItemStack _setstack = new ItemStack(Blocks.SPONGE).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3342,7 +3342,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.POPPED_CHORUS_FRUIT);
+						final ItemStack _setstack = new ItemStack(Items.POPPED_CHORUS_FRUIT).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3392,7 +3392,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.LIME_DYE);
+						final ItemStack _setstack = new ItemStack(Items.LIME_DYE).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3442,7 +3442,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3492,7 +3492,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3542,7 +3542,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3592,7 +3592,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3642,7 +3642,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3692,7 +3692,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3742,7 +3742,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3792,7 +3792,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3842,7 +3842,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3892,7 +3892,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3942,7 +3942,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -3992,7 +3992,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -4042,7 +4042,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -4092,7 +4092,7 @@ public class ElecfurnaceproProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 1;
-						final ItemStack _setstack = new ItemStack(Items.CHARCOAL);
+						final ItemStack _setstack = new ItemStack(Items.CHARCOAL).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);

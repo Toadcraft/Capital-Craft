@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "capitalachievement": {
+    "capitalachievement_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
