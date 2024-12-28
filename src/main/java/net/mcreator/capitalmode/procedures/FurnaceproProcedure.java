@@ -27,6 +27,10 @@ public class FurnaceproProcedure {
 			}
 			if (entity instanceof Player _player)
 				_player.giveExperiencePoints(-(10));
+			if (entity instanceof Player _player) {
+				ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+			}
 		}
 	}
 }
