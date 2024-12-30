@@ -24,6 +24,22 @@
           "x": 204,
           "y": 107
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_energie_gui",
+          "text": {
+            "fixedValue": "",
+            "name": "EnergieGUI"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 107
+        }
       }
     ],
     "gridSettings": {

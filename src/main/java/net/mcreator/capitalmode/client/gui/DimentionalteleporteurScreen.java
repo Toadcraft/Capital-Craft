@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.capitalmode.world.inventory.DimentionalteleporteurMenu;
+import net.mcreator.capitalmode.procedures.EnergieGUIProcedure;
 import net.mcreator.capitalmode.network.DimentionalteleporteurButtonMessage;
 import net.mcreator.capitalmode.CapitalModeMod;
 
@@ -67,6 +68,9 @@ public class DimentionalteleporteurScreen extends AbstractContainerScreen<Diment
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font,
+
+				EnergieGUIProcedure.execute(world, x, y, z), 6, 7, -12829636, false);
 	}
 
 	@Override

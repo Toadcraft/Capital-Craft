@@ -53,14 +53,15 @@
         "data": {
           "name": "label_energy_fe",
           "text": {
-            "fixedValue": "<energy> FE"
+            "fixedValue": "<energy> FE",
+            "name": "EnergieGUI"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 238,
-          "y": 51
+          "x": 132,
+          "y": 53
         }
       }
     ],
@@ -69,7 +70,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

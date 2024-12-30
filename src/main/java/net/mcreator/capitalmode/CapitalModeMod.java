@@ -19,7 +19,6 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.capitalmode.init.CapitalModeModTabs;
 import net.mcreator.capitalmode.init.CapitalModeModSounds;
-import net.mcreator.capitalmode.init.CapitalModeModPotions;
 import net.mcreator.capitalmode.init.CapitalModeModMenus;
 import net.mcreator.capitalmode.init.CapitalModeModItems;
 import net.mcreator.capitalmode.init.CapitalModeModFluids;
@@ -54,8 +53,6 @@ public class CapitalModeMod {
 		CapitalModeModEntities.REGISTRY.register(bus);
 
 		CapitalModeModTabs.REGISTRY.register(bus);
-
-		CapitalModeModPotions.REGISTRY.register(bus);
 
 		CapitalModeModMenus.REGISTRY.register(bus);
 		CapitalModeModFluids.REGISTRY.register(bus);

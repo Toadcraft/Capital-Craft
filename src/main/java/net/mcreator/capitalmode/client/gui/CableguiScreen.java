@@ -12,6 +12,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.capitalmode.world.inventory.CableguiMenu;
+import net.mcreator.capitalmode.procedures.EnergieGUIProcedure;
 
 import java.util.HashMap;
 
@@ -82,7 +83,9 @@ public class CableguiScreen extends AbstractContainerScreen<CableguiMenu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_cable"), 72, 14, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.cablegui.label_energy_fe"), 112, 4, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				EnergieGUIProcedure.execute(world, x, y, z), 6, 6, -12829636, false);
 	}
 
 	@Override

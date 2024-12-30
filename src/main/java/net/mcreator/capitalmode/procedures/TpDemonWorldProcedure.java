@@ -59,9 +59,9 @@ public class TpDemonWorldProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 254));
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(0, 120, 0);
+				_ent.teleportTo(0, 80, 0);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(0, 120, 0, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(0, 80, 0, _ent.getYRot(), _ent.getXRot());
 			}
 		}
 	}

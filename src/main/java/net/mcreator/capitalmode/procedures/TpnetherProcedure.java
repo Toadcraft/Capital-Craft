@@ -60,9 +60,9 @@ public class TpnetherProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 254));
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(0, 100, 0);
+				_ent.teleportTo(0, 70, 0);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(0, 100, 0, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(0, 70, 0, _ent.getYRot(), _ent.getXRot());
 			}
 		}
 	}

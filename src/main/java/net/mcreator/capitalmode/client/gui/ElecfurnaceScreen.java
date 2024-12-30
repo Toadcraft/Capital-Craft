@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.capitalmode.world.inventory.ElecfurnaceMenu;
+import net.mcreator.capitalmode.procedures.EnergieGUIProcedure;
 
 import java.util.HashMap;
 
@@ -83,6 +84,9 @@ public class ElecfurnaceScreen extends AbstractContainerScreen<ElecfurnaceMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font,
+
+				EnergieGUIProcedure.execute(world, x, y, z), 6, 7, -12829636, false);
 	}
 
 	@Override

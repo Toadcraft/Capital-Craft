@@ -8557,17 +8557,6 @@
       "path": "~/Items"
     },
     {
-      "name": "Jusdopale",
-      "type": "potion",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jusdopale",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "DimensionalmachineMiseAJourDuTick",
       "type": "procedure",
       "compiles": true,
@@ -9082,6 +9071,37 @@
         ]
       },
       "path": "~/Machine/Item"
+    },
+    {
+      "name": "Electricfurnaceprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricfurnaceprocedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/ElectricfurnaceprocedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machine/Procedures"
     }
   ],
   "variable_elements": [
@@ -9412,12 +9432,12 @@
       "item.capital_mode.coeur_8_spawn_egg": "Coeur 8 Spawn Egg",
       "item.capital_mode.bourredefleches": "Bourré de flèches",
       "item.capital_mode.rubi_axe": "Cobalt Axe",
-      "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
       "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
+      "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
       "advancements.ingenieur.title": "Ingénieur",
       "item.capital_mode.capital_outils_pickaxe": "Capital Pickaxe",
-      "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
       "item.capital_mode.cobgdague": "Cobalt dague",
+      "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
       "item.capital_mode.ameliorastone": "Améliorastone",
       "block.capital_mode.atm": "ATM",
       "block.capital_mode.cable_x": "Cable",
@@ -9459,7 +9479,6 @@
       "gui.capital_mode.capitaledeposer.button_1000eu": "1000€",
       "item.capital_mode.sugilite_sword": "Iridium Sword",
       "advancements.puissant.title": "Puissance",
-      "item.minecraft.lingering_potion.effect.jusdopale": "Lingering Jus d\u0027Opale",
       "block.capital_mode.mineralyser": "Mineralyser",
       "item.capital_mode.coeur_6_spawn_egg": "Coeur 6 Spawn Egg",
       "gui.capital_mode.jobs_gui.button_paysan": "PAYSAN",
@@ -9600,7 +9619,6 @@
       "item.capital_mode.rubi_armor_helmet": "Cobalt Helmet",
       "item.capital_mode.sugilite_axe": "Iridium Axe",
       "item.capital_mode.sugilite_armor_helmet": "Iridium Helmet",
-      "item.minecraft.tipped_arrow.effect.jusdopale": "Arrow of Jus d\u0027Opale",
       "gui.capital_mode.elecfurnace.label_energy": "\u003cenergy\u003e",
       "gui.capital_mode.competenses_2.label_vous_avez_varskills_points_po": "Vous avez \u003cVAR:skills_points\u003e points",
       "gui.capital_mode.at_mdepose.button_retour": "Retour",
@@ -9695,7 +9713,6 @@
       "gui.capital_mode.cablegui.label_cable": "Cable",
       "item.capital_mode.bandage": "Bandage",
       "item.capital_mode.travel_chestplate": "Plastron Travel",
-      "item.minecraft.splash_potion.effect.jusdopale": "Splash Jus d\u0027Opale",
       "block.capital_mode.dimensionalmachine": "Dimensional machine",
       "item.capital_mode.capital_rank": "Capital rank",
       "item.capital_mode.speedstone": "Speedstone",
@@ -9741,7 +9758,6 @@
       "block.capital_mode.cable_ltc": "Cable",
       "item.capital_mode.coeur_5_spawn_egg": "Coeur 5 Spawn Egg",
       "item.capital_mode.super_cobalt_old_sword": "Cobalt Old sword 64x64",
-      "item.minecraft.potion.effect.jusdopale": "Jus d\u0027Opale",
       "item.capital_mode.batoniriduim": "Iridium stick",
       "item.capital_mode.capital": "Capital ingot",
       "block.capital_mode.duramachine": "Duramachine"
@@ -9751,12 +9767,12 @@
       "item.capital_mode.coeur_8_spawn_egg": "Coeur 7 Spawn Egg",
       "item.capital_mode.bourredefleches": "Bourré de flèches",
       "item.capital_mode.rubi_axe": "Cobalt Axe",
-      "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
       "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
+      "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
       "advancements.ingenieur.title": "Ingénieur",
       "item.capital_mode.capital_outils_pickaxe": "Capital Pickaxe",
-      "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
       "item.capital_mode.cobgdague": "Cobalt dague",
+      "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
       "item.capital_mode.ameliorastone": "Améliorastone",
       "block.capital_mode.atm": "ATM",
       "block.capital_mode.cable_x": "Cable",
@@ -9798,7 +9814,6 @@
       "gui.capital_mode.capitaledeposer.button_1000eu": "1000€",
       "item.capital_mode.sugilite_sword": "Iridium Sword",
       "advancements.puissant.title": "Puissance",
-      "item.minecraft.lingering_potion.effect.jusdopale": "Lingering Jus d\u0027Opale",
       "block.capital_mode.mineralyser": "Mineralyser",
       "item.capital_mode.coeur_6_spawn_egg": "Coeur 5 Spawn Egg",
       "gui.capital_mode.jobs_gui.button_paysan": "PAYSAN",
@@ -9941,7 +9956,6 @@
       "item.capital_mode.rubi_armor_helmet": "Cobalt Helmet",
       "item.capital_mode.sugilite_axe": "Iridium Axe",
       "item.capital_mode.sugilite_armor_helmet": "Iridium Helmet",
-      "item.minecraft.tipped_arrow.effect.jusdopale": "Arrow of Jus d\u0027Opale",
       "gui.capital_mode.elecfurnace.label_energy": "\u003cenergy\u003e",
       "gui.capital_mode.competenses_2.label_vous_avez_varskills_points_po": "Vous avez \u003cVAR:skills_points\u003e points",
       "gui.capital_mode.at_mdepose.button_retour": "Retour",
@@ -10036,7 +10050,6 @@
       "gui.capital_mode.cablegui.label_cable": "Cable",
       "item.capital_mode.bandage": "Bandage",
       "item.capital_mode.travel_chestplate": "Plastron de Travel",
-      "item.minecraft.splash_potion.effect.jusdopale": "Splash Jus d\u0027Opale",
       "block.capital_mode.dimensionalmachine": "Dimensional machine",
       "item.capital_mode.capital_rank": "Capital rank",
       "item.capital_mode.speedstone": "Speedstone",
@@ -10082,7 +10095,6 @@
       "block.capital_mode.cable_ltc": "Cable",
       "item.capital_mode.coeur_5_spawn_egg": "Coeur 4 Spawn Egg",
       "item.capital_mode.super_cobalt_old_sword": "Cobalt Old sword 64x64",
-      "item.minecraft.potion.effect.jusdopale": "Jus d\u0027Opale",
       "item.capital_mode.batoniriduim": "Iridium stick",
       "item.capital_mode.capital": "Capital ingot",
       "block.capital_mode.duramachine": "Duramachine"

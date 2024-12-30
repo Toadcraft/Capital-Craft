@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.capitalmode.world.inventory.BatterieguiMenu;
+import net.mcreator.capitalmode.procedures.EnergieGUIProcedure;
 
 import java.util.HashMap;
 
@@ -61,6 +62,9 @@ public class BatterieguiScreen extends AbstractContainerScreen<BatterieguiMenu> 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.batteriegui.label_energy_1_000_000_000_fe"), 78, 70, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				EnergieGUIProcedure.execute(world, x, y, z), 24, 70, -12829636, false);
 	}
 
 	@Override

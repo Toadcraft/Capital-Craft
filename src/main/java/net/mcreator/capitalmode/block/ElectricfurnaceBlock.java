@@ -28,7 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.capitalmode.world.inventory.ElecfurnaceMenu;
-import net.mcreator.capitalmode.procedures.ElecfurnaceproProcedure;
+import net.mcreator.capitalmode.procedures.ElectricfurnaceprocedureProcedure;
 import net.mcreator.capitalmode.block.entity.ElectricfurnaceBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -55,7 +55,7 @@ public class ElectricfurnaceBlock extends Block implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		ElecfurnaceproProcedure.execute(world, x, y, z);
+		ElectricfurnaceprocedureProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 1);
 	}
 
