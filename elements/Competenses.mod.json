@@ -213,6 +213,22 @@
           "x": 339,
           "y": 188
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_variableskills",
+          "text": {
+            "fixedValue": "",
+            "name": "Variableskills"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 26
+        }
       }
     ],
     "onTick": {

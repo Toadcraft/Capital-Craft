@@ -8,10 +8,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.capitalmode.init.CapitalModeModItems;
+import net.mcreator.capitalmode.init.CapitalModeModBlocks;
 
 public class CapitalplantQuandLeBlocEstAjouteProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FARMLAND) == false) {
+		if (((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == CapitalModeModBlocks.DOLOMITE_FARMLAND.get()) == false) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CapitalModeModItems.CAPITALSEED.get()));

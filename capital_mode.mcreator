@@ -1881,24 +1881,7 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/procedures/FonderieproProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Machine/Procedures"
     },
@@ -3399,7 +3382,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "CompetensesPendantQueCeGUIEstOuvertParTick",
@@ -3418,7 +3401,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competenses",
@@ -3434,7 +3417,7 @@
           "src/main/java/net/mcreator/capitalmode/client/gui/CompetensesScreen.java"
         ]
       },
-      "path": "~/Competances/GUI"
+      "path": "~/Competences/GUI"
     },
     {
       "name": "OpenSkills",
@@ -3469,7 +3452,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Skills",
@@ -3482,7 +3465,7 @@
           "src/main/java/net/mcreator/capitalmode/command/SkillsCommand.java"
         ]
       },
-      "path": "~/Competances/Commandes"
+      "path": "~/Competences/Commandes"
     },
     {
       "name": "Pluspoints",
@@ -3501,7 +3484,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense02",
@@ -3520,7 +3503,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Givearrow",
@@ -3539,7 +3522,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense03",
@@ -3558,7 +3541,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Arrow",
@@ -3571,7 +3554,7 @@
           "src/main/java/net/mcreator/capitalmode/command/ArrowCommand.java"
         ]
       },
-      "path": "~/Competances/Commandes"
+      "path": "~/Competences/Commandes"
     },
     {
       "name": "Competense04",
@@ -3590,7 +3573,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense05",
@@ -3609,7 +3592,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense06",
@@ -3628,7 +3611,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense07",
@@ -3647,7 +3630,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Grandcoeur",
@@ -3661,7 +3644,7 @@
           "src/main/resources/assets/capital_mode/models/item/grandcoeur.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Fandecapital",
@@ -3678,7 +3661,7 @@
           "src/main/resources/assets/capital_mode/models/item/fandecapital.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Bourredefleches",
@@ -3692,7 +3675,7 @@
           "src/main/resources/assets/capital_mode/models/item/bourredefleches.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Hyperactif1",
@@ -3706,7 +3689,7 @@
           "src/main/java/net/mcreator/capitalmode/item/Hyperactif1Item.java"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Hyperactif2",
@@ -3720,7 +3703,7 @@
           "src/main/resources/assets/capital_mode/models/item/hyperactif_2.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Hyperactif3",
@@ -3734,7 +3717,7 @@
           "src/main/resources/assets/capital_mode/models/item/hyperactif_3.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Yeuxdechat",
@@ -3748,7 +3731,7 @@
           "src/main/resources/assets/capital_mode/models/item/yeuxdechat.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Grandcoeur2",
@@ -3762,7 +3745,7 @@
           "src/main/java/net/mcreator/capitalmode/item/Grandcoeur2Item.java"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Competense08",
@@ -3781,7 +3764,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense09",
@@ -3800,7 +3783,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Grandcoeur3",
@@ -3814,7 +3797,7 @@
           "src/main/resources/assets/capital_mode/models/item/grandcoeur_3.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Petitssoins",
@@ -3828,7 +3811,7 @@
           "src/main/resources/assets/capital_mode/models/item/petitssoins.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Quandlejoueurspawn",
@@ -3847,7 +3830,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense10",
@@ -3866,7 +3849,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Boompro",
@@ -3905,7 +3888,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Competense11",
@@ -3924,7 +3907,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Chutelibre",
@@ -3938,7 +3921,7 @@
           "src/main/resources/assets/capital_mode/models/item/chutelibre.json"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Capitalseed",
@@ -4704,7 +4687,7 @@
           "src/main/java/net/mcreator/capitalmode/command/SkilladdCommand.java"
         ]
       },
-      "path": "~/Competances/Commandes"
+      "path": "~/Competences/Commandes"
     },
     {
       "name": "Competense12",
@@ -4723,7 +4706,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Opencomp1",
@@ -4758,7 +4741,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Opencomp2",
@@ -4793,7 +4776,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Puissancedemoniaque",
@@ -4807,7 +4790,7 @@
           "src/main/java/net/mcreator/capitalmode/item/PuissancedemoniaqueItem.java"
         ]
       },
-      "path": "~/Competances/Items"
+      "path": "~/Competences/Items"
     },
     {
       "name": "Dynamopro",
@@ -8864,7 +8847,7 @@
           }
         ]
       },
-      "path": "~/Competances/Procedures"
+      "path": "~/Competences/Procedures"
     },
     {
       "name": "Xpmineur",
@@ -9094,6 +9077,52 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machine/Procedures"
+    },
+    {
+      "name": "BionicswordToolInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bionicsword_tool_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/BionicswordToolInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Machine/Procedures"
+    },
+    {
+      "name": "BionicswordToolInInventoryTick2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bionicsword_tool_in_inventory_tick_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/BionicswordToolInInventoryTick2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "world",
@@ -10183,7 +10212,7 @@
         "children": []
       },
       {
-        "name": "Competances",
+        "name": "Competences",
         "children": [
           {
             "name": "Commandes",

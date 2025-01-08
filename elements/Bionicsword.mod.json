@@ -20,7 +20,7 @@
     "efficiency": 9.5,
     "attackSpeed": 100.0,
     "enchantability": 16,
-    "damageVsEntity": 1.0,
+    "damageVsEntity": 6.0,
     "usageCount": 1000,
     "glowCondition": {
       "fixedValue": false
@@ -34,6 +34,12 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "BionicswordToolInInventoryTick2"
+    },
+    "onItemInUseTick": {
+      "name": "BionicswordToolInInventoryTick"
+    }
   }
 }

@@ -77,16 +77,16 @@ public class CapmachineMenu extends AbstractContainerMenu implements Supplier<Ma
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 53) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 62) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 17) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 26) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 35) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 44) {
 			private final int slot = 2;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 124, 35) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 124, 44) {
 			private final int slot = 3;
 
 			@Override

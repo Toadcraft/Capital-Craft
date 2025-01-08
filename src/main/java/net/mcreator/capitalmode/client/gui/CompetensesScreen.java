@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.capitalmode.world.inventory.CompetensesMenu;
+import net.mcreator.capitalmode.procedures.VariableskillsProcedure;
 import net.mcreator.capitalmode.network.CompetensesButtonMessage;
 import net.mcreator.capitalmode.CapitalModeMod;
 
@@ -68,6 +69,9 @@ public class CompetensesScreen extends AbstractContainerScreen<CompetensesMenu> 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.competenses.label_page_1"), 331, 6, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				VariableskillsProcedure.execute(entity), 7, 6, -12829636, false);
 	}
 
 	@Override
