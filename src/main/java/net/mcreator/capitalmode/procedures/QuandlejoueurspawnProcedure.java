@@ -1,10 +1,10 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -18,7 +18,7 @@ import net.mcreator.capitalmode.init.CapitalModeModItems;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class QuandlejoueurspawnProcedure {
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
@@ -32,25 +32,25 @@ public class QuandlejoueurspawnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_07 == 1) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skill_07 == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 999999, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 2));
 		}
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_08 == 1) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skill_08 == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 999999, 2));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 2));
 		}
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_09 == 1) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skill_09 == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 999999, 4));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 2));
 		}
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_10 == 1) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skill_10 == 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(CapitalModeModItems.PETITSSOINS.get()).copy();
 				_setstack.setCount(1);

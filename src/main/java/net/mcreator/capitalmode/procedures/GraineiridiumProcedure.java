@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.capitalmode.init.CapitalModeModItems;
@@ -19,17 +20,7 @@ public class GraineiridiumProcedure {
 			return;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))) == CapitalModeModBlocks.DOLOMITE_FARMLAND.get().defaultBlockState() && ((world.getBlockState(BlockPos.containing(x, y + 1, z))) == Blocks.AIR.defaultBlockState()
 				|| (world.getBlockState(BlockPos.containing(x, y + 1, z))) == Blocks.VOID_AIR.defaultBlockState() || (world.getBlockState(BlockPos.containing(x, y + 1, z))) == Blocks.CAVE_AIR.defaultBlockState())) {
-			if (new Object() {
-				public boolean checkGamemode(Entity _ent) {
-					if (_ent instanceof ServerPlayer _serverPlayer) {
-						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-					}
-					return false;
-				}
-			}.checkGamemode(entity)) {
+			if (getEntityGameType(entity) == GameType.CREATIVE) {
 				world.setBlock(BlockPos.containing(x, y + 1, z), CapitalModeModBlocks.IRIDIUMPLANT.get().defaultBlockState(), 3);
 			} else {
 				if (entity instanceof Player _player) {
@@ -39,5 +30,16 @@ public class GraineiridiumProcedure {
 				world.setBlock(BlockPos.containing(x, y + 1, z), CapitalModeModBlocks.IRIDIUMPLANT.get().defaultBlockState(), 3);
 			}
 		}
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

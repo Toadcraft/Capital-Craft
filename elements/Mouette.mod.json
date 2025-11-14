@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "livingentity",
   "definition": {
     "mobName": "Mouette",
@@ -7,6 +7,7 @@
     "mobModelName": "ModelmouetteV4",
     "mobModelTexture": "mouette.png",
     "modelLayers": [],
+    "animations": [],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -63,7 +64,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,
@@ -135,6 +135,8 @@
       4,
       4,
       2
-    ]
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": []
   }
 }

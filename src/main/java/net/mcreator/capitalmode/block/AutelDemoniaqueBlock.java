@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -7,18 +6,17 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.BlockPos;
 
 public class AutelDemoniaqueBlock extends Block {
-	public AutelDemoniaqueBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.STONE).strength(1f, 15f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public AutelDemoniaqueBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 15f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.item;
 
 import net.minecraft.world.item.Rarity;
@@ -9,7 +8,7 @@ import net.minecraft.world.item.BucketItem;
 import net.mcreator.capitalmode.init.CapitalModeModFluids;
 
 public class IridfonduItem extends BucketItem {
-	public IridfonduItem() {
-		super(CapitalModeModFluids.IRIDFONDU, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.UNCOMMON));
+	public IridfonduItem(Item.Properties properties) {
+		super(CapitalModeModFluids.IRIDFONDU.get(), properties.craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.UNCOMMON));
 	}
 }

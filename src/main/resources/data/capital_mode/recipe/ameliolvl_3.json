@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:diamond_block",
+    "b": "capital_mode:ameliorateurlvl_2"
+  },
+  "result": {
+    "id": "capital_mode:ameliorateurlvl_3",
+    "count": 1
+  }
+}

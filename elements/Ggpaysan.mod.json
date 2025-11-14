@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 114,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 134,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "falpha": 0.0
           },
           "x": 215,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
           "image": "gg.png",
           "use1Xscale": true,
           "x": 98,
-          "y": 55
+          "y": 55,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
           "image": "capital_ingot.png",
           "use1Xscale": false,
           "x": 198,
-          "y": 115
+          "y": 115,
+          "locked": false
         }
       }
     ],

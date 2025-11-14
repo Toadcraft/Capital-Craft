@@ -1,46 +1,24 @@
-
 package net.mcreator.capitalmode.item;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.capitalmode.procedures.CapitalhammerBlockDestroyedWithToolProcedure;
-import net.mcreator.capitalmode.init.CapitalModeModItems;
 
-public class CapitalhammerItem extends PickaxeItem {
-	public CapitalhammerItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 3000;
-			}
+public class CapitalhammerItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3000, 15f, 0, 20, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:capitalhammer_repair_items")));
 
-			public float getSpeed() {
-				return 15f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 8f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 20;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.CAPITAL.get()));
-			}
-		}, 1, -3f, new Item.Properties());
+	public CapitalhammerItem(Item.Properties properties) {
+		super(properties.pickaxe(TOOL_MATERIAL, 9f, -3f));
 	}
 
 	@Override

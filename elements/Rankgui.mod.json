@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -22,7 +22,8 @@
             "name": "CoalRankUnlock"
           },
           "x": 42,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "name": "IronRankUnlock"
           },
           "x": 87,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "name": "GoldRankUnlock"
           },
           "x": 132,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -67,7 +70,8 @@
             "name": "DiamondRankUnlock"
           },
           "x": 177,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -82,7 +86,8 @@
             "name": "NetheriteRankUnlock"
           },
           "x": 222,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -97,7 +102,8 @@
             "name": "CobaltRankUnlock"
           },
           "x": 267,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -112,7 +118,8 @@
             "name": "CapitalRankUnlock"
           },
           "x": 312,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -127,7 +134,8 @@
             "name": "IridiumRankUnlock"
           },
           "x": 357,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       }
     ],

@@ -1,111 +1,91 @@
-
 package net.mcreator.capitalmode.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.capitalmode.world.inventory.RankguiMenu;
-import net.mcreator.capitalmode.procedures.NetheriteRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.IronRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.IridiumRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.GoldRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.DiamondRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.CobaltRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.CoalRankUnlockProcedure;
-import net.mcreator.capitalmode.procedures.CapitalRankUnlockProcedure;
+import net.mcreator.capitalmode.procedures.*;
 import net.mcreator.capitalmode.CapitalModeMod;
 
-import java.util.function.Supplier;
-import java.util.HashMap;
+@EventBusSubscriber
+public record RankguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class RankguiSlotMessage {
-	private final int slotID, x, y, z, changeType, meta;
-
-	public RankguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) {
-		this.slotID = slotID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		this.changeType = changeType;
-		this.meta = meta;
-	}
-
-	public RankguiSlotMessage(FriendlyByteBuf buffer) {
-		this.slotID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
-		this.changeType = buffer.readInt();
-		this.meta = buffer.readInt();
-	}
-
-	public static void buffer(RankguiSlotMessage message, FriendlyByteBuf buffer) {
+	public static final Type<RankguiSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(CapitalModeMod.MODID, "rankgui_slots"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, RankguiSlotMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, RankguiSlotMessage message) -> {
 		buffer.writeInt(message.slotID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 		buffer.writeInt(message.changeType);
 		buffer.writeInt(message.meta);
+	}, (RegistryFriendlyByteBuf buffer) -> new RankguiSlotMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	@Override
+	public Type<RankguiSlotMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(RankguiSlotMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int slotID = message.slotID;
-			int changeType = message.changeType;
-			int meta = message.meta;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleSlotAction(entity, slotID, changeType, meta, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final RankguiSlotMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> handleSlotAction(context.player(), message.slotID, message.changeType, message.meta, message.x, message.y, message.z)).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = RankguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (slot == 0 && changeType == 1) {
+			int amount = meta;
 
 			CoalRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 1 && changeType == 1) {
+			int amount = meta;
 
 			IronRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 2 && changeType == 1) {
+			int amount = meta;
 
 			GoldRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 3 && changeType == 1) {
+			int amount = meta;
 
 			DiamondRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 4 && changeType == 1) {
+			int amount = meta;
 
 			NetheriteRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 5 && changeType == 1) {
+			int amount = meta;
 
 			CobaltRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 6 && changeType == 1) {
+			int amount = meta;
 
 			CapitalRankUnlockProcedure.execute(entity);
 		}
 		if (slot == 7 && changeType == 1) {
+			int amount = meta;
 
 			IridiumRankUnlockProcedure.execute(entity);
 		}
@@ -113,6 +93,6 @@ public class RankguiSlotMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		CapitalModeMod.addNetworkMessage(RankguiSlotMessage.class, RankguiSlotMessage::buffer, RankguiSlotMessage::new, RankguiSlotMessage::handler);
+		CapitalModeMod.addNetworkMessage(RankguiSlotMessage.TYPE, RankguiSlotMessage.STREAM_CODEC, RankguiSlotMessage::handleData);
 	}
 }

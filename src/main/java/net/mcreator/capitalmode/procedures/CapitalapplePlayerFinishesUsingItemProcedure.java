@@ -10,7 +10,7 @@ public class CapitalapplePlayerFinishesUsingItemProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1000, 1));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 1000, 1));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 1000, 3));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

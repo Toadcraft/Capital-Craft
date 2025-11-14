@@ -8,6 +8,6 @@ public class VariableLVLmineurProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Vous \u00EAtes niveau " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_mineur);
+		return "Vous \u00EAtes niveau " + new java.text.DecimalFormat("##.##").format(entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_mineur);
 	}
 }

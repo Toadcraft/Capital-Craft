@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:iron_block",
+    "capital_mode:cinquannte_eu",
+    "minecraft:iron_block",
+    "capital_mode:cent_eu",
+    "minecraft:iron_block",
+    "capital_mode:milleeuro",
+    "capital_mode:dixeuro",
+    "capital_mode:cinqcen_eu",
+    "capital_mode:un_eu"
+  ],
+  "result": {
+    "id": "capital_mode:atm",
+    "count": 1
+  }
+}

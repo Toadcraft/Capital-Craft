@@ -1,6 +1,6 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -14,13 +14,11 @@ public class Donner1000eProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (1000 <= (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent) {
+		if (1000 <= entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent - 1000;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Argent = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.Argent = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent - 1000;
+				_vars.markSyncDirty();
 			}
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(CapitalModeModItems.MILLEEURO.get()).copy();

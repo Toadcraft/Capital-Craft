@@ -1,35 +1,34 @@
-
 package net.mcreator.capitalmode.item;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.capitalmode.procedures.BoomproProcedure;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class PetitssoinsItem extends Item {
-	public PetitssoinsItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public PetitssoinsItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Cr\u00E9e une explosion de niveau 4 ne cassent aucun blocs toutes les 15 minutes"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.capital_mode.petitssoins.description_0"));
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		BoomproProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		BoomproProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }

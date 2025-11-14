@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": "capital_mode:cobalt",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "capital_mode:rubi_pickaxe",
+    "count": 1
+  }
+}

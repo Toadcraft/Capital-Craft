@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "biome",
   "definition": {
     "name": "Blue Biome",
@@ -13,6 +13,10 @@
       "value": ""
     },
     "airColor": {
+      "value": -13382401,
+      "falpha": 0.0
+    },
+    "fogColor": {
       "value": -13382401,
       "falpha": 0.0
     },

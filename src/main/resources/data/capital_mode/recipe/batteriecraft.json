@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "minecraft:redstone",
+    "c": "minecraft:iron_block",
+    "d": "minecraft:redstone_torch"
+  },
+  "result": {
+    "id": "capital_mode:batterie",
+    "count": 1
+  }
+}

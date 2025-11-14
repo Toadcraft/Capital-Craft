@@ -1,14 +1,13 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
 package net.mcreator.capitalmode.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -18,10 +17,10 @@ import net.minecraft.core.registries.Registries;
 
 import net.mcreator.capitalmode.CapitalModeMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class CapitalModeModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CapitalModeMod.MODID);
-	public static final RegistryObject<CreativeModeTab> CAPITAL_MOD = REGISTRY.register("capital_mod",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CAPITAL_MOD = REGISTRY.register("capital_mod",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.capital_mode.capital_mod")).icon(() -> new ItemStack(CapitalModeModItems.CAPITAL.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CapitalModeModItems.CAPITAL.get());
 				tabData.accept(CapitalModeModBlocks.CAPITAL_ORE.get().asItem());
@@ -155,16 +154,12 @@ public class CapitalModeModTabs {
 				tabData.accept(CapitalModeModBlocks.LUMIERE.get().asItem());
 				tabData.accept(CapitalModeModItems.BIONICSWORD.get());
 				tabData.accept(CapitalModeModItems.BATTERIEEXTERNE.get());
-			})
-
-					.build());
+			}).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-
 			tabData.accept(CapitalModeModItems.MOUETTE_SPAWN_EGG.get());
-
 		}
 	}
 }

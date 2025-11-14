@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:capital"
+  },
+  "result": {
+    "id": "capital_mode:capitale_armor_chestplate",
+    "count": 1
+  }
+}

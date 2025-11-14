@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
           "width": 56,
           "height": 20,
           "x": 108,
-          "y": 147
+          "y": 147,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
           "width": 56,
           "height": 20,
           "x": 184,
-          "y": 147
+          "y": 147,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           "width": 67,
           "height": 20,
           "x": 256,
-          "y": 147
+          "y": 147,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
           "image": "jobs_texture.png",
           "use1Xscale": true,
           "x": 96,
-          "y": 54
+          "y": 54,
+          "locked": false
         }
       }
     ],

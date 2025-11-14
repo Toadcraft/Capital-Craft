@@ -1,40 +1,17 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 public class RubiShovelItem extends ShovelItem {
-	public RubiShovelItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2100;
-			}
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2100, 9.5f, 0, 16, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:rubi_shovel_repair_items")));
 
-			public float getSpeed() {
-				return 9.5f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 0f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 16;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.COBALT.get()));
-			}
-		}, 1, -3f, new Item.Properties());
+	public RubiShovelItem(Item.Properties properties) {
+		super(TOOL_MATERIAL, 1f, -3f, properties);
 	}
 }

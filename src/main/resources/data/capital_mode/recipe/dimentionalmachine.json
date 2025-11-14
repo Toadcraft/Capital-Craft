@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "eee"
+  ],
+  "key": {
+    "a": "minecraft:obsidian",
+    "b": "minecraft:ender_eye",
+    "c": "minecraft:end_crystal",
+    "d": "capital_mode:batterie",
+    "e": "capital_mode:capital"
+  },
+  "result": {
+    "id": "capital_mode:dimensionalmachine",
+    "count": 1
+  }
+}

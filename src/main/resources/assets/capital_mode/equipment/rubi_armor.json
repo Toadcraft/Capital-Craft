@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "capital_mode:rubi_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "capital_mode:rubi_armor"
+      }
+    ]
+  }
+}

@@ -1,40 +1,16 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+public class RubiPickaxeItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2100, 14f, 0, 16, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:rubi_pickaxe_repair_items")));
 
-public class RubiPickaxeItem extends PickaxeItem {
-	public RubiPickaxeItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2100;
-			}
-
-			public float getSpeed() {
-				return 14f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 1f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 16;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.COBALT.get()));
-			}
-		}, 1, -3f, new Item.Properties());
+	public RubiPickaxeItem(Item.Properties properties) {
+		super(properties.pickaxe(TOOL_MATERIAL, 2f, -3f));
 	}
 }

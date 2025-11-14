@@ -1,23 +1,21 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.network.chat.Component;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class Hyperactif3Item extends Item {
-	public Hyperactif3Item() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public Hyperactif3Item(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Vous donne l'effet haste 3"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.capital_mode.hyperactif_3.description_0"));
 	}
 }

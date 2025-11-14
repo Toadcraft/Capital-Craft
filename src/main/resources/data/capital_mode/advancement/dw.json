@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "capital_mode:rubi_armor_helmet"
+    },
+    "title": {
+      "translate": "advancements.dw.title"
+    },
+    "description": {
+      "translate": "advancements.dw.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dw_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "capital_mode:demonworld"
+      }
+    }
+  },
+  "parent": "capital_mode:demond"
+}

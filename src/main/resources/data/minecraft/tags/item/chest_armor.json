@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "capital_mode:invisiblearmor_chestplate",
+    "capital_mode:capitale_armor_chestplate",
+    "capital_mode:travel_chestplate",
+    "capital_mode:rubi_armor_chestplate",
+    "capital_mode:sugilite_armor_chestplate"
+  ]
+}

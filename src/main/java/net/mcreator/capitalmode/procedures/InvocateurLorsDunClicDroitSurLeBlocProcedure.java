@@ -4,9 +4,9 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
@@ -22,12 +22,12 @@ public class InvocateurLorsDunClicDroitSurLeBlocProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "time set night");
 		if (world instanceof ServerLevel _level) {
-			LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-			entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
+			LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level, EntitySpawnReason.TRIGGERED);
+			entityToSpawn.snapTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
 			_level.addFreshEntity(entityToSpawn);
 		}
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = CapitalModeModEntities.GARDIENDEMONIAQUE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = CapitalModeModEntities.GARDIENDEMONIAQUE.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 			}
 		}

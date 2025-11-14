@@ -1,67 +1,52 @@
-
 package net.mcreator.capitalmode.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.capitalmode.world.inventory.CapitaledeposerMenu;
 import net.mcreator.capitalmode.procedures.Depose1eProcedure;
 import net.mcreator.capitalmode.procedures.Depose10EUProcedure;
 import net.mcreator.capitalmode.procedures.Depose100EUProcedure;
 import net.mcreator.capitalmode.procedures.Depose1000EUProcedure;
 import net.mcreator.capitalmode.CapitalModeMod;
 
-import java.util.function.Supplier;
-import java.util.HashMap;
+@EventBusSubscriber
+public record CapitaledeposerButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class CapitaledeposerButtonMessage {
-	private final int buttonID, x, y, z;
-
-	public CapitaledeposerButtonMessage(FriendlyByteBuf buffer) {
-		this.buttonID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
-	}
-
-	public CapitaledeposerButtonMessage(int buttonID, int x, int y, int z) {
-		this.buttonID = buttonID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
-
-	public static void buffer(CapitaledeposerButtonMessage message, FriendlyByteBuf buffer) {
+	public static final Type<CapitaledeposerButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(CapitalModeMod.MODID, "capitaledeposer_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, CapitaledeposerButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, CapitaledeposerButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new CapitaledeposerButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	@Override
+	public Type<CapitaledeposerButtonMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(CapitaledeposerButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int buttonID = message.buttonID;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleButtonAction(entity, buttonID, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final CapitaledeposerButtonMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = CapitaledeposerMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -85,6 +70,6 @@ public class CapitaledeposerButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		CapitalModeMod.addNetworkMessage(CapitaledeposerButtonMessage.class, CapitaledeposerButtonMessage::buffer, CapitaledeposerButtonMessage::new, CapitaledeposerButtonMessage::handler);
+		CapitalModeMod.addNetworkMessage(CapitaledeposerButtonMessage.TYPE, CapitaledeposerButtonMessage.STREAM_CODEC, CapitaledeposerButtonMessage::handleData);
 	}
 }

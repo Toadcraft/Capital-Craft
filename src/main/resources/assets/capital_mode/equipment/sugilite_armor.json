@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "capital_mode:sugilite_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "capital_mode:sugilite_armor"
+      }
+    ]
+  }
+}

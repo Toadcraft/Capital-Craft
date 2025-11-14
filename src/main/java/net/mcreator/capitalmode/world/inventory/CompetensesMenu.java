@@ -1,15 +1,18 @@
-
 package net.mcreator.capitalmode.world.inventory;
 
-import net.minecraftforge.items.SlotItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import net.neoforged.neoforge.items.SlotItemHandler;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -25,15 +28,22 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.capitalmode.procedures.CompetensesPendantQueCeGUIEstOuvertParTickProcedure;
 import net.mcreator.capitalmode.network.CompetensesSlotMessage;
 import net.mcreator.capitalmode.init.CapitalModeModMenus;
-import net.mcreator.capitalmode.CapitalModeMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-@Mod.EventBusSubscriber
-public class CompetensesMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+@EventBusSubscriber
+public class CompetensesMenu extends AbstractContainerMenu implements CapitalModeModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 15)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -63,34 +73,38 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 				byte hand = extraData.readByte();
 				ItemStack itemstack = hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem();
 				this.boundItemMatcher = () -> itemstack == (hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem());
-				itemstack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-					this.internal = capability;
+				IItemHandler cap = itemstack.getCapability(Capabilities.ItemHandler.ITEM);
+				if (cap != null) {
+					this.internal = cap;
 					this.bound = true;
-				});
+				}
 			} else if (extraData.readableBytes() > 1) { // bound to entity
 				extraData.readByte(); // drop padding
 				boundEntity = world.getEntity(extraData.readVarInt());
-				if (boundEntity != null)
-					boundEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						this.internal = capability;
+				if (boundEntity != null) {
+					IItemHandler cap = boundEntity.getCapability(Capabilities.ItemHandler.ENTITY);
+					if (cap != null) {
+						this.internal = cap;
 						this.bound = true;
-					});
+					}
+				}
 			} else { // might be bound to block
 				boundBlockEntity = this.world.getBlockEntity(pos);
-				if (boundBlockEntity != null)
-					boundBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						this.internal = capability;
-						this.bound = true;
-					});
+				if (boundBlockEntity instanceof BaseContainerBlockEntity baseContainerBlockEntity) {
+					this.internal = new InvWrapper(baseContainerBlockEntity);
+					this.bound = true;
+				}
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 179, 7) {
 			private final int slot = 0;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(0, 1, 0);
+				slotChanged(0, 1, stack.getCount());
 			}
 
 			@Override
@@ -100,11 +114,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 107, 34) {
 			private final int slot = 1;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(1, 1, 0);
+				slotChanged(1, 1, stack.getCount());
 			}
 
 			@Override
@@ -114,11 +130,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 179, 43) {
 			private final int slot = 2;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(2, 1, 0);
+				slotChanged(2, 1, stack.getCount());
 			}
 
 			@Override
@@ -128,11 +146,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 152, 79) {
 			private final int slot = 3;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(3, 1, 0);
+				slotChanged(3, 1, stack.getCount());
 			}
 
 			@Override
@@ -142,11 +162,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 152, 115) {
 			private final int slot = 4;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(4, 1, 0);
+				slotChanged(4, 1, stack.getCount());
 			}
 
 			@Override
@@ -156,11 +178,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 206, 79) {
 			private final int slot = 5;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(5, 1, 0);
+				slotChanged(5, 1, stack.getCount());
 			}
 
 			@Override
@@ -170,11 +194,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 35, 34) {
 			private final int slot = 6;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(6, 1, 0);
+				slotChanged(6, 1, stack.getCount());
 			}
 
 			@Override
@@ -184,11 +210,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 35, 70) {
 			private final int slot = 7;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(7, 1, 0);
+				slotChanged(7, 1, stack.getCount());
 			}
 
 			@Override
@@ -198,11 +226,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 35, 106) {
 			private final int slot = 8;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(8, 1, 0);
+				slotChanged(8, 1, stack.getCount());
 			}
 
 			@Override
@@ -212,11 +242,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 251, 34) {
 			private final int slot = 9;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(9, 1, 0);
+				slotChanged(9, 1, stack.getCount());
 			}
 
 			@Override
@@ -226,11 +258,13 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 278, 70) {
 			private final int slot = 10;
+			private int x = CompetensesMenu.this.x;
+			private int y = CompetensesMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(10, 1, 0);
+				slotChanged(10, 1, stack.getCount());
 			}
 
 			@Override
@@ -279,12 +313,14 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0)
-				slot.set(ItemStack.EMPTY);
-			else
+			if (itemstack1.isEmpty()) {
+				slot.setByPlayer(ItemStack.EMPTY);
+			} else {
 				slot.setChanged();
-			if (itemstack1.getCount() == itemstack.getCount())
+			}
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
+			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;
@@ -298,35 +334,28 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 			i = p_38906_ - 1;
 		}
 		if (p_38904_.isStackable()) {
-			while (!p_38904_.isEmpty()) {
-				if (p_38907_) {
-					if (i < p_38905_) {
-						break;
-					}
-				} else if (i >= p_38906_) {
-					break;
-				}
+			while (!p_38904_.isEmpty() && (p_38907_ ? i >= p_38905_ : i < p_38906_)) {
 				Slot slot = this.slots.get(i);
 				ItemStack itemstack = slot.getItem();
-				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameTags(p_38904_, itemstack)) {
+				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameComponents(p_38904_, itemstack)) {
 					int j = itemstack.getCount() + p_38904_.getCount();
-					int maxSize = Math.min(slot.getMaxStackSize(), p_38904_.getMaxStackSize());
-					if (j <= maxSize) {
+					int k = slot.getMaxStackSize(itemstack);
+					if (j <= k) {
 						p_38904_.setCount(0);
 						itemstack.setCount(j);
 						slot.set(itemstack);
 						flag = true;
-					} else if (itemstack.getCount() < maxSize) {
-						p_38904_.shrink(maxSize - itemstack.getCount());
-						itemstack.setCount(maxSize);
+					} else if (itemstack.getCount() < k) {
+						p_38904_.shrink(k - itemstack.getCount());
+						itemstack.setCount(k);
 						slot.set(itemstack);
 						flag = true;
 					}
 				}
 				if (p_38907_) {
-					--i;
+					i--;
 				} else {
-					++i;
+					i++;
 				}
 			}
 		}
@@ -336,30 +365,20 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 			} else {
 				i = p_38905_;
 			}
-			while (true) {
-				if (p_38907_) {
-					if (i < p_38905_) {
-						break;
-					}
-				} else if (i >= p_38906_) {
-					break;
-				}
+			while (p_38907_ ? i >= p_38905_ : i < p_38906_) {
 				Slot slot1 = this.slots.get(i);
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
-					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.setByPlayer(p_38904_.split(slot1.getMaxStackSize()));
-					} else {
-						slot1.setByPlayer(p_38904_.split(p_38904_.getCount()));
-					}
+					int l = slot1.getMaxStackSize(p_38904_);
+					slot1.setByPlayer(p_38904_.split(Math.min(p_38904_.getCount(), l)));
 					slot1.setChanged();
 					flag = true;
 					break;
 				}
 				if (p_38907_) {
-					--i;
+					i--;
 				} else {
-					++i;
+					i++;
 				}
 			}
 		}
@@ -394,7 +413,9 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 						continue;
 					if (j == 10)
 						continue;
-					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
+					playerIn.drop(internal.getStackInSlot(j), false);
+					if (internal instanceof IItemHandlerModifiable ihm)
+						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
@@ -420,7 +441,9 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 						continue;
 					if (i == 10)
 						continue;
-					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
+					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
+					if (internal instanceof IItemHandlerModifiable ihm)
+						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
 		}
@@ -428,23 +451,29 @@ public class CompetensesMenu extends AbstractContainerMenu implements Supplier<M
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			CapitalModeMod.PACKET_HANDLER.sendToServer(new CompetensesSlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new CompetensesSlotMessage(slotid, x, y, z, ctype, meta));
 			CompetensesSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		Player entity = event.player;
-		if (event.phase == TickEvent.Phase.END && entity.containerMenu instanceof CompetensesMenu) {
-			Level world = entity.level();
-			double x = entity.getX();
-			double y = entity.getY();
-			double z = entity.getZ();
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof CompetensesMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
 			CompetensesPendantQueCeGUIEstOuvertParTickProcedure.execute(entity);
 		}
 	}

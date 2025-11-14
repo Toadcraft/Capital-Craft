@@ -9,11 +9,9 @@ public class PluspointsProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skills_points + 1;
-			entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.skills_points = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+			_vars.skills_points = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skills_points + 1;
+			_vars.markSyncDirty();
 		}
 	}
 }

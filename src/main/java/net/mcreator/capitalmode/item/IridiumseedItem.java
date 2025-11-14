@@ -1,16 +1,14 @@
-
 package net.mcreator.capitalmode.item;
 
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 import net.mcreator.capitalmode.procedures.GraineiridiumProcedure;
 
 public class IridiumseedItem extends Item {
-	public IridiumseedItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public IridiumseedItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override

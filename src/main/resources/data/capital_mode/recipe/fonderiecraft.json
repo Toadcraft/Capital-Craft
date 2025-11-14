@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "aba"
+  ],
+  "key": {
+    "a": "capital_mode:cablock",
+    "b": "capital_mode:capital",
+    "c": "minecraft:lava_bucket",
+    "d": "minecraft:blast_furnace",
+    "e": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "capital_mode:fonderie",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "minecraft:fire_charge",
+    "c": "minecraft:blaze_rod",
+    "d": "capital_mode:demon_hears",
+    "e": "minecraft:magma_cream"
+  },
+  "result": {
+    "id": "capital_mode:firestone",
+    "count": 1
+  }
+}

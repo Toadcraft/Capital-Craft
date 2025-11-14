@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_overworld",
-  "features": "capital_mode:capital_ore",
-  "step": "underground_ores"
-}

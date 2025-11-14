@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "a b",
+    " ab"
+  ],
+  "key": {
+    "a": "capital_mode:capitalstick",
+    "b": "minecraft:string"
+  },
+  "result": {
+    "id": "capital_mode:deleted_mod_element",
+    "count": 1
+  }
+}

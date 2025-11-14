@@ -1,135 +1,77 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+import java.util.function.Consumer;
+import java.util.Map;
 
-import java.util.List;
+public abstract class InvisiblearmorItem extends Item {
+	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(100, Map.of(ArmorType.BOOTS, 6, ArmorType.LEGGINGS, 12, ArmorType.CHESTPLATE, 18, ArmorType.HELMET, 6, ArmorType.BODY, 18), 45,
+			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("block.amethyst_block.break")), 4f, 0.15f, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:invisiblearmor_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("capital_mode:invisiblearmor")));
 
-public abstract class InvisiblearmorItem extends ArmorItem {
-	public InvisiblearmorItem(ArmorItem.Type type, Item.Properties properties) {
-		super(new ArmorMaterial() {
-			@Override
-			public int getDurabilityForType(ArmorItem.Type type) {
-				return new int[]{13, 15, 16, 11}[type.getSlot().getIndex()] * 100;
-			}
-
-			@Override
-			public int getDefenseForType(ArmorItem.Type type) {
-				return new int[]{6, 12, 18, 6}[type.getSlot().getIndex()];
-			}
-
-			@Override
-			public int getEnchantmentValue() {
-				return 45;
-			}
-
-			@Override
-			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.break"));
-			}
-
-			@Override
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.CAPITAL.get()));
-			}
-
-			@Override
-			public String getName() {
-				return "invisiblearmor";
-			}
-
-			@Override
-			public float getToughness() {
-				return 4f;
-			}
-
-			@Override
-			public float getKnockbackResistance() {
-				return 0.15f;
-			}
-		}, type, properties);
+	private InvisiblearmorItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	public static class Helmet extends InvisiblearmorItem {
-		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties());
+		public Helmet(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.HELMET));
 		}
 
 		@Override
-		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("Cosm\u00E9tique \u00E9pique"));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/invisible_armor_layer_1.png";
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("item.capital_mode.invisiblearmor_helmet.description_0"));
 		}
 	}
 
 	public static class Chestplate extends InvisiblearmorItem {
-		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties());
+		public Chestplate(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.CHESTPLATE));
 		}
 
 		@Override
-		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("Cosm\u00E9tique \u00E9pique"));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/invisible_armor_layer_1.png";
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("item.capital_mode.invisiblearmor_chestplate.description_0"));
 		}
 	}
 
 	public static class Leggings extends InvisiblearmorItem {
-		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties());
+		public Leggings(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.LEGGINGS));
 		}
 
 		@Override
-		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("Cosm\u00E9tique \u00E9pique"));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/invisible_armor_layer_2.png";
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("item.capital_mode.invisiblearmor_leggings.description_0"));
 		}
 	}
 
 	public static class Boots extends InvisiblearmorItem {
-		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties());
+		public Boots(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.BOOTS));
 		}
 
 		@Override
-		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("Cosm\u00E9tique \u00E9pique"));
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/invisible_armor_layer_1.png";
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("item.capital_mode.invisiblearmor_boots.description_0"));
 		}
 	}
 }

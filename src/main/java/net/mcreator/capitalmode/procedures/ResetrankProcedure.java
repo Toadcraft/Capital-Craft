@@ -9,11 +9,9 @@ public class ResetrankProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 0;
-			entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Rank = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+			_vars.Rank = 0;
+			_vars.markSyncDirty();
 		}
 	}
 }

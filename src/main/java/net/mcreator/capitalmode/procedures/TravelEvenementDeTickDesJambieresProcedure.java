@@ -10,6 +10,6 @@ public class TravelEvenementDeTickDesJambieresProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 10, 0));
+			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 10, 0));
 	}
 }

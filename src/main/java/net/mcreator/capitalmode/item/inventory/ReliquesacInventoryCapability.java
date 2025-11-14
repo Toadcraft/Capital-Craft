@@ -1,76 +1,47 @@
-
 package net.mcreator.capitalmode.item.inventory;
 
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.items.ComponentItemHandler;
+import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
+import net.neoforged.neoforge.common.MutableDataComponentHolder;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.component.DataComponents;
 
+import net.mcreator.capitalmode.world.inventory.ReliquesacGUIMenu;
 import net.mcreator.capitalmode.init.CapitalModeModItems;
-import net.mcreator.capitalmode.client.gui.ReliquesacGUIScreen;
 
-import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-@Mod.EventBusSubscriber(Dist.CLIENT)
-public class ReliquesacInventoryCapability implements ICapabilitySerializable<CompoundTag> {
+@EventBusSubscriber
+public class ReliquesacInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
 	public static void onItemDropped(ItemTossEvent event) {
 		if (event.getEntity().getItem().getItem() == CapitalModeModItems.RELIQUESAC.get()) {
-			if (Minecraft.getInstance().screen instanceof ReliquesacGUIScreen) {
-				Minecraft.getInstance().player.closeContainer();
-			}
+			Player player = event.getPlayer();
+			if (player.containerMenu instanceof ReliquesacGUIMenu)
+				player.closeContainer();
 		}
 	}
 
-	private final LazyOptional<ItemStackHandler> inventory = LazyOptional.of(this::createItemHandler);
-
-	@Override
-	public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
-		return capability == ForgeCapabilities.ITEM_HANDLER ? this.inventory.cast() : LazyOptional.empty();
+	public ReliquesacInventoryCapability(MutableDataComponentHolder parent) {
+		super(parent, DataComponents.CONTAINER, 19);
 	}
 
 	@Override
-	public CompoundTag serializeNBT() {
-		return getItemHandler().serializeNBT();
+	public int getSlotLimit(int slot) {
+		return 64;
 	}
 
 	@Override
-	public void deserializeNBT(CompoundTag nbt) {
-		getItemHandler().deserializeNBT(nbt);
+	public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
+		return stack.getItem() != CapitalModeModItems.RELIQUESAC.get();
 	}
 
-	private ItemStackHandler createItemHandler() {
-		return new ItemStackHandler(19) {
-			@Override
-			public int getSlotLimit(int slot) {
-				return 64;
-			}
-
-			@Override
-			public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-				return stack.getItem() != CapitalModeModItems.RELIQUESAC.get();
-			}
-
-			@Override
-			public void setSize(int size) {
-			}
-		};
-	}
-
-	private ItemStackHandler getItemHandler() {
-		return inventory.orElseThrow(RuntimeException::new);
+	@Override
+	public ItemStack getStackInSlot(int slot) {
+		return super.getStackInSlot(slot).copy();
 	}
 }

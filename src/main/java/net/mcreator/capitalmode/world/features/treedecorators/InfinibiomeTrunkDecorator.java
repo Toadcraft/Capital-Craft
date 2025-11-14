@@ -1,10 +1,8 @@
-
 package net.mcreator.capitalmode.world.features.treedecorators;
 
-import net.minecraftforge.registries.RegisterEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
@@ -12,19 +10,21 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class InfinibiomeTrunkDecorator extends TrunkVineDecorator {
-	public static Codec<InfinibiomeTrunkDecorator> CODEC = Codec.unit(InfinibiomeTrunkDecorator::new);
+	public static MapCodec<InfinibiomeTrunkDecorator> CODEC = MapCodec.unit(InfinibiomeTrunkDecorator::new);
 	public static TreeDecoratorType<?> DECORATOR_TYPE = new TreeDecoratorType<>(CODEC);
 
 	@SubscribeEvent
 	public static void registerTreeDecorator(RegisterEvent event) {
-		event.register(ForgeRegistries.Keys.TREE_DECORATOR_TYPES, registerHelper -> registerHelper.register("infinibiome_tree_trunk_decorator", DECORATOR_TYPE));
+		event.register(Registries.TREE_DECORATOR_TYPE, ResourceLocation.parse("capital_mode:infinibiome_tree_trunk_decorator"), () -> DECORATOR_TYPE);
 	}
 
 	@Override
@@ -62,11 +62,12 @@ public class InfinibiomeTrunkDecorator extends TrunkVineDecorator {
 		});
 	}
 
+	@SuppressWarnings("deprecation")
 	private static BlockState oriented(BlockState blockstate, Direction direction) {
 		return switch (direction) {
-			case SOUTH -> blockstate.getBlock().rotate(blockstate, Rotation.CLOCKWISE_180);
-			case EAST -> blockstate.getBlock().rotate(blockstate, Rotation.CLOCKWISE_90);
-			case WEST -> blockstate.getBlock().rotate(blockstate, Rotation.COUNTERCLOCKWISE_90);
+			case SOUTH -> blockstate.rotate(Rotation.CLOCKWISE_180);
+			case EAST -> blockstate.rotate(Rotation.CLOCKWISE_90);
+			case WEST -> blockstate.rotate(Rotation.COUNTERCLOCKWISE_90);
 			default -> blockstate;
 		};
 	}

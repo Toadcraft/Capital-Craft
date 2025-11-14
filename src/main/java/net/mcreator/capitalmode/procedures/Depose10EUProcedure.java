@@ -11,16 +11,14 @@ public class Depose10EUProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent >= 10) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent >= 10) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent - 10;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Argent = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.Argent = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent - 10;
+				_vars.markSyncDirty();
 			}
 			CapitalModeModVariables.MapVariables.get(world).argent_spawn = CapitalModeModVariables.MapVariables.get(world).argent_spawn + 10;
-			CapitalModeModVariables.MapVariables.get(world).syncData(world);
+			CapitalModeModVariables.MapVariables.get(world).markSyncDirty();
 		} else {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

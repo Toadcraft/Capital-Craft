@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "capital_mode:capital_machine"
+    },
+    "title": {
+      "translate": "advancements.ingenieur.title"
+    },
+    "description": {
+      "translate": "advancements.ingenieur.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ingenieur_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "capital_mode:capital_machine"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "capital_mode:leblocdetrop"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "ab",
+    " b"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "capital_mode:capitalstick"
+  },
+  "result": {
+    "id": "capital_mode:capital_outils_axe",
+    "count": 1
+  }
+}

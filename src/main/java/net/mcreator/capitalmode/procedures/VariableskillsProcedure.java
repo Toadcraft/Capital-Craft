@@ -8,6 +8,6 @@ public class VariableskillsProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Vous avez " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skills_points) + " points";
+		return "Vous avez " + new java.text.DecimalFormat("##.##").format(entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skills_points) + " points";
 	}
 }

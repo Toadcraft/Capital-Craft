@@ -16,15 +16,15 @@ public class BoomproProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).skill_10 == 1) {
+		if (entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).skill_10 == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 254));
+				_entity.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 60, 254));
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.NONE);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("KABOOM !"), false);
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 300);
+				_player.getCooldowns().addCooldown(itemstack, 300);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("VOUS DEVEZ AVOIR LA COMPETENSE \"KABOOM !\""), false);

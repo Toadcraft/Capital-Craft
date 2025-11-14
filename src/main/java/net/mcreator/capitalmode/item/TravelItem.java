@@ -1,141 +1,90 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.capitalmode.procedures.TravelEvenementDeTickDuPlastronProcedure;
 import net.mcreator.capitalmode.procedures.TravelEvenementDeTickDuCasqueProcedure;
 import net.mcreator.capitalmode.procedures.TravelEvenementDeTickDesJambieresProcedure;
 import net.mcreator.capitalmode.procedures.TravelEvenementDeTickDesBottesProcedure;
 
-import com.google.common.collect.Iterables;
+import javax.annotation.Nullable;
 
-public abstract class TravelItem extends ArmorItem {
-	public TravelItem(ArmorItem.Type type, Item.Properties properties) {
-		super(new ArmorMaterial() {
-			@Override
-			public int getDurabilityForType(ArmorItem.Type type) {
-				return new int[]{13, 15, 16, 11}[type.getSlot().getIndex()] * 25;
-			}
+import java.util.Map;
 
-			@Override
-			public int getDefenseForType(ArmorItem.Type type) {
-				return new int[]{2, 5, 6, 2}[type.getSlot().getIndex()];
-			}
+public abstract class TravelItem extends Item {
+	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(25, Map.of(ArmorType.BOOTS, 2, ArmorType.LEGGINGS, 5, ArmorType.CHESTPLATE, 6, ArmorType.HELMET, 2, ArmorType.BODY, 6), 9,
+			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:travel_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("capital_mode:travel")));
 
-			@Override
-			public int getEnchantmentValue() {
-				return 9;
-			}
-
-			@Override
-			public SoundEvent getEquipSound() {
-				return SoundEvents.EMPTY;
-			}
-
-			@Override
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
-			}
-
-			@Override
-			public String getName() {
-				return "travel";
-			}
-
-			@Override
-			public float getToughness() {
-				return 0f;
-			}
-
-			@Override
-			public float getKnockbackResistance() {
-				return 0f;
-			}
-		}, type, properties);
+	private TravelItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	public static class Helmet extends TravelItem {
-		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties());
+		public Helmet(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.HELMET));
 		}
 
 		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/travel_layer_1.png";
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				TravelEvenementDeTickDuCasqueProcedure.execute(entity);
 			}
 		}
 	}
 
 	public static class Chestplate extends TravelItem {
-		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties());
+		public Chestplate(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.CHESTPLATE));
 		}
 
 		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/travel_layer_1.png";
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				TravelEvenementDeTickDuPlastronProcedure.execute(entity);
 			}
 		}
 	}
 
 	public static class Leggings extends TravelItem {
-		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties());
+		public Leggings(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.LEGGINGS));
 		}
 
 		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/travel_layer_2.png";
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				TravelEvenementDeTickDesJambieresProcedure.execute(entity);
 			}
 		}
 	}
 
 	public static class Boots extends TravelItem {
-		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties());
+		public Boots(Item.Properties properties) {
+			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.BOOTS));
 		}
 
 		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "capital_mode:textures/models/armor/travel_layer_1.png";
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				TravelEvenementDeTickDesBottesProcedure.execute(entity);
 			}
 		}

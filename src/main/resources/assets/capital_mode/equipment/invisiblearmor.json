@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "capital_mode:invisiblearmor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "capital_mode:invisiblearmor"
+      }
+    ]
+  }
+}

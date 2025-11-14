@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gunpowder",
+    "capital_mode:sugilite",
+    "minecraft:gunpowder"
+  ],
+  "result": {
+    "id": "capital_mode:iridiumpowder",
+    "count": 2
+  }
+}

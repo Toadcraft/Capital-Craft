@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:gold_block",
+    "b": "minecraft:paper"
+  },
+  "result": {
+    "id": "capital_mode:ameliorateurlvl_2",
+    "count": 1
+  }
+}

@@ -1,9 +1,9 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,11 +14,11 @@ import net.mcreator.capitalmode.init.CapitalModeModItems;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class BionicswordstreakProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getSource().getEntity());
 		}
 	}
@@ -32,11 +32,9 @@ public class BionicswordstreakProcedure {
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CapitalModeModItems.BIONICSWORD.get()) {
 			{
-				double _setval = (sourceentity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Kill_streak + 1;
-				sourceentity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Kill_streak = _setval;
-					capability.syncPlayerVariables(sourceentity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = sourceentity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.Kill_streak = sourceentity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Kill_streak + 1;
+				_vars.markSyncDirty();
 			}
 		}
 	}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:sugilite_block",
+    "b": "capital_mode:ameliorateurlvl_8"
+  },
+  "result": {
+    "id": "capital_mode:ameliorateurlvl_9",
+    "count": 1
+  }
+}

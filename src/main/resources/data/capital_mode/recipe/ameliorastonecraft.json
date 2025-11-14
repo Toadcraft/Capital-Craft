@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "afa"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "minecraft:diamond",
+    "c": "capital_mode:cobalt",
+    "d": "capital_mode:demon_hears",
+    "e": "minecraft:gold_ingot",
+    "f": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "capital_mode:ameliorastone",
+    "count": 1
+  }
+}

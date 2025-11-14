@@ -9,7 +9,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CapitalItem.java",
-          "src/main/resources/assets/capital_mode/models/item/capital.json"
+          "src/main/resources/assets/capital_mode/models/item/capital.json",
+          "src/main/resources/assets/capital_mode/items/capital.json"
         ]
       },
       "path": "~/Capital"
@@ -22,14 +23,15 @@
       "registry_name": "capital_ore",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/capital_ore.json",
           "src/main/resources/assets/capital_mode/models/item/capital_ore.json",
           "src/main/resources/assets/capital_mode/models/block/capital_ore.json",
           "src/main/resources/data/capital_mode/worldgen/configured_feature/capital_ore.json",
+          "src/main/resources/assets/capital_mode/items/capital_ore.json",
           "src/main/java/net/mcreator/capitalmode/block/CapitaloreBlock.java",
           "src/main/resources/assets/capital_mode/blockstates/capital_ore.json",
-          "src/main/resources/data/capital_mode/forge/biome_modifier/capital_ore_biome_modifier.json",
           "src/main/resources/data/capital_mode/worldgen/placed_feature/capital_ore.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capital_ore.json"
+          "src/main/resources/data/capital_mode/neoforge/biome_modifier/capital_ore_biome_modifier.json"
         ]
       },
       "path": "~/Capital"
@@ -43,6 +45,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/capital_outils_pickaxe.json",
+          "src/main/resources/assets/capital_mode/items/capital_outils_pickaxe.json",
           "src/main/java/net/mcreator/capitalmode/item/Capital_outilsPickaxeItem.java"
         ]
       },
@@ -56,6 +59,7 @@
       "registry_name": "capital_outils_axe",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capital_outils_axe.json",
           "src/main/resources/assets/capital_mode/models/item/capital_outils_axe.json",
           "src/main/java/net/mcreator/capitalmode/item/Capital_outilsAxeItem.java"
         ]
@@ -71,7 +75,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Capital_outilsSwordItem.java",
-          "src/main/resources/assets/capital_mode/models/item/capital_outils_sword.json"
+          "src/main/resources/assets/capital_mode/models/item/capital_outils_sword.json",
+          "src/main/resources/assets/capital_mode/items/capital_outils_sword.json"
         ]
       },
       "path": "~/Capital"
@@ -85,6 +90,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Capital_outilsShovelItem.java",
+          "src/main/resources/assets/capital_mode/items/capital_outils_shovel.json",
           "src/main/resources/assets/capital_mode/models/item/capital_outils_shovel.json"
         ]
       },
@@ -98,6 +104,7 @@
       "registry_name": "capital_outils_hoe",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capital_outils_hoe.json",
           "src/main/java/net/mcreator/capitalmode/item/Capital_outilsHoeItem.java",
           "src/main/resources/assets/capital_mode/models/item/capital_outils_hoe.json"
         ]
@@ -112,7 +119,7 @@
       "registry_name": "capital_outils_pickaxe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_outils_pickaxe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capital_outils_pickaxe_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -125,7 +132,7 @@
       "registry_name": "capital_outils_axe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_outils_axe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capital_outils_axe_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -138,7 +145,7 @@
       "registry_name": "capital_outils_sword_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_outils_sword_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capital_outils_sword_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -151,7 +158,7 @@
       "registry_name": "capital_outils_shovel_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_outils_shovel_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capital_outils_shovel_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -164,7 +171,7 @@
       "registry_name": "capital_outils_hoe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_outils_hoe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capital_outils_hoe_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -181,10 +188,16 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/java/net/mcreator/capitalmode/client/renderer/item/CapitaleArmorArmor.java",
+          "src/main/resources/assets/capital_mode/items/capitale_armor_leggings.json",
           "src/main/resources/assets/capital_mode/models/item/capitale_armor_chestplate.json",
           "src/main/resources/assets/capital_mode/models/item/capitale_armor_boots.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitaleArmorItem.java",
+          "src/main/resources/assets/capital_mode/items/capitale_armor_helmet.json",
+          "src/main/resources/assets/capital_mode/items/capitale_armor_boots.json",
           "src/main/resources/assets/capital_mode/models/item/capitale_armor_helmet.json",
+          "src/main/resources/assets/capital_mode/equipment/capitale_armor.json",
+          "src/main/resources/assets/capital_mode/items/capitale_armor_chestplate.json",
           "src/main/resources/assets/capital_mode/models/item/capitale_armor_leggings.json"
         ]
       },
@@ -198,7 +211,7 @@
       "registry_name": "capitale_armor_helmet_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitale_armor_helmet_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capitale_armor_helmet_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -211,7 +224,7 @@
       "registry_name": "capitale_armor_body_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitale_armor_body_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capitale_armor_body_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -224,7 +237,7 @@
       "registry_name": "capitale_armor_leggings_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitale_armor_leggings_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capitale_armor_leggings_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -237,7 +250,7 @@
       "registry_name": "capitale_armor_boots_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitale_armor_boots_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/capitale_armor_boots_recipe.json"
         ]
       },
       "path": "~/Capital"
@@ -250,6 +263,7 @@
       "registry_name": "capitalapple",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capitalapple.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalappleItem.java",
           "src/main/resources/assets/capital_mode/models/item/capitalapple.json"
         ]
@@ -265,7 +279,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/demon_hears.json",
-          "src/main/java/net/mcreator/capitalmode/item/DemonHearsItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/DemonHearsItem.java",
+          "src/main/resources/assets/capital_mode/items/demon_hears.json"
         ]
       },
       "path": "~/Demons"
@@ -279,6 +294,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/RubyItem.java",
+          "src/main/resources/assets/capital_mode/items/cobalt.json",
           "src/main/resources/assets/capital_mode/models/item/cobalt.json"
         ]
       },
@@ -303,7 +319,7 @@
       "registry_name": "capitalachievement",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/capitalachievement.json"
+          "src/main/resources/data/capital_mode/advancement/capitalachievement.json"
         ]
       },
       "path": "~/Capital"
@@ -317,6 +333,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/RubiPickaxeItem.java",
+          "src/main/resources/assets/capital_mode/items/rubi_pickaxe.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_pickaxe.json"
         ]
       },
@@ -331,7 +348,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/RubiAxeItem.java",
-          "src/main/resources/assets/capital_mode/models/item/rubi_axe.json"
+          "src/main/resources/assets/capital_mode/models/item/rubi_axe.json",
+          "src/main/resources/assets/capital_mode/items/rubi_axe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -344,6 +362,7 @@
       "registry_name": "rubi_sword",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/rubi_sword.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_sword.json",
           "src/main/java/net/mcreator/capitalmode/item/RubiSwordItem.java"
         ]
@@ -358,6 +377,7 @@
       "registry_name": "rubi_shovel",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/rubi_shovel.json",
           "src/main/java/net/mcreator/capitalmode/item/RubiShovelItem.java",
           "src/main/resources/assets/capital_mode/models/item/rubi_shovel.json"
         ]
@@ -373,7 +393,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/RubiHoeItem.java",
-          "src/main/resources/assets/capital_mode/models/item/rubi_hoe.json"
+          "src/main/resources/assets/capital_mode/models/item/rubi_hoe.json",
+          "src/main/resources/assets/capital_mode/items/rubi_hoe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -390,10 +411,16 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/java/net/mcreator/capitalmode/client/renderer/item/RubiArmorArmor.java",
+          "src/main/resources/assets/capital_mode/items/rubi_armor_leggings.json",
           "src/main/java/net/mcreator/capitalmode/item/RubiArmorItem.java",
+          "src/main/resources/assets/capital_mode/equipment/rubi_armor.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_armor_helmet.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_armor_boots.json",
+          "src/main/resources/assets/capital_mode/items/rubi_armor_helmet.json",
+          "src/main/resources/assets/capital_mode/items/rubi_armor_boots.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_armor_chestplate.json",
+          "src/main/resources/assets/capital_mode/items/rubi_armor_chestplate.json",
           "src/main/resources/assets/capital_mode/models/item/rubi_armor_leggings.json"
         ]
       },
@@ -407,6 +434,7 @@
       "registry_name": "capitalstick",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capitalstick.json",
           "src/main/resources/assets/capital_mode/models/item/capitalstick.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalstickItem.java"
         ]
@@ -421,7 +449,7 @@
       "registry_name": "capital_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_block.json"
+          "src/main/resources/data/capital_mode/recipe/capital_block.json"
         ]
       },
       "path": "~/Capital"
@@ -434,7 +462,7 @@
       "registry_name": "cobalt_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_block.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_block.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -447,7 +475,7 @@
       "registry_name": "demon_hearts",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/demon_hearts.json"
+          "src/main/resources/data/capital_mode/recipe/demon_hearts.json"
         ]
       },
       "path": "~/Demons"
@@ -460,7 +488,7 @@
       "registry_name": "capitalstickcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitalstickcraft.json"
+          "src/main/resources/data/capital_mode/recipe/capitalstickcraft.json"
         ]
       },
       "path": "~/Capital"
@@ -473,7 +501,7 @@
       "registry_name": "colbalt_armor_helmet",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/colbalt_armor_helmet.json"
+          "src/main/resources/data/capital_mode/recipe/colbalt_armor_helmet.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -486,7 +514,7 @@
       "registry_name": "colbalt_armor_body",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/colbalt_armor_body.json"
+          "src/main/resources/data/capital_mode/recipe/colbalt_armor_body.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -499,7 +527,7 @@
       "registry_name": "colbalt_armor_leggings",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/colbalt_armor_leggings.json"
+          "src/main/resources/data/capital_mode/recipe/colbalt_armor_leggings.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -512,7 +540,7 @@
       "registry_name": "cobalt_armor_boots",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_armor_boots.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_armor_boots.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -525,7 +553,7 @@
       "registry_name": "cobalt_sword",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_sword.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_sword.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -538,7 +566,7 @@
       "registry_name": "cobalt_pickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_pickaxe.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_pickaxe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -551,7 +579,7 @@
       "registry_name": "cobalt_axe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_axe.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_axe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -564,7 +592,7 @@
       "registry_name": "cobalt_shovel",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_shovel.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_shovel.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -577,7 +605,7 @@
       "registry_name": "cobalt_hoe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_hoe.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_hoe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -590,7 +618,7 @@
       "registry_name": "craft_capitalbow",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/craft_capitalbow.json"
+          "src/main/resources/data/capital_mode/recipe/craft_capitalbow.json"
         ]
       },
       "path": "~/Capital"
@@ -603,7 +631,7 @@
       "registry_name": "capitalblockautresens",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitalblockautresens.json"
+          "src/main/resources/data/capital_mode/recipe/capitalblockautresens.json"
         ]
       },
       "path": "~/Capital"
@@ -616,7 +644,7 @@
       "registry_name": "cobalt_blockautresens",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_blockautresens.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_blockautresens.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -629,9 +657,10 @@
       "registry_name": "cablock",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/cablock.json",
           "src/main/java/net/mcreator/capitalmode/block/CablockBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cablock.json",
           "src/main/resources/assets/capital_mode/models/block/cablock.json",
+          "src/main/resources/assets/capital_mode/items/cablock.json",
           "src/main/resources/assets/capital_mode/blockstates/cablock.json",
           "src/main/resources/assets/capital_mode/models/item/cablock.json"
         ]
@@ -649,7 +678,8 @@
           "src/main/resources/assets/capital_mode/models/item/coblock.json",
           "src/main/resources/assets/capital_mode/blockstates/coblock.json",
           "src/main/java/net/mcreator/capitalmode/block/CoblockBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/coblock.json",
+          "src/main/resources/assets/capital_mode/items/coblock.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/coblock.json",
           "src/main/resources/assets/capital_mode/models/block/coblock.json"
         ]
       },
@@ -664,6 +694,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/un_eu.json",
+          "src/main/resources/assets/capital_mode/items/un_eu.json",
           "src/main/java/net/mcreator/capitalmode/item/UnEUItem.java"
         ]
       },
@@ -678,6 +709,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/DixeuroItem.java",
+          "src/main/resources/assets/capital_mode/items/dixeuro.json",
           "src/main/resources/assets/capital_mode/models/item/dixeuro.json"
         ]
       },
@@ -692,6 +724,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CinquannteEUItem.java",
+          "src/main/resources/assets/capital_mode/items/cinquannte_eu.json",
           "src/main/resources/assets/capital_mode/models/item/cinquannte_eu.json"
         ]
       },
@@ -706,6 +739,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cent_eu.json",
+          "src/main/resources/assets/capital_mode/items/cent_eu.json",
           "src/main/java/net/mcreator/capitalmode/item/CentEUItem.java"
         ]
       },
@@ -720,7 +754,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cinqcen_eu.json",
-          "src/main/java/net/mcreator/capitalmode/item/CinqcenEUItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/CinqcenEUItem.java",
+          "src/main/resources/assets/capital_mode/items/cinqcen_eu.json"
         ]
       },
       "path": "~/Argent"
@@ -734,6 +769,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_2.json",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_2.json",
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl2Item.java"
         ]
       },
@@ -748,6 +784,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_3.json",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_3.json",
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl3Item.java"
         ]
       },
@@ -762,6 +799,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl4Item.java",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_4.json",
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_4.json"
         ]
       },
@@ -775,6 +813,7 @@
       "registry_name": "ameliorateurlvl_5",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_5.json",
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl5Item.java",
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_5.json"
         ]
@@ -789,7 +828,7 @@
       "registry_name": "ameliolvl_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliolvl_2.json"
+          "src/main/resources/data/capital_mode/recipe/ameliolvl_2.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -802,7 +841,7 @@
       "registry_name": "ameliolvl_3",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliolvl_3.json"
+          "src/main/resources/data/capital_mode/recipe/ameliolvl_3.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -815,7 +854,7 @@
       "registry_name": "ameliolvl_4",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliolvl_4.json"
+          "src/main/resources/data/capital_mode/recipe/ameliolvl_4.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -828,7 +867,7 @@
       "registry_name": "ameliolvl_5",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliolvl_5.json"
+          "src/main/resources/data/capital_mode/recipe/ameliolvl_5.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -877,6 +916,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/speed_sword.json",
+          "src/main/resources/assets/capital_mode/items/speed_sword.json",
           "src/main/java/net/mcreator/capitalmode/item/SpeedSwordItem.java"
         ]
       },
@@ -890,12 +930,13 @@
       "registry_name": "capital_machine",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capital_machine.json",
           "src/main/resources/assets/capital_mode/models/item/capital_machine.json",
           "src/main/java/net/mcreator/capitalmode/block/CapitalMachineBlock.java",
           "src/main/java/net/mcreator/capitalmode/block/entity/CapitalMachineBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capital_machine.json",
           "src/main/resources/assets/capital_mode/blockstates/capital_machine.json",
-          "src/main/resources/assets/capital_mode/models/block/capital_machine.json"
+          "src/main/resources/assets/capital_mode/models/block/capital_machine.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/capital_machine.json"
         ]
       },
       "path": "~/Machine/Utilise  FE"
@@ -922,6 +963,7 @@
       "registry_name": "ameliorastone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/ameliorastone.json",
           "src/main/resources/assets/capital_mode/models/item/ameliorastone.json",
           "src/main/java/net/mcreator/capitalmode/item/AmeliorastoneItem.java"
         ]
@@ -967,6 +1009,7 @@
       "registry_name": "speedstone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/speedstone.json",
           "src/main/java/net/mcreator/capitalmode/item/SpeedstoneItem.java",
           "src/main/resources/assets/capital_mode/models/item/speedstone.json"
         ]
@@ -981,7 +1024,7 @@
       "registry_name": "capital_machine_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capital_machine_craft.json"
+          "src/main/resources/data/capital_mode/recipe/capital_machine_craft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -994,7 +1037,7 @@
       "registry_name": "speedstonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/speedstonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/speedstonecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -1007,7 +1050,7 @@
       "registry_name": "ameliorastonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorastonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorastonecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -1021,6 +1064,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/SpeedpickaxeItem.java",
+          "src/main/resources/assets/capital_mode/items/speedpickaxe.json",
           "src/main/resources/assets/capital_mode/models/item/speedpickaxe.json"
         ]
       },
@@ -1035,7 +1079,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CapitalhammerItem.java",
-          "src/main/resources/assets/capital_mode/models/item/capitalhammer.json"
+          "src/main/resources/assets/capital_mode/models/item/capitalhammer.json",
+          "src/main/resources/assets/capital_mode/items/capitalhammer.json"
         ]
       },
       "path": "~/Capital"
@@ -1083,6 +1128,7 @@
       "registry_name": "capitalwand",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capitalwand.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalwandItem.java",
           "src/main/resources/assets/capital_mode/models/item/capitalwand.json"
         ]
@@ -1098,7 +1144,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/UltimastoneItem.java",
-          "src/main/resources/assets/capital_mode/models/item/ultimastone.json"
+          "src/main/resources/assets/capital_mode/models/item/ultimastone.json",
+          "src/main/resources/assets/capital_mode/items/ultimastone.json"
         ]
       },
       "path": "~/Machine/stones"
@@ -1111,7 +1158,7 @@
       "registry_name": "demond",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/demond.json"
+          "src/main/resources/data/capital_mode/advancement/demond.json"
         ]
       },
       "path": "~/Avancements"
@@ -1124,7 +1171,7 @@
       "registry_name": "leblocdetrop",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/leblocdetrop.json"
+          "src/main/resources/data/capital_mode/advancement/leblocdetrop.json"
         ]
       },
       "path": "~/Capital"
@@ -1137,7 +1184,7 @@
       "registry_name": "ultimastonecarft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ultimastonecarft.json"
+          "src/main/resources/data/capital_mode/recipe/ultimastonecarft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -1150,7 +1197,7 @@
       "registry_name": "ingenieur",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/ingenieur.json"
+          "src/main/resources/data/capital_mode/advancement/ingenieur.json"
         ]
       },
       "path": "~/Avancements"
@@ -1163,7 +1210,7 @@
       "registry_name": "rapide",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/rapide.json"
+          "src/main/resources/data/capital_mode/advancement/rapide.json"
         ]
       },
       "path": "~/Avancements"
@@ -1176,7 +1223,7 @@
       "registry_name": "puissant",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/puissant.json"
+          "src/main/resources/data/capital_mode/advancement/puissant.json"
         ]
       },
       "path": "~/Avancements"
@@ -1189,7 +1236,7 @@
       "registry_name": "ultime",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/ultime.json"
+          "src/main/resources/data/capital_mode/advancement/ultime.json"
         ]
       },
       "path": "~/Avancements"
@@ -1203,6 +1250,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/bigsword.json",
+          "src/main/resources/assets/capital_mode/items/bigsword.json",
           "src/main/java/net/mcreator/capitalmode/item/BigswordItem.java"
         ]
       },
@@ -1216,7 +1264,7 @@
       "registry_name": "mitrailleur",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/mitrailleur.json"
+          "src/main/resources/data/capital_mode/advancement/mitrailleur.json"
         ]
       },
       "path": "~/Capital"
@@ -1249,6 +1297,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurniv6itemItem.java",
+          "src/main/resources/assets/capital_mode/items/ameliorateurniv_6item.json",
           "src/main/resources/assets/capital_mode/models/item/ameliorateurniv_6item.json"
         ]
       },
@@ -1263,6 +1312,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cobalt_hammer.json",
+          "src/main/resources/assets/capital_mode/items/cobalt_hammer.json",
           "src/main/java/net/mcreator/capitalmode/item/CobaltHammerItem.java"
         ]
       },
@@ -1277,6 +1327,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cobaltspeedsword.json",
+          "src/main/resources/assets/capital_mode/items/cobaltspeedsword.json",
           "src/main/java/net/mcreator/capitalmode/item/CobaltspeedswordItem.java"
         ]
       },
@@ -1290,7 +1341,7 @@
       "registry_name": "ameliorateurniv_6",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorateurniv_6.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorateurniv_6.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1303,7 +1354,7 @@
       "registry_name": "capitalapplecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitalapplecraft.json"
+          "src/main/resources/data/capital_mode/recipe/capitalapplecraft.json"
         ]
       },
       "path": "~/Capital"
@@ -1317,7 +1368,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cobaltbigword.json",
-          "src/main/java/net/mcreator/capitalmode/item/CobaltbigwordItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/CobaltbigwordItem.java",
+          "src/main/resources/assets/capital_mode/items/cobaltbigword.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -1331,7 +1383,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CobaltspeedpickaxeItem.java",
-          "src/main/resources/assets/capital_mode/models/item/cobaltspeedpickaxe.json"
+          "src/main/resources/assets/capital_mode/models/item/cobaltspeedpickaxe.json",
+          "src/main/resources/assets/capital_mode/items/cobaltspeedpickaxe.json"
         ]
       },
       "path": "~/Demons/Cobalt"
@@ -1344,7 +1397,7 @@
       "registry_name": "sugilite_pickaxe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_pickaxe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_pickaxe_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1357,7 +1410,7 @@
       "registry_name": "cente",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cente.json"
+          "src/main/resources/data/capital_mode/recipe/cente.json"
         ]
       },
       "path": "~/Argent"
@@ -1371,7 +1424,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl7Item.java",
-          "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_7.json"
+          "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_7.json",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_7.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1384,6 +1438,7 @@
       "registry_name": "milleeuro",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/milleeuro.json",
           "src/main/resources/assets/capital_mode/models/item/milleeuro.json",
           "src/main/java/net/mcreator/capitalmode/item/MilleeuroItem.java"
         ]
@@ -1398,7 +1453,7 @@
       "registry_name": "sugilite_armor_helmet_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_armor_helmet_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_armor_helmet_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1411,7 +1466,7 @@
       "registry_name": "ameliorateurniv_10",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorateurniv_10.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorateurniv_10.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1424,7 +1479,7 @@
       "registry_name": "une",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/une.json"
+          "src/main/resources/data/capital_mode/recipe/une.json"
         ]
       },
       "path": "~/Argent"
@@ -1438,6 +1493,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl9Item.java",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_9.json",
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_9.json"
         ]
       },
@@ -1452,6 +1508,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_8.json",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_8.json",
           "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl8Item.java"
         ]
       },
@@ -1465,7 +1522,7 @@
       "registry_name": "sugilite_armor_boots_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_armor_boots_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_armor_boots_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1479,7 +1536,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/SugiliteBlockBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/sugilite_block.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/sugilite_block.json",
+          "src/main/resources/assets/capital_mode/items/sugilite_block.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_block.json",
           "src/main/resources/assets/capital_mode/blockstates/sugilite_block.json",
           "src/main/resources/assets/capital_mode/models/block/sugilite_block.json"
@@ -1495,7 +1553,7 @@
       "registry_name": "sugilite_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_block_ore_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_block_ore_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1508,7 +1566,7 @@
       "registry_name": "sugilite_sword_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_sword_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_sword_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1521,7 +1579,7 @@
       "registry_name": "sugilitecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilitecraft.json"
+          "src/main/resources/data/capital_mode/recipe/sugilitecraft.json"
         ]
       },
       "path": "~/Iridium"
@@ -1534,6 +1592,7 @@
       "registry_name": "sugilite_pickaxe",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/sugilite_pickaxe.json",
           "src/main/java/net/mcreator/capitalmode/item/SugilitePickaxeItem.java",
           "src/main/resources/assets/capital_mode/models/item/sugilite_pickaxe.json"
         ]
@@ -1548,7 +1607,7 @@
       "registry_name": "sugilite_armor_leggings_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_armor_leggings_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_armor_leggings_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1561,6 +1620,7 @@
       "registry_name": "sugilite_shovel",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/sugilite_shovel.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_shovel.json",
           "src/main/java/net/mcreator/capitalmode/item/SugiliteShovelItem.java"
         ]
@@ -1588,7 +1648,7 @@
       "registry_name": "cinqe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cinqe.json"
+          "src/main/resources/data/capital_mode/recipe/cinqe.json"
         ]
       },
       "path": "~/Argent"
@@ -1601,7 +1661,7 @@
       "registry_name": "sugilite_axe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_axe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_axe_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1615,6 +1675,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/SugiliteAxeItem.java",
+          "src/main/resources/assets/capital_mode/items/sugilite_axe.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_axe.json"
         ]
       },
@@ -1628,7 +1689,7 @@
       "registry_name": "sugilite_hoe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_hoe_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_hoe_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1642,6 +1703,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/SugiliteItem.java",
+          "src/main/resources/assets/capital_mode/items/sugilite.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite.json"
         ]
       },
@@ -1655,7 +1717,7 @@
       "registry_name": "ameliorateurniv_9",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorateurniv_9.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorateurniv_9.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1668,7 +1730,7 @@
       "registry_name": "dixe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/dixe.json"
+          "src/main/resources/data/capital_mode/recipe/dixe.json"
         ]
       },
       "path": "~/Argent"
@@ -1685,10 +1747,16 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/resources/assets/capital_mode/items/sugilite_armor_boots.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_armor_leggings.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_armor_chestplate.json",
+          "src/main/resources/assets/capital_mode/items/sugilite_armor_chestplate.json",
+          "src/main/resources/assets/capital_mode/items/sugilite_armor_leggings.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_armor_helmet.json",
+          "src/main/resources/assets/capital_mode/equipment/sugilite_armor.json",
+          "src/main/resources/assets/capital_mode/items/sugilite_armor_helmet.json",
           "src/main/java/net/mcreator/capitalmode/item/SugiliteArmorItem.java",
+          "src/main/java/net/mcreator/capitalmode/client/renderer/item/SugiliteArmorArmor.java",
           "src/main/resources/assets/capital_mode/models/item/sugilite_armor_boots.json"
         ]
       },
@@ -1703,6 +1771,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/sugilite_sword.json",
+          "src/main/resources/assets/capital_mode/items/sugilite_sword.json",
           "src/main/java/net/mcreator/capitalmode/item/SugiliteSwordItem.java"
         ]
       },
@@ -1716,7 +1785,7 @@
       "registry_name": "ameliorateurniv_7",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorateurniv_7.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorateurniv_7.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1729,6 +1798,7 @@
       "registry_name": "sugilite_hoe",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/sugilite_hoe.json",
           "src/main/resources/assets/capital_mode/models/item/sugilite_hoe.json",
           "src/main/java/net/mcreator/capitalmode/item/SugiliteHoeItem.java"
         ]
@@ -1743,7 +1813,7 @@
       "registry_name": "sugilite_shovel_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_shovel_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_shovel_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1756,7 +1826,7 @@
       "registry_name": "sugilite_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_ore_block_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_ore_block_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1769,7 +1839,7 @@
       "registry_name": "sugilite_armor_body_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/sugilite_armor_body_recipe.json"
+          "src/main/resources/data/capital_mode/recipe/sugilite_armor_body_recipe.json"
         ]
       },
       "path": "~/Iridium"
@@ -1782,7 +1852,7 @@
       "registry_name": "ameliorateurniv_8",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ameliorateurniv_8.json"
+          "src/main/resources/data/capital_mode/recipe/ameliorateurniv_8.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1796,7 +1866,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/ameliorateurlvl_10.json",
-          "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl10Item.java"
+          "src/main/java/net/mcreator/capitalmode/item/Ameliorateurlvl10Item.java",
+          "src/main/resources/assets/capital_mode/items/ameliorateurlvl_10.json"
         ]
       },
       "path": "~/Ameliorateur"
@@ -1828,7 +1899,7 @@
       "registry_name": "cinqcente",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cinqcente.json"
+          "src/main/resources/data/capital_mode/recipe/cinqcente.json"
         ]
       },
       "path": "~/Argent"
@@ -1841,11 +1912,12 @@
       "registry_name": "fonderie",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/fonderie.json",
+          "src/main/resources/assets/capital_mode/items/fonderie.json",
           "src/main/resources/assets/capital_mode/blockstates/fonderie.json",
           "src/main/java/net/mcreator/capitalmode/block/FonderieBlock.java",
           "src/main/java/net/mcreator/capitalmode/block/entity/FonderieBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/fonderie.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/fonderie.json",
           "src/main/resources/assets/capital_mode/models/item/fonderie.json"
         ]
       },
@@ -1860,13 +1932,14 @@
       "metadata": {
         "gb": true,
         "files": [
+          "src/main/java/net/mcreator/capitalmode/client/fluid/CapitalfonduFluidExtension.java",
           "src/main/resources/assets/capital_mode/blockstates/capitalfondu.json",
           "src/main/resources/assets/capital_mode/models/block/capitalfondu.json",
+          "src/main/resources/assets/capital_mode/items/capitalfondu_bucket.json",
           "src/main/java/net/mcreator/capitalmode/block/CapitalfonduBlock.java",
           "src/main/java/net/mcreator/capitalmode/fluid/types/CapitalfonduFluidType.java",
           "src/main/java/net/mcreator/capitalmode/item/CapitalfonduItem.java",
-          "src/main/java/net/mcreator/capitalmode/fluid/CapitalfonduFluid.java",
-          "src/main/resources/assets/capital_mode/models/item/capitalfondu_bucket.json"
+          "src/main/java/net/mcreator/capitalmode/fluid/CapitalfonduFluid.java"
         ]
       },
       "path": "~/Capital"
@@ -1881,7 +1954,24 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/procedures/FonderieproProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Machine/Procedures"
     },
@@ -1893,7 +1983,7 @@
       "registry_name": "craftbatoniridium",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/craftbatoniridium.json"
+          "src/main/resources/data/capital_mode/recipe/craftbatoniridium.json"
         ]
       },
       "path": "~/Iridium"
@@ -1906,6 +1996,7 @@
       "registry_name": "batoniriduim",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/batoniriduim.json",
           "src/main/java/net/mcreator/capitalmode/item/BatoniriduimItem.java",
           "src/main/resources/assets/capital_mode/models/item/batoniriduim.json"
         ]
@@ -1920,6 +2011,7 @@
       "registry_name": "achatchunk",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/achatchunk.json",
           "src/main/resources/assets/capital_mode/models/item/achatchunk.json",
           "src/main/java/net/mcreator/capitalmode/item/AchatchunkItem.java"
         ]
@@ -1934,7 +2026,7 @@
       "registry_name": "achatchunk_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/achatchunk_2.json"
+          "src/main/resources/data/capital_mode/recipe/achatchunk_2.json"
         ]
       },
       "path": "~/Argent"
@@ -1948,7 +2040,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/PerfectCoalItem.java",
-          "src/main/resources/assets/capital_mode/models/item/perfect_coal.json"
+          "src/main/resources/assets/capital_mode/models/item/perfect_coal.json",
+          "src/main/resources/assets/capital_mode/items/perfect_coal.json"
         ]
       },
       "path": "~/Machine/Item"
@@ -1961,8 +2054,9 @@
       "registry_name": "condensedstone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/condensedstone.json",
           "src/main/java/net/mcreator/capitalmode/block/CondensedstoneBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/condensedstone.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/condensedstone.json",
           "src/main/resources/assets/capital_mode/models/block/condensedstone.json",
           "src/main/resources/assets/capital_mode/models/item/condensedstone.json",
           "src/main/resources/assets/capital_mode/blockstates/condensedstone.json"
@@ -1978,7 +2072,7 @@
       "registry_name": "condensedstonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/condensedstonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/condensedstonecraft.json"
         ]
       },
       "path": "~/Craft"
@@ -1993,9 +2087,10 @@
         "files": [
           "src/main/resources/assets/capital_mode/models/item/ultracondensed.json",
           "src/main/resources/assets/capital_mode/blockstates/ultracondensed.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/ultracondensed.json",
+          "src/main/resources/assets/capital_mode/items/ultracondensed.json",
           "src/main/java/net/mcreator/capitalmode/block/UltracondensedBlock.java",
-          "src/main/resources/assets/capital_mode/models/block/ultracondensed.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/ultracondensed.json"
+          "src/main/resources/assets/capital_mode/models/block/ultracondensed.json"
         ]
       },
       "path": "~/Blocs"
@@ -2008,7 +2103,7 @@
       "registry_name": "ultracondensedstonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/ultracondensedstonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/ultracondensedstonecraft.json"
         ]
       },
       "path": "~/Craft"
@@ -2022,7 +2117,8 @@
       "metadata": {
         "gb": true,
         "files": [
-          "src/main/resources/assets/capital_mode/models/item/cobaltfondu_bucket.json",
+          "src/main/resources/assets/capital_mode/items/cobaltfondu_bucket.json",
+          "src/main/java/net/mcreator/capitalmode/client/fluid/CobaltfonduFluidExtension.java",
           "src/main/resources/assets/capital_mode/models/block/cobaltfondu.json",
           "src/main/java/net/mcreator/capitalmode/item/CobaltfonduItem.java",
           "src/main/java/net/mcreator/capitalmode/fluid/types/CobaltfonduFluidType.java",
@@ -2042,6 +2138,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CapitalpowderItem.java",
+          "src/main/resources/assets/capital_mode/items/capitalpowder.json",
           "src/main/resources/assets/capital_mode/models/item/capitalpowder.json"
         ]
       },
@@ -2056,6 +2153,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CobaltpowderItem.java",
+          "src/main/resources/assets/capital_mode/items/cobaltpowder.json",
           "src/main/resources/assets/capital_mode/models/item/cobaltpowder.json"
         ]
       },
@@ -2070,6 +2168,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/IridiumpowderItem.java",
+          "src/main/resources/assets/capital_mode/items/iridiumpowder.json",
           "src/main/resources/assets/capital_mode/models/item/iridiumpowder.json"
         ]
       },
@@ -2083,7 +2182,7 @@
       "registry_name": "cappowder",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cappowder.json"
+          "src/main/resources/data/capital_mode/recipe/cappowder.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -2096,7 +2195,7 @@
       "registry_name": "cobpowder",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobpowder.json"
+          "src/main/resources/data/capital_mode/recipe/cobpowder.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -2109,7 +2208,7 @@
       "registry_name": "iridpowder",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/iridpowder.json"
+          "src/main/resources/data/capital_mode/recipe/iridpowder.json"
         ]
       },
       "path": "~/Iridium"
@@ -2127,9 +2226,10 @@
           "src/main/resources/assets/capital_mode/models/block/iridfondu.json",
           "src/main/resources/assets/capital_mode/blockstates/iridfondu.json",
           "src/main/java/net/mcreator/capitalmode/block/IridfonduBlock.java",
+          "src/main/java/net/mcreator/capitalmode/client/fluid/IridfonduFluidExtension.java",
           "src/main/java/net/mcreator/capitalmode/fluid/types/IridfonduFluidType.java",
           "src/main/java/net/mcreator/capitalmode/fluid/IridfonduFluid.java",
-          "src/main/resources/assets/capital_mode/models/item/iridfondu_bucket.json"
+          "src/main/resources/assets/capital_mode/items/iridfondu_bucket.json"
         ]
       },
       "path": "~/Iridium"
@@ -2143,7 +2243,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/deadstone.json",
-          "src/main/java/net/mcreator/capitalmode/item/DeadstoneItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/DeadstoneItem.java",
+          "src/main/resources/assets/capital_mode/items/deadstone.json"
         ]
       },
       "path": "~/Machine/stones"
@@ -2156,7 +2257,7 @@
       "registry_name": "deadstonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/deadstonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/deadstonecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -2189,6 +2290,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/capital_faux.json",
+          "src/main/resources/assets/capital_mode/items/capital_faux.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalFauxItem.java"
         ]
       },
@@ -2221,6 +2323,7 @@
       "registry_name": "cobgdague",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/cobgdague.json",
           "src/main/resources/assets/capital_mode/models/item/cobgdague.json",
           "src/main/java/net/mcreator/capitalmode/item/CobgdagueItem.java"
         ]
@@ -2236,7 +2339,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/capitaldague.json",
-          "src/main/java/net/mcreator/capitalmode/item/CapitaldagueItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/CapitaldagueItem.java",
+          "src/main/resources/assets/capital_mode/items/capitaldague.json"
         ]
       },
       "path": "~/Capital"
@@ -2249,6 +2353,7 @@
       "registry_name": "firestone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/firestone.json",
           "src/main/resources/assets/capital_mode/models/item/firestone.json",
           "src/main/java/net/mcreator/capitalmode/item/FirestoneItem.java"
         ]
@@ -2300,6 +2405,7 @@
       "registry_name": "iridiumspeedsword",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/iridiumspeedsword.json",
           "src/main/java/net/mcreator/capitalmode/item/IridiumspeedswordItem.java",
           "src/main/resources/assets/capital_mode/models/item/iridiumspeedsword.json"
         ]
@@ -2315,6 +2421,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/capitalspear.json",
+          "src/main/resources/assets/capital_mode/items/capitalspear.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalspearItem.java"
         ]
       },
@@ -2328,7 +2435,7 @@
       "registry_name": "firestonecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/firestonecraft.json"
+          "src/main/resources/data/capital_mode/recipe/firestonecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -2378,7 +2485,7 @@
       "registry_name": "fonderiecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/fonderiecraft.json"
+          "src/main/resources/data/capital_mode/recipe/fonderiecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -2392,7 +2499,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/IridiumhammerItem.java",
-          "src/main/resources/assets/capital_mode/models/item/iridiumhammer.json"
+          "src/main/resources/assets/capital_mode/models/item/iridiumhammer.json",
+          "src/main/resources/assets/capital_mode/items/iridiumhammer.json"
         ]
       },
       "path": "~/Iridium"
@@ -2406,6 +2514,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/iridiumspeedpickaxe.json",
+          "src/main/resources/assets/capital_mode/items/iridiumspeedpickaxe.json",
           "src/main/java/net/mcreator/capitalmode/item/IridiumspeedpickaxeItem.java"
         ]
       },
@@ -2419,7 +2528,7 @@
       "registry_name": "spear",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/spear.json"
+          "src/main/resources/data/capital_mode/recipe/spear.json"
         ]
       },
       "path": "~/Capital"
@@ -2452,7 +2561,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/reliqueeau.json",
-          "src/main/java/net/mcreator/capitalmode/item/ReliqueeauItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/ReliqueeauItem.java",
+          "src/main/resources/assets/capital_mode/items/reliqueeau.json"
         ]
       },
       "path": "~/Reliques"
@@ -2466,7 +2576,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/ReliqueboofItem.java",
-          "src/main/resources/assets/capital_mode/models/item/reliqueboof.json"
+          "src/main/resources/assets/capital_mode/models/item/reliqueboof.json",
+          "src/main/resources/assets/capital_mode/items/reliqueboof.json"
         ]
       },
       "path": "~/Reliques"
@@ -2495,7 +2606,8 @@
         "files": [
           "src/main/resources/assets/capital_mode/models/item/reliquesac.json",
           "src/main/java/net/mcreator/capitalmode/item/ReliquesacItem.java",
-          "src/main/java/net/mcreator/capitalmode/item/inventory/ReliquesacInventoryCapability.java"
+          "src/main/java/net/mcreator/capitalmode/item/inventory/ReliquesacInventoryCapability.java",
+          "src/main/resources/assets/capital_mode/items/reliquesac.json"
         ]
       },
       "path": "~/Reliques"
@@ -2527,6 +2639,7 @@
       "registry_name": "reliquefire",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/reliquefire.json",
           "src/main/java/net/mcreator/capitalmode/item/ReliquefireItem.java",
           "src/main/resources/assets/capital_mode/models/item/reliquefire.json"
         ]
@@ -2565,6 +2678,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/ReliquepvpItem.java",
+          "src/main/resources/assets/capital_mode/items/reliquepvp.json",
           "src/main/resources/assets/capital_mode/models/item/reliquepvp.json"
         ]
       },
@@ -2579,7 +2693,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/rouedugardien.json",
-          "src/main/java/net/mcreator/capitalmode/item/GiverreliqueItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/GiverreliqueItem.java",
+          "src/main/resources/assets/capital_mode/items/rouedugardien.json"
         ]
       },
       "path": "~/Reliques"
@@ -2616,6 +2731,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/JouetmarteauItem.java",
+          "src/main/resources/assets/capital_mode/items/jouetmarteau.json",
           "src/main/resources/assets/capital_mode/models/item/jouetmarteau.json"
         ]
       },
@@ -2630,7 +2746,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/IridiumbigswordItem.java",
-          "src/main/resources/assets/capital_mode/models/item/iridiumbigsword.json"
+          "src/main/resources/assets/capital_mode/models/item/iridiumbigsword.json",
+          "src/main/resources/assets/capital_mode/items/iridiumbigsword.json"
         ]
       },
       "path": "~/Iridium"
@@ -2643,7 +2760,7 @@
       "registry_name": "capitaloredrop",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capital_ore.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/capital_ore.json"
         ]
       },
       "path": "~/Capital"
@@ -3090,13 +3207,14 @@
       "metadata": {
         "files": [
           "src/main/resources/data/capital_mode/worldgen/configured_feature/invocateur.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/invocateur.json",
           "src/main/resources/assets/capital_mode/models/item/invocateur.json",
           "src/main/resources/data/capital_mode/worldgen/placed_feature/invocateur.json",
           "src/main/java/net/mcreator/capitalmode/block/InvocateurBlock.java",
+          "src/main/resources/data/capital_mode/neoforge/biome_modifier/invocateur_biome_modifier.json",
           "src/main/resources/assets/capital_mode/blockstates/invocateur.json",
           "src/main/resources/assets/capital_mode/models/block/invocateur.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/invocateur.json",
-          "src/main/resources/data/capital_mode/forge/biome_modifier/invocateur_biome_modifier.json"
+          "src/main/resources/assets/capital_mode/items/invocateur.json"
         ]
       },
       "path": "~/Demons"
@@ -3166,7 +3284,8 @@
           "src/main/java/net/mcreator/capitalmode/block/DemonworldPortalBlock.java",
           "src/main/resources/assets/capital_mode/models/block/demonworld_portal_ns.json",
           "src/main/resources/data/capital_mode/dimension/demonworld.json",
-          "src/main/resources/assets/capital_mode/models/block/demonworld_portal_ew.json"
+          "src/main/resources/assets/capital_mode/models/block/demonworld_portal_ew.json",
+          "src/main/resources/assets/capital_mode/items/demonworld.json"
         ]
       },
       "path": "~/Demons/Demon World"
@@ -3641,7 +3760,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/GrandcoeurItem.java",
-          "src/main/resources/assets/capital_mode/models/item/grandcoeur.json"
+          "src/main/resources/assets/capital_mode/models/item/grandcoeur.json",
+          "src/main/resources/assets/capital_mode/items/grandcoeur.json"
         ]
       },
       "path": "~/Competences/Items"
@@ -3655,8 +3775,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/blockstates/fandecapital.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/fandecapital.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/fandecapital.json",
           "src/main/resources/assets/capital_mode/models/block/fandecapital.json",
+          "src/main/resources/assets/capital_mode/items/fandecapital.json",
           "src/main/java/net/mcreator/capitalmode/block/FandecapitalBlock.java",
           "src/main/resources/assets/capital_mode/models/item/fandecapital.json"
         ]
@@ -3671,6 +3792,7 @@
       "registry_name": "bourredefleches",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/bourredefleches.json",
           "src/main/java/net/mcreator/capitalmode/item/BourredeflechesItem.java",
           "src/main/resources/assets/capital_mode/models/item/bourredefleches.json"
         ]
@@ -3686,6 +3808,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/hyperactif_1.json",
+          "src/main/resources/assets/capital_mode/items/hyperactif_1.json",
           "src/main/java/net/mcreator/capitalmode/item/Hyperactif1Item.java"
         ]
       },
@@ -3700,7 +3823,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Hyperactif2Item.java",
-          "src/main/resources/assets/capital_mode/models/item/hyperactif_2.json"
+          "src/main/resources/assets/capital_mode/models/item/hyperactif_2.json",
+          "src/main/resources/assets/capital_mode/items/hyperactif_2.json"
         ]
       },
       "path": "~/Competences/Items"
@@ -3714,7 +3838,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/Hyperactif3Item.java",
-          "src/main/resources/assets/capital_mode/models/item/hyperactif_3.json"
+          "src/main/resources/assets/capital_mode/models/item/hyperactif_3.json",
+          "src/main/resources/assets/capital_mode/items/hyperactif_3.json"
         ]
       },
       "path": "~/Competences/Items"
@@ -3727,6 +3852,7 @@
       "registry_name": "yeuxdechat",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/yeuxdechat.json",
           "src/main/java/net/mcreator/capitalmode/item/YeuxdechatItem.java",
           "src/main/resources/assets/capital_mode/models/item/yeuxdechat.json"
         ]
@@ -3742,7 +3868,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/grandcoeur_2.json",
-          "src/main/java/net/mcreator/capitalmode/item/Grandcoeur2Item.java"
+          "src/main/java/net/mcreator/capitalmode/item/Grandcoeur2Item.java",
+          "src/main/resources/assets/capital_mode/items/grandcoeur_2.json"
         ]
       },
       "path": "~/Competences/Items"
@@ -3793,6 +3920,7 @@
       "registry_name": "grandcoeur_3",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/grandcoeur_3.json",
           "src/main/java/net/mcreator/capitalmode/item/Grandcoeur3Item.java",
           "src/main/resources/assets/capital_mode/models/item/grandcoeur_3.json"
         ]
@@ -3808,6 +3936,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/PetitssoinsItem.java",
+          "src/main/resources/assets/capital_mode/items/petitssoins.json",
           "src/main/resources/assets/capital_mode/models/item/petitssoins.json"
         ]
       },
@@ -3917,6 +4046,7 @@
       "registry_name": "chutelibre",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/chutelibre.json",
           "src/main/java/net/mcreator/capitalmode/item/ChutelibreItem.java",
           "src/main/resources/assets/capital_mode/models/item/chutelibre.json"
         ]
@@ -3932,7 +4062,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/capitalseed.json",
-          "src/main/java/net/mcreator/capitalmode/item/CapitalseedItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/CapitalseedItem.java",
+          "src/main/resources/assets/capital_mode/items/capitalseed.json"
         ]
       },
       "path": "~/Plantes/items"
@@ -3948,8 +4079,9 @@
           "src/main/resources/assets/capital_mode/blockstates/capitalplant.json",
           "src/main/java/net/mcreator/capitalmode/block/CapitalplantBlock.java",
           "src/main/resources/assets/capital_mode/models/block/capitalplant.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capitalplant.json",
-          "src/main/resources/assets/capital_mode/models/item/capitalplant.json"
+          "src/main/resources/assets/capital_mode/items/capitalplant.json",
+          "src/main/resources/assets/capital_mode/models/item/capitalplant.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/capitalplant.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -3963,7 +4095,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/Capitalplant2Block.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capitalplant_2.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/capitalplant_2.json",
+          "src/main/resources/assets/capital_mode/items/capitalplant_2.json",
           "src/main/resources/assets/capital_mode/models/item/capitalplant_2.json",
           "src/main/resources/assets/capital_mode/models/block/capitalplant_2.json",
           "src/main/resources/assets/capital_mode/blockstates/capitalplant_2.json"
@@ -3979,10 +4112,11 @@
       "registry_name": "capitalplant_3",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capitalplant_3.json",
           "src/main/resources/assets/capital_mode/models/block/capitalplant_3.json",
           "src/main/java/net/mcreator/capitalmode/block/Capitalplant3Block.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/capitalplant_3.json",
           "src/main/resources/assets/capital_mode/models/item/capitalplant_3.json",
+          "src/main/resources/assets/capital_mode/items/capitalplant_3.json",
           "src/main/resources/assets/capital_mode/blockstates/capitalplant_3.json"
         ]
       },
@@ -3996,11 +4130,12 @@
       "registry_name": "capitalplant_4",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capitalplant_4.json",
           "src/main/resources/assets/capital_mode/blockstates/capitalplant_4.json",
           "src/main/resources/assets/capital_mode/models/block/capitalplant_4.json",
           "src/main/resources/assets/capital_mode/models/item/capitalplant_4.json",
-          "src/main/java/net/mcreator/capitalmode/block/Capitalplant4Block.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capitalplant_4.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/capitalplant_4.json",
+          "src/main/java/net/mcreator/capitalmode/block/Capitalplant4Block.java"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -4203,6 +4338,7 @@
       "registry_name": "dolomiteingot",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/dolomiteingot.json",
           "src/main/java/net/mcreator/capitalmode/item/DolomiteingotItem.java",
           "src/main/resources/assets/capital_mode/models/item/dolomiteingot.json"
         ]
@@ -4217,7 +4353,7 @@
       "registry_name": "dolomiteoredrop",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/dolomiteore.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/dolomiteore.json"
         ]
       },
       "path": "~/Plantes/Dolomite"
@@ -4237,8 +4373,14 @@
           "src/main/java/net/mcreator/capitalmode/item/InvisiblearmorItem.java",
           "src/main/resources/assets/capital_mode/models/item/invisiblearmor_helmet.json",
           "src/main/resources/assets/capital_mode/models/item/invisiblearmor_boots.json",
+          "src/main/resources/assets/capital_mode/items/invisiblearmor_helmet.json",
+          "src/main/resources/assets/capital_mode/equipment/invisiblearmor.json",
+          "src/main/resources/assets/capital_mode/items/invisiblearmor_boots.json",
+          "src/main/java/net/mcreator/capitalmode/client/renderer/item/InvisiblearmorArmor.java",
           "src/main/resources/assets/capital_mode/models/item/invisiblearmor_leggings.json",
-          "src/main/resources/assets/capital_mode/models/item/invisiblearmor_chestplate.json"
+          "src/main/resources/assets/capital_mode/items/invisiblearmor_leggings.json",
+          "src/main/resources/assets/capital_mode/models/item/invisiblearmor_chestplate.json",
+          "src/main/resources/assets/capital_mode/items/invisiblearmor_chestplate.json"
         ]
       },
       "path": "~/Cosmetiques/epique"
@@ -4251,6 +4393,7 @@
       "registry_name": "dolomiteore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/dolomiteore.json",
           "src/main/resources/assets/capital_mode/blockstates/dolomiteore.json",
           "src/main/resources/assets/capital_mode/models/item/dolomiteore.json",
           "src/main/resources/assets/capital_mode/models/block/dolomiteore.json",
@@ -4267,7 +4410,7 @@
       "registry_name": "capitalseedcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitalseedcraft.json"
+          "src/main/resources/data/capital_mode/recipe/capitalseedcraft.json"
         ]
       },
       "path": "~/Plantes/craft"
@@ -4281,6 +4424,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/soul_sword.json",
+          "src/main/resources/assets/capital_mode/items/soul_sword.json",
           "src/main/java/net/mcreator/capitalmode/item/SoulSwordItem.java"
         ]
       },
@@ -4308,7 +4452,8 @@
       "registry_name": "electricfurnace",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/electricfurnace.json",
+          "src/main/resources/assets/capital_mode/items/electricfurnace.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/electricfurnace.json",
           "src/main/resources/assets/capital_mode/blockstates/electricfurnace.json",
           "src/main/resources/assets/capital_mode/models/block/electricfurnace.json",
           "src/main/java/net/mcreator/capitalmode/block/ElectricfurnaceBlock.java",
@@ -4358,7 +4503,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CosmetiquecobspeedswordItem.java",
-          "src/main/resources/assets/capital_mode/models/item/super_cobalt_old_sword.json"
+          "src/main/resources/assets/capital_mode/models/item/super_cobalt_old_sword.json",
+          "src/main/resources/assets/capital_mode/items/super_cobalt_old_sword.json"
         ]
       },
       "path": "~/Cosmetiques/communs"
@@ -4437,9 +4583,10 @@
       "registry_name": "panneausolair",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/panneausolair.json",
           "src/main/resources/assets/capital_mode/blockstates/panneausolair.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/panneausolair.json",
           "src/main/resources/assets/capital_mode/models/item/panneausolair.json",
+          "src/main/resources/assets/capital_mode/items/panneausolair.json",
           "src/main/java/net/mcreator/capitalmode/block/PanneausolairBlock.java",
           "src/main/java/net/mcreator/capitalmode/block/entity/PanneausolairBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/panneausolair.json"
@@ -4455,7 +4602,7 @@
       "registry_name": "capitalfondre",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/capitalfondre.json"
+          "src/main/resources/data/capital_mode/recipe/capitalfondre.json"
         ]
       },
       "path": "~/Capital"
@@ -4483,12 +4630,13 @@
       "registry_name": "dimensionalmachine",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/dimensionalmachine.json",
           "src/main/java/net/mcreator/capitalmode/block/DimensionalmachineBlock.java",
           "src/main/resources/assets/capital_mode/models/item/dimensionalmachine.json",
           "src/main/resources/assets/capital_mode/blockstates/dimensionalmachine.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/dimensionalmachine.json",
           "src/main/resources/assets/capital_mode/models/block/dimensionalmachine.json",
-          "src/main/java/net/mcreator/capitalmode/block/entity/DimensionalmachineBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/dimensionalmachine.json"
+          "src/main/java/net/mcreator/capitalmode/block/entity/DimensionalmachineBlockEntity.java"
         ]
       },
       "path": "~/Machine/Utilise  FE"
@@ -4642,6 +4790,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/blockstates/boxcommune.json",
+          "src/main/resources/assets/capital_mode/items/boxcommune.json",
           "src/main/java/net/mcreator/capitalmode/block/BoxcommuneBlock.java",
           "src/main/resources/assets/capital_mode/models/block/boxcommune.json",
           "src/main/resources/assets/capital_mode/models/item/boxcommune.json"
@@ -4657,7 +4806,7 @@
       "registry_name": "dropcombox",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/boxcommune.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/boxcommune.json"
         ]
       },
       "path": "~/Cosmetiques/Box"
@@ -4787,7 +4936,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/puissancedemoniaque.json",
-          "src/main/java/net/mcreator/capitalmode/item/PuissancedemoniaqueItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/PuissancedemoniaqueItem.java",
+          "src/main/resources/assets/capital_mode/items/puissancedemoniaque.json"
         ]
       },
       "path": "~/Competences/Items"
@@ -4848,9 +4998,10 @@
           "src/main/resources/assets/capital_mode/blockstates/dynamo.json",
           "src/main/java/net/mcreator/capitalmode/block/DynamoBlock.java",
           "src/main/resources/assets/capital_mode/models/item/dynamo.json",
+          "src/main/resources/assets/capital_mode/items/dynamo.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/DynamoBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/dynamo.json",
-          "src/main/resources/assets/capital_mode/models/block/dynamo.json"
+          "src/main/resources/assets/capital_mode/models/block/dynamo.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/dynamo.json"
         ]
       },
       "path": "~/Machine/Cree FE"
@@ -4863,11 +5014,12 @@
       "registry_name": "mineralyser",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/mineralyser.json",
           "src/main/java/net/mcreator/capitalmode/block/MineralyserBlock.java",
           "src/main/resources/assets/capital_mode/models/block/mineralyser.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/MineralyserBlockEntity.java",
           "src/main/resources/assets/capital_mode/blockstates/mineralyser.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/mineralyser.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/mineralyser.json",
           "src/main/resources/assets/capital_mode/models/item/mineralyser.json"
         ]
       },
@@ -4926,10 +5078,11 @@
       "registry_name": "batterie",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/batterie.json",
+          "src/main/resources/assets/capital_mode/items/batterie.json",
           "src/main/resources/assets/capital_mode/blockstates/batterie.json",
           "src/main/java/net/mcreator/capitalmode/block/BatterieBlock.java",
           "src/main/resources/assets/capital_mode/models/block/batterie.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/batterie.json",
           "src/main/resources/assets/capital_mode/models/item/batterie.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/BatterieBlockEntity.java"
         ]
@@ -5049,6 +5202,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/coal_rank.json",
+          "src/main/resources/assets/capital_mode/items/coal_rank.json",
           "src/main/java/net/mcreator/capitalmode/item/CoalrankItem.java"
         ]
       },
@@ -5078,9 +5232,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/client/renderer/MouetteRenderer.java",
+          "src/main/resources/assets/capital_mode/items/mouette_spawn_egg.json",
           "src/main/java/net/mcreator/capitalmode/entity/MouetteEntity.java",
           "src/main/resources/assets/capital_mode/models/item/mouette_spawn_egg.json",
-          "src/main/resources/data/capital_mode/forge/biome_modifier/mouette_biome_modifier.json"
+          "src/main/resources/data/capital_mode/neoforge/biome_modifier/mouette_biome_modifier.json"
         ]
       },
       "path": "~/Entites"
@@ -5094,6 +5249,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/iridium_rank.json",
+          "src/main/resources/assets/capital_mode/items/iridium_rank.json",
           "src/main/java/net/mcreator/capitalmode/item/IridiumrankItem.java"
         ]
       },
@@ -5107,6 +5263,7 @@
       "registry_name": "gold_rank",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/gold_rank.json",
           "src/main/resources/assets/capital_mode/models/item/gold_rank.json",
           "src/main/java/net/mcreator/capitalmode/item/GoldRankItem.java"
         ]
@@ -5122,6 +5279,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CobaltrankItem.java",
+          "src/main/resources/assets/capital_mode/items/cobalt_rank.json",
           "src/main/resources/assets/capital_mode/models/item/cobalt_rank.json"
         ]
       },
@@ -5136,7 +5294,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/DiamondrankItem.java",
-          "src/main/resources/assets/capital_mode/models/item/diamond_rank.json"
+          "src/main/resources/assets/capital_mode/models/item/diamond_rank.json",
+          "src/main/resources/assets/capital_mode/items/diamond_rank.json"
         ]
       },
       "path": "~/Rank/item"
@@ -5150,6 +5309,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/iron_rank.json",
+          "src/main/resources/assets/capital_mode/items/iron_rank.json",
           "src/main/java/net/mcreator/capitalmode/item/IronrankItem.java"
         ]
       },
@@ -5164,7 +5324,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/netherite_rank.json",
-          "src/main/java/net/mcreator/capitalmode/item/NetheriterankItem.java"
+          "src/main/java/net/mcreator/capitalmode/item/NetheriterankItem.java",
+          "src/main/resources/assets/capital_mode/items/netherite_rank.json"
         ]
       },
       "path": "~/Rank/item"
@@ -5177,6 +5338,7 @@
       "registry_name": "capital_rank",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/capital_rank.json",
           "src/main/resources/assets/capital_mode/models/item/capital_rank.json",
           "src/main/java/net/mcreator/capitalmode/item/CapitalrankItem.java"
         ]
@@ -5192,6 +5354,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/bandage.json",
+          "src/main/resources/assets/capital_mode/items/bandage.json",
           "src/main/java/net/mcreator/capitalmode/item/BandageItem.java"
         ]
       },
@@ -5226,8 +5389,9 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/client/renderer/DemonRenderer.java",
           "src/main/resources/assets/capital_mode/models/item/demon_spawn_egg.json",
+          "src/main/resources/data/capital_mode/neoforge/biome_modifier/demon_biome_modifier.json",
           "src/main/java/net/mcreator/capitalmode/entity/DemonEntity.java",
-          "src/main/resources/data/capital_mode/forge/biome_modifier/demon_biome_modifier.json"
+          "src/main/resources/assets/capital_mode/items/demon_spawn_egg.json"
         ]
       },
       "path": "~/Entites"
@@ -5240,6 +5404,7 @@
       "registry_name": "gardiendemoniaque",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/gardiendemoniaque_spawn_egg.json",
           "src/main/resources/assets/capital_mode/models/item/gardiendemoniaque_spawn_egg.json",
           "src/main/java/net/mcreator/capitalmode/client/renderer/GardiendemoniaqueRenderer.java",
           "src/main/java/net/mcreator/capitalmode/entity/GardiendemoniaqueEntity.java"
@@ -5257,6 +5422,7 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/AutelDemoniaqueBlock.java",
           "src/main/resources/assets/capital_mode/models/block/autel_demoniaque.json",
+          "src/main/resources/assets/capital_mode/items/autel_demoniaque.json",
           "src/main/resources/assets/capital_mode/models/item/autel_demoniaque.json",
           "src/main/resources/assets/capital_mode/blockstates/autel_demoniaque.json"
         ]
@@ -5335,7 +5501,7 @@
       "registry_name": "auteldemoniaqueloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/autel_demoniaque.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/autel_demoniaque.json"
         ]
       },
       "path": "~/Demons"
@@ -5395,9 +5561,10 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/ATMBlock.java",
           "src/main/java/net/mcreator/capitalmode/block/entity/ATMBlockEntity.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/atm.json",
           "src/main/resources/assets/capital_mode/models/block/atm.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/atm.json",
           "src/main/resources/assets/capital_mode/models/item/atm.json",
+          "src/main/resources/assets/capital_mode/items/atm.json",
           "src/main/resources/assets/capital_mode/blockstates/atm.json"
         ]
       },
@@ -5669,7 +5836,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/CobaltseedItem.java",
-          "src/main/resources/assets/capital_mode/models/item/cobaltseed.json"
+          "src/main/resources/assets/capital_mode/models/item/cobaltseed.json",
+          "src/main/resources/assets/capital_mode/items/cobaltseed.json"
         ]
       },
       "path": "~/Plantes/items"
@@ -5683,10 +5851,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/CobaltplantBlock.java",
+          "src/main/resources/assets/capital_mode/items/cobaltplant.json",
           "src/main/resources/assets/capital_mode/models/block/cobaltplant.json",
           "src/main/resources/assets/capital_mode/blockstates/cobaltplant.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cobaltplant.json",
-          "src/main/resources/assets/capital_mode/models/item/cobaltplant.json"
+          "src/main/resources/assets/capital_mode/models/item/cobaltplant.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cobaltplant.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -5700,9 +5869,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/block/cobaltplant_2.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cobaltplant_2.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cobaltplant_2.json",
           "src/main/resources/assets/capital_mode/models/item/cobaltplant_2.json",
           "src/main/resources/assets/capital_mode/blockstates/cobaltplant_2.json",
+          "src/main/resources/assets/capital_mode/items/cobaltplant_2.json",
           "src/main/java/net/mcreator/capitalmode/block/Cobaltplant2Block.java"
         ]
       },
@@ -5716,11 +5886,12 @@
       "registry_name": "cobaltplant_3",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/cobaltplant_3.json",
           "src/main/resources/assets/capital_mode/blockstates/cobaltplant_3.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cobaltplant_3.json",
           "src/main/resources/assets/capital_mode/models/item/cobaltplant_3.json",
           "src/main/resources/assets/capital_mode/models/block/cobaltplant_3.json",
-          "src/main/java/net/mcreator/capitalmode/block/Cobaltplant3Block.java"
+          "src/main/java/net/mcreator/capitalmode/block/Cobaltplant3Block.java",
+          "src/main/resources/assets/capital_mode/items/cobaltplant_3.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -5733,11 +5904,12 @@
       "registry_name": "cobaltplant_4",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cobaltplant_4.json",
           "src/main/resources/assets/capital_mode/models/item/cobaltplant_4.json",
+          "src/main/resources/assets/capital_mode/items/cobaltplant_4.json",
           "src/main/resources/assets/capital_mode/models/block/cobaltplant_4.json",
           "src/main/resources/assets/capital_mode/blockstates/cobaltplant_4.json",
-          "src/main/java/net/mcreator/capitalmode/block/Cobaltplant4Block.java"
+          "src/main/java/net/mcreator/capitalmode/block/Cobaltplant4Block.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cobaltplant_4.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -5910,6 +6082,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/IridiumseedItem.java",
+          "src/main/resources/assets/capital_mode/items/iridiumseed.json",
           "src/main/resources/assets/capital_mode/models/item/iridiumseed.json"
         ]
       },
@@ -5959,8 +6132,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/iridiumplant.json",
+          "src/main/resources/assets/capital_mode/items/iridiumplant.json",
           "src/main/java/net/mcreator/capitalmode/block/IridiumplantBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/iridiumplant.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/iridiumplant.json",
           "src/main/resources/assets/capital_mode/models/block/iridiumplant.json",
           "src/main/resources/assets/capital_mode/blockstates/iridiumplant.json"
         ]
@@ -5975,8 +6149,9 @@
       "registry_name": "iridiumplant_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/iridiumplant_2.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/iridiumplant_2.json",
           "src/main/java/net/mcreator/capitalmode/block/Iridiumplant2Block.java",
+          "src/main/resources/assets/capital_mode/items/iridiumplant_2.json",
           "src/main/resources/assets/capital_mode/models/item/iridiumplant_2.json",
           "src/main/resources/assets/capital_mode/blockstates/iridiumplant_2.json",
           "src/main/resources/assets/capital_mode/models/block/iridiumplant_2.json"
@@ -5994,7 +6169,8 @@
         "files": [
           "src/main/resources/assets/capital_mode/models/item/iridiumplant_3.json",
           "src/main/resources/assets/capital_mode/blockstates/iridiumplant_3.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/iridiumplant_3.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/iridiumplant_3.json",
+          "src/main/resources/assets/capital_mode/items/iridiumplant_3.json",
           "src/main/java/net/mcreator/capitalmode/block/Iridiumplant3Block.java",
           "src/main/resources/assets/capital_mode/models/block/iridiumplant_3.json"
         ]
@@ -6009,11 +6185,12 @@
       "registry_name": "iridiumplant_4",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/iridiumplant_4.json",
           "src/main/resources/assets/capital_mode/models/item/iridiumplant_4.json",
           "src/main/resources/assets/capital_mode/blockstates/iridiumplant_4.json",
           "src/main/resources/assets/capital_mode/models/block/iridiumplant_4.json",
           "src/main/java/net/mcreator/capitalmode/block/Iridiumplant4Block.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/iridiumplant_4.json"
+          "src/main/resources/assets/capital_mode/items/iridiumplant_4.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -6152,9 +6329,10 @@
         "files": [
           "src/main/resources/assets/capital_mode/models/item/dolomite_farmland.json",
           "src/main/resources/assets/capital_mode/models/block/dolomite_farmland.json",
+          "src/main/resources/assets/capital_mode/items/dolomite_farmland.json",
           "src/main/resources/assets/capital_mode/blockstates/dolomite_farmland.json",
           "src/main/java/net/mcreator/capitalmode/block/DolomiteFarmlandBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/dolomite_farmland.json"
+          "src/main/resources/data/capital_mode/loot_table/blocks/dolomite_farmland.json"
         ]
       },
       "path": "~/Plantes/blocs"
@@ -6167,7 +6345,7 @@
       "registry_name": "cobalt_seed_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/cobalt_seed_craft.json"
+          "src/main/resources/data/capital_mode/recipe/cobalt_seed_craft.json"
         ]
       },
       "path": "~/Plantes/craft"
@@ -6180,7 +6358,7 @@
       "registry_name": "iridium_seed_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/iridium_seed_craft.json"
+          "src/main/resources/data/capital_mode/recipe/iridium_seed_craft.json"
         ]
       },
       "path": "~/Plantes/craft"
@@ -6193,8 +6371,9 @@
       "registry_name": "quarry",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/quarry.json",
           "src/main/java/net/mcreator/capitalmode/block/QuarryBlock.java",
+          "src/main/resources/assets/capital_mode/items/quarry.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/quarry.json",
           "src/main/resources/assets/capital_mode/blockstates/quarry.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/QuarryBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/quarry.json",
@@ -6213,7 +6392,8 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/LimitesBlock.java",
           "src/main/resources/assets/capital_mode/blockstates/limites.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/limites.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/limites.json",
+          "src/main/resources/assets/capital_mode/items/limites.json",
           "src/main/resources/assets/capital_mode/models/item/limites.json",
           "src/main/resources/assets/capital_mode/models/block/limites.json"
         ]
@@ -6398,7 +6578,7 @@
       "registry_name": "lenergievert",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/lenergievert.json"
+          "src/main/resources/data/capital_mode/advancement/lenergievert.json"
         ]
       },
       "path": "~/Avancements"
@@ -6554,7 +6734,7 @@
       "registry_name": "dw",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/dw.json"
+          "src/main/resources/data/capital_mode/advancement/dw.json"
         ]
       },
       "path": "~/Avancements"
@@ -6687,7 +6867,7 @@
       "registry_name": "dimentionalmachine",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/dimentionalmachine.json"
+          "src/main/resources/data/capital_mode/recipe/dimentionalmachine.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -6700,7 +6880,7 @@
       "registry_name": "bandages",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/bandages.json"
+          "src/main/resources/data/capital_mode/recipe/bandages.json"
         ]
       },
       "path": "~/Craft"
@@ -6713,7 +6893,7 @@
       "registry_name": "lvl_10",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/lvl_10.json"
+          "src/main/resources/data/capital_mode/advancement/lvl_10.json"
         ]
       },
       "path": "~/Avancements"
@@ -6726,7 +6906,7 @@
       "registry_name": "fulliridium",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/fulliridium.json"
+          "src/main/resources/data/capital_mode/advancement/fulliridium.json"
         ]
       },
       "path": "~/Avancements"
@@ -6754,7 +6934,7 @@
       "registry_name": "lvl_1",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/lvl_1.json"
+          "src/main/resources/data/capital_mode/advancement/lvl_1.json"
         ]
       },
       "path": "~/Avancements"
@@ -6767,7 +6947,7 @@
       "registry_name": "dolomitefarmlandcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/dolomitefarmlandcraft.json"
+          "src/main/resources/data/capital_mode/recipe/dolomitefarmlandcraft.json"
         ]
       },
       "path": "~/Plantes/craft"
@@ -6803,7 +6983,7 @@
       "registry_name": "batteriecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/batteriecraft.json"
+          "src/main/resources/data/capital_mode/recipe/batteriecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -6816,7 +6996,7 @@
       "registry_name": "mineralysercraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/mineralysercraft.json"
+          "src/main/resources/data/capital_mode/recipe/mineralysercraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -6898,9 +7078,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/entity/CapitaleBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/capitale.json",
           "src/main/resources/assets/capital_mode/models/block/capitale.json",
           "src/main/java/net/mcreator/capitalmode/block/CapitaleBlock.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/capitale.json",
+          "src/main/resources/assets/capital_mode/items/capitale.json",
           "src/main/resources/assets/capital_mode/blockstates/capitale.json",
           "src/main/resources/assets/capital_mode/models/item/capitale.json"
         ]
@@ -6969,7 +7150,7 @@
       "registry_name": "dynamocraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/dynamocraft.json"
+          "src/main/resources/data/capital_mode/recipe/dynamocraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -6982,7 +7163,7 @@
       "registry_name": "dolomitesmelt",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/dolomitesmelt.json"
+          "src/main/resources/data/capital_mode/recipe/dolomitesmelt.json"
         ]
       },
       "path": "~/Craft"
@@ -6995,7 +7176,7 @@
       "registry_name": "at_mcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/at_mcraft.json"
+          "src/main/resources/data/capital_mode/recipe/at_mcraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -7009,10 +7190,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/BuegrassBlock.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/buegrass.json",
           "src/main/resources/assets/capital_mode/models/item/buegrass.json",
+          "src/main/resources/assets/capital_mode/items/buegrass.json",
           "src/main/resources/assets/capital_mode/blockstates/buegrass.json",
-          "src/main/resources/assets/capital_mode/models/block/buegrass.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/buegrass.json"
+          "src/main/resources/assets/capital_mode/models/block/buegrass.json"
         ]
       },
       "path": "~/Blocs"
@@ -7025,7 +7207,7 @@
       "registry_name": "solarpannel",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/solarpannel.json"
+          "src/main/resources/data/capital_mode/recipe/solarpannel.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -7038,7 +7220,7 @@
       "registry_name": "quarrycraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/quarrycraft.json"
+          "src/main/resources/data/capital_mode/recipe/quarrycraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -7101,7 +7283,7 @@
       "registry_name": "la_mort",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/advancements/la_mort.json"
+          "src/main/resources/data/capital_mode/advancement/la_mort.json"
         ]
       },
       "path": "~/Avancements"
@@ -7114,7 +7296,7 @@
       "registry_name": "electricfurnacecraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/recipes/electricfurnacecraft.json"
+          "src/main/resources/data/capital_mode/recipe/electricfurnacecraft.json"
         ]
       },
       "path": "~/Machine/Craft"
@@ -7331,12 +7513,13 @@
       "registry_name": "cable",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable.json",
           "src/main/java/net/mcreator/capitalmode/block/CableBlock.java",
           "src/main/resources/assets/capital_mode/blockstates/cable.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/cable.json",
           "src/main/resources/assets/capital_mode/models/item/cable.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable.json"
+          "src/main/resources/assets/capital_mode/items/cable.json"
         ]
       },
       "path": "~/Machine/Cable/Blocks"
@@ -7350,10 +7533,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/item/cablee.json",
+          "src/main/resources/assets/capital_mode/items/cablee.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableeBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/cablee.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cablee.json",
           "src/main/resources/assets/capital_mode/blockstates/cablee.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cablee.json",
           "src/main/java/net/mcreator/capitalmode/block/CableeBlock.java"
         ]
       },
@@ -7367,7 +7551,8 @@
       "registry_name": "cablei",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cablei.json",
+          "src/main/resources/assets/capital_mode/items/cablei.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cablei.json",
           "src/main/resources/assets/capital_mode/blockstates/cablei.json",
           "src/main/java/net/mcreator/capitalmode/block/CableiBlock.java",
           "src/main/resources/assets/capital_mode/models/block/cablei.json",
@@ -7386,10 +7571,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/entity/CablelBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cablel.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cablel.json",
           "src/main/java/net/mcreator/capitalmode/block/CablelBlock.java",
           "src/main/resources/assets/capital_mode/models/item/cablel.json",
           "src/main/resources/assets/capital_mode/blockstates/cablel.json",
+          "src/main/resources/assets/capital_mode/items/cablel.json",
           "src/main/resources/assets/capital_mode/models/block/cablel.json"
         ]
       },
@@ -7405,8 +7591,9 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/entity/CableLCBlockEntity.java",
           "src/main/java/net/mcreator/capitalmode/block/CableLCBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_lc.json",
           "src/main/resources/assets/capital_mode/models/block/cable_lc.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_lc.json",
+          "src/main/resources/assets/capital_mode/items/cable_lc.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_lc.json",
           "src/main/resources/assets/capital_mode/models/item/cable_lc.json"
         ]
@@ -7421,11 +7608,12 @@
       "registry_name": "cable_lcc",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_lcc.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableLCCBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/item/cable_lcc.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_lcc.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_lcc.json",
           "src/main/java/net/mcreator/capitalmode/block/CableLCCBlock.java",
+          "src/main/resources/assets/capital_mode/items/cable_lcc.json",
           "src/main/resources/assets/capital_mode/models/block/cable_lcc.json"
         ]
       },
@@ -7440,9 +7628,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/models/block/cable_lt.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_lt.json",
           "src/main/resources/assets/capital_mode/models/item/cable_lt.json",
           "src/main/java/net/mcreator/capitalmode/block/CableLTBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_lt.json",
+          "src/main/resources/assets/capital_mode/items/cable_lt.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableLTBlockEntity.java",
           "src/main/resources/assets/capital_mode/blockstates/cable_lt.json"
         ]
@@ -7458,9 +7647,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/capital_mode/blockstates/cable_ltc.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_ltc.json",
+          "src/main/resources/assets/capital_mode/items/cable_ltc.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableLTCBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/block/cable_ltc.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_ltc.json",
           "src/main/java/net/mcreator/capitalmode/block/CableLTCBlock.java",
           "src/main/resources/assets/capital_mode/models/item/cable_ltc.json"
         ]
@@ -7475,12 +7665,13 @@
       "registry_name": "cable_t",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_t.json",
+          "src/main/resources/assets/capital_mode/items/cable_t.json",
           "src/main/java/net/mcreator/capitalmode/block/CableTBlock.java",
           "src/main/resources/assets/capital_mode/models/block/cable_t.json",
           "src/main/resources/assets/capital_mode/models/item/cable_t.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableTBlockEntity.java",
-          "src/main/resources/assets/capital_mode/blockstates/cable_t.json"
+          "src/main/resources/assets/capital_mode/blockstates/cable_t.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_t.json"
         ]
       },
       "path": "~/Machine/Cable/Blocks"
@@ -7493,11 +7684,12 @@
       "registry_name": "cable_tc",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_tc.json",
+          "src/main/resources/assets/capital_mode/items/cable_tc.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_tc.json",
           "src/main/resources/assets/capital_mode/models/block/cable_tc.json",
           "src/main/resources/assets/capital_mode/models/item/cable_tc.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableTCBlockEntity.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_tc.json",
           "src/main/java/net/mcreator/capitalmode/block/CableTCBlock.java"
         ]
       },
@@ -7511,12 +7703,13 @@
       "registry_name": "cable_tx",
       "metadata": {
         "files": [
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_tx.json",
           "src/main/resources/assets/capital_mode/models/item/cable_tx.json",
           "src/main/resources/assets/capital_mode/models/block/cable_tx.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableTXBlockEntity.java",
           "src/main/java/net/mcreator/capitalmode/block/CableTXBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_tx.json",
-          "src/main/resources/assets/capital_mode/blockstates/cable_tx.json"
+          "src/main/resources/assets/capital_mode/blockstates/cable_tx.json",
+          "src/main/resources/assets/capital_mode/items/cable_tx.json"
         ]
       },
       "path": "~/Machine/Cable/Blocks"
@@ -7531,9 +7724,10 @@
         "files": [
           "src/main/java/net/mcreator/capitalmode/block/CableTXCBlock.java",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableTXCBlockEntity.java",
+          "src/main/resources/assets/capital_mode/items/cable_txc.json",
           "src/main/resources/assets/capital_mode/models/block/cable_txc.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_txc.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_txc.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_txc.json",
           "src/main/resources/assets/capital_mode/models/item/cable_txc.json"
         ]
       },
@@ -7551,8 +7745,9 @@
           "src/main/resources/assets/capital_mode/models/block/cable_txcc.json",
           "src/main/resources/assets/capital_mode/models/item/cable_txcc.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableTXCCBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_txcc.json",
-          "src/main/java/net/mcreator/capitalmode/block/CableTXCCBlock.java"
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_txcc.json",
+          "src/main/java/net/mcreator/capitalmode/block/CableTXCCBlock.java",
+          "src/main/resources/assets/capital_mode/items/cable_txcc.json"
         ]
       },
       "path": "~/Machine/Cable/Blocks"
@@ -7569,8 +7764,9 @@
           "src/main/resources/assets/capital_mode/blockstates/cable_x.json",
           "src/main/resources/assets/capital_mode/models/block/cable_x.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableXBlockEntity.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_x.json",
-          "src/main/java/net/mcreator/capitalmode/block/CableXBlock.java"
+          "src/main/resources/assets/capital_mode/items/cable_x.json",
+          "src/main/java/net/mcreator/capitalmode/block/CableXBlock.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_x.json"
         ]
       },
       "path": "~/Machine/Cable/Blocks"
@@ -7583,9 +7779,10 @@
       "registry_name": "cable_xc",
       "metadata": {
         "files": [
+          "src/main/resources/assets/capital_mode/items/cable_xc.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_xc.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_xc.json",
           "src/main/resources/assets/capital_mode/models/item/cable_xc.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_xc.json",
           "src/main/resources/assets/capital_mode/models/block/cable_xc.json",
           "src/main/java/net/mcreator/capitalmode/block/entity/CableXCBlockEntity.java",
           "src/main/java/net/mcreator/capitalmode/block/CableXCBlock.java"
@@ -7601,8 +7798,9 @@
       "registry_name": "cable_f",
       "metadata": {
         "files": [
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_f.json",
+          "src/main/resources/assets/capital_mode/items/cable_f.json",
           "src/main/java/net/mcreator/capitalmode/block/CableFBlock.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_f.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_f.json",
           "src/main/resources/assets/capital_mode/models/item/cable_f.json",
           "src/main/resources/assets/capital_mode/models/block/cable_f.json",
@@ -7623,7 +7821,8 @@
           "src/main/java/net/mcreator/capitalmode/block/entity/CableSBlockEntity.java",
           "src/main/resources/assets/capital_mode/models/item/cable_s.json",
           "src/main/java/net/mcreator/capitalmode/block/CableSBlock.java",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/cable_s.json",
+          "src/main/resources/assets/capital_mode/items/cable_s.json",
+          "src/main/resources/data/capital_mode/loot_table/blocks/cable_s.json",
           "src/main/resources/assets/capital_mode/blockstates/cable_s.json"
         ]
       },
@@ -8530,11 +8729,17 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/resources/assets/capital_mode/items/travel_leggings.json",
           "src/main/resources/assets/capital_mode/models/item/travel_leggings.json",
           "src/main/java/net/mcreator/capitalmode/item/TravelItem.java",
           "src/main/resources/assets/capital_mode/models/item/travel_chestplate.json",
+          "src/main/java/net/mcreator/capitalmode/client/renderer/item/TravelArmor.java",
+          "src/main/resources/assets/capital_mode/items/travel_helmet.json",
           "src/main/resources/assets/capital_mode/models/item/travel_helmet.json",
-          "src/main/resources/assets/capital_mode/models/item/travel_boots.json"
+          "src/main/resources/assets/capital_mode/models/item/travel_boots.json",
+          "src/main/resources/assets/capital_mode/items/travel_chestplate.json",
+          "src/main/resources/assets/capital_mode/equipment/travel.json",
+          "src/main/resources/assets/capital_mode/items/travel_boots.json"
         ]
       },
       "path": "~/Items"
@@ -8580,9 +8785,10 @@
         "files": [
           "src/main/resources/assets/capital_mode/blockstates/lumiere.json",
           "src/main/resources/assets/capital_mode/models/item/lumiere.json",
-          "src/main/resources/data/capital_mode/loot_tables/blocks/lumiere.json",
           "src/main/resources/assets/capital_mode/models/block/lumiere.json",
-          "src/main/java/net/mcreator/capitalmode/block/LumiereBlock.java"
+          "src/main/resources/assets/capital_mode/items/lumiere.json",
+          "src/main/java/net/mcreator/capitalmode/block/LumiereBlock.java",
+          "src/main/resources/data/capital_mode/loot_table/blocks/lumiere.json"
         ]
       },
       "path": "~/Blocs"
@@ -8782,7 +8988,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/BionicswordItem.java",
-          "src/main/resources/assets/capital_mode/models/item/bionicsword.json"
+          "src/main/resources/assets/capital_mode/models/item/bionicsword.json",
+          "src/main/resources/assets/capital_mode/items/bionicsword.json"
         ]
       },
       "path": "~/Machine/Item"
@@ -9050,7 +9257,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/capitalmode/item/BatterieexterneItem.java",
-          "src/main/resources/assets/capital_mode/models/item/batterieexterne.json"
+          "src/main/resources/assets/capital_mode/models/item/batterieexterne.json",
+          "src/main/resources/assets/capital_mode/items/batterieexterne.json"
         ]
       },
       "path": "~/Machine/Item"
@@ -9131,6 +9339,105 @@
         ]
       },
       "path": "~/Machine/Procedures"
+    },
+    {
+      "name": "Manamore",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manamore",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/ManamoreProcedure.java"
+        ]
+      },
+      "path": "~/Machine/Procedures"
+    },
+    {
+      "name": "ManaFullPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_full_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/ManaFullProProcedure.java"
+        ]
+      },
+      "path": "~/Commandes"
+    },
+    {
+      "name": "ManaFull",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_full",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/command/ManaFullCommand.java"
+        ]
+      },
+      "path": "~/Commandes"
+    },
+    {
+      "name": "ManaCheckPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_check_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/procedures/ManaCheckProProcedure.java"
+        ]
+      },
+      "path": "~/Commandes"
+    },
+    {
+      "name": "ManaCheck",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_check",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/command/ManaCheckCommand.java"
+        ]
+      },
+      "path": "~/Commandes"
     }
   ],
   "variable_elements": [
@@ -9261,10 +9568,10 @@
       "value": "0"
     },
     {
-      "name": "energie_nombre",
+      "name": "Mana",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "1000.0"
     },
     {
       "name": "Argent",
@@ -9283,6 +9590,12 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "Mana_max",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10000.0"
     }
   ],
   "sound_elements": [
@@ -9452,6 +9765,146 @@
     ],
     "BIOMES:minecraft:has_structure/village_plains": [
       "~CUSTOM:BlueBiome"
+    ],
+    "ITEMS:capital_mode:capital_outils_pickaxe_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capital_outils_axe_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capital_outils_sword_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capital_outils_shovel_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capital_outils_hoe_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Travel.helmet",
+      "~CUSTOM:Invisiblearmor.helmet",
+      "~CUSTOM:SugiliteArmor.helmet",
+      "~CUSTOM:RubiArmor.helmet",
+      "~CUSTOM:CapitaleArmor.helmet"
+    ],
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:Travel.body",
+      "~CUSTOM:Invisiblearmor.body",
+      "~CUSTOM:SugiliteArmor.body",
+      "~CUSTOM:RubiArmor.body",
+      "~CUSTOM:CapitaleArmor.body"
+    ],
+    "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:Travel.legs",
+      "~CUSTOM:Invisiblearmor.legs",
+      "~CUSTOM:SugiliteArmor.legs",
+      "~CUSTOM:RubiArmor.legs",
+      "~CUSTOM:CapitaleArmor.legs"
+    ],
+    "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:Travel.boots",
+      "~CUSTOM:Invisiblearmor.boots",
+      "~CUSTOM:SugiliteArmor.boots",
+      "~CUSTOM:RubiArmor.boots",
+      "~CUSTOM:CapitaleArmor.boots"
+    ],
+    "ITEMS:capital_mode:capitale_armor_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:rubi_pickaxe_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:rubi_axe_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:rubi_sword_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:rubi_shovel_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:rubi_hoe_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:rubi_armor_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:speed_sword_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:speedpickaxe_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capitalhammer_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:capitalwand_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:bigsword_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:cobalt_hammer_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:cobaltspeedpickaxe_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:sugilite_pickaxe_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:sugilite_shovel_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:sugilite_axe_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:sugilite_armor_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:sugilite_sword_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:sugilite_hoe_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:cobgdague_repair_items": [
+      "~CUSTOM:Ruby"
+    ],
+    "ITEMS:capital_mode:capitaldague_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:iridiumspeedsword_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:capitalspear_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:iridiumhammer_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:iridiumspeedpickaxe_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:iridiumbigsword_repair_items": [
+      "~CUSTOM:Sugilite"
+    ],
+    "ITEMS:capital_mode:invisiblearmor_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:capital_mode:soul_sword_repair_items": [
+      "~CUSTOM:Capital"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Bandage"
+    ],
+    "ENTITIES:minecraft:undead": [
+      "~CUSTOM:Gardiendemoniaque",
+      "~CUSTOM:Demon"
+    ],
+    "ITEMS:capital_mode:bionicsword_repair_items": [
+      "~CUSTOM:Batterie"
     ]
   },
   "tab_element_order": {},
@@ -9461,12 +9914,12 @@
       "item.capital_mode.coeur_8_spawn_egg": "Coeur 8 Spawn Egg",
       "item.capital_mode.bourredefleches": "Bourré de flèches",
       "item.capital_mode.rubi_axe": "Cobalt Axe",
-      "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
       "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
+      "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
       "advancements.ingenieur.title": "Ingénieur",
       "item.capital_mode.capital_outils_pickaxe": "Capital Pickaxe",
-      "item.capital_mode.cobgdague": "Cobalt dague",
       "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
+      "item.capital_mode.cobgdague": "Cobalt dague",
       "item.capital_mode.ameliorastone": "Améliorastone",
       "block.capital_mode.atm": "ATM",
       "block.capital_mode.cable_x": "Cable",
@@ -9789,19 +10242,103 @@
       "item.capital_mode.super_cobalt_old_sword": "Cobalt Old sword 64x64",
       "item.capital_mode.batoniriduim": "Iridium stick",
       "item.capital_mode.capital": "Capital ingot",
-      "block.capital_mode.duramachine": "Duramachine"
+      "block.capital_mode.duramachine": "Duramachine",
+      "item.capital_mode.capital_ore": "Capital ore",
+      "item.capital_mode.cablock": "Capital Block",
+      "item.capital_mode.coblock": "Cobalt Block",
+      "item.capital_mode.capital_machine": "Capital Machine",
+      "item.capital_mode.sugilite_block": "Iridium Block",
+      "item.capital_mode.fonderie": "Fonderie",
+      "fluid_type.capital_mode.capitalfondu": "Capital fondu",
+      "item.capital_mode.condensedstone": "Condensed stone",
+      "item.capital_mode.ultracondensed": "Ultracondensed",
+      "fluid_type.capital_mode.cobaltfondu": "Cobalt fondu",
+      "fluid_type.capital_mode.iridfondu": "Iridium fondu",
+      "item.capital_mode.invocateur": "Invocateur démoniaque",
+      "item.capital_mode.grandcoeur.description_0": "Vous donne 2 coeurs suplémentaire",
+      "block.capital_mode.fandecapital.description_0": "Donne un capital de plus quand vous en minez",
+      "item.capital_mode.fandecapital": "Fan de capital",
+      "item.capital_mode.bourredefleches.description_0": "Vous donne accès à la commande /arrow qui vous donne 64 flèches",
+      "item.capital_mode.hyperactif_1.description_0": "Vous donne l\u0027effet haste 1",
+      "item.capital_mode.hyperactif_2.description_0": "Vous donne l\u0027effet haste 2",
+      "item.capital_mode.hyperactif_3.description_0": "Vous donne l\u0027effet haste 3",
+      "item.capital_mode.yeuxdechat.description_0": "Vous permet de voir dans le noir",
+      "item.capital_mode.grandcoeur_2.description_0": "Vous donne 6 coeurs suplémentaire",
+      "item.capital_mode.grandcoeur_3.description_0": "Vous donne 10 coeurs suplémentaire",
+      "item.capital_mode.petitssoins.description_0": "Crée une explosion de niveau 4 ne cassent aucun blocs toutes les 15 minutes",
+      "item.capital_mode.chutelibre.description_0": "Vous retire tout les dégâts de chutes",
+      "item.capital_mode.capitalplant": "Capital plant",
+      "item.capital_mode.capitalplant_2": "Capital plant",
+      "item.capital_mode.capitalplant_3": "Capital plant",
+      "item.capital_mode.capitalplant_4": "Capital plant",
+      "item.capital_mode.invisiblearmor_leggings.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_helmet.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_boots.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_chestplate.description_0": "Cosmétique épique",
+      "item.capital_mode.dolomiteore": "Dolomite ore",
+      "item.capital_mode.soul_sword.description_0": "Cosmétique rare",
+      "item.capital_mode.electricfurnace": "Electric Furnace",
+      "item.capital_mode.super_cobalt_old_sword.description_0": "Cosmétique commun",
+      "item.capital_mode.panneausolair": "Panneau solaire",
+      "item.capital_mode.dimensionalmachine": "Dimensional machine",
+      "item.capital_mode.boxcommune": "Box commune",
+      "item.capital_mode.puissancedemoniaque.description_0": "Vous retire les effets néfastes dans le Démon World",
+      "item.capital_mode.dynamo": "Dynamo",
+      "item.capital_mode.mineralyser": "Mineralyser",
+      "item.capital_mode.batterie": "Batterie",
+      "item.capital_mode.coal_rank.description_0": "Vous devez avoir : 20€ et Les succès Acquire Hardware et Monster Hunter",
+      "item.capital_mode.iridium_rank.description_0": "Vous devez avoir : 10000€ et Les succès La mort et Lvl 10",
+      "item.capital_mode.gold_rank.description_0": "Vous devez avoir : 100€ et Les succès L\u0027énergie verte et Into Fire",
+      "item.capital_mode.cobalt_rank.description_0": "Vous devez avoir : 600€ et Les succès Ingenieur et Demon World",
+      "item.capital_mode.diamond_rank.description_0": "Vous devez avoir : 200€ et Les succès Demon Slayer et Capital Craft",
+      "item.capital_mode.iron_rank.description_0": "Vous devez avoir : 50€ et Les succès DIAMOND! et Into The Nether",
+      "item.capital_mode.netherite_rank.description_0": "Vous devez avoir : 400€ et Les succès le bloc de trop et Cover me in debris",
+      "item.capital_mode.capital_rank.description_0": "Vous devez avoir : 700€ et Les succès Puissant et Ultime",
+      "item.capital_mode.autel_demoniaque": "Autel Demoniaque",
+      "item.capital_mode.atm": "ATM",
+      "item.capital_mode.cobaltplant": "Cobalt plant",
+      "item.capital_mode.cobaltplant_2": "Cobalt plant",
+      "item.capital_mode.cobaltplant_3": "Cobalt plant",
+      "item.capital_mode.cobaltplant_4": "Cobalt plant",
+      "item.capital_mode.iridiumplant": "Iridium plant",
+      "item.capital_mode.iridiumplant_2": "Iridium plant",
+      "item.capital_mode.iridiumplant_3": "Iridium plant",
+      "item.capital_mode.iridiumplant_4": "Iridium plant",
+      "item.capital_mode.dolomite_farmland": "Dolomite farmland",
+      "item.capital_mode.quarry": "Quarry",
+      "item.capital_mode.limites": "Limites",
+      "item.capital_mode.capitale": "Capitale",
+      "item.capital_mode.buegrass": "Blue grass",
+      "item.capital_mode.cable": "Cable",
+      "item.capital_mode.cablee": "Cable",
+      "item.capital_mode.cablei": "Cable",
+      "item.capital_mode.cablel": "Cable",
+      "item.capital_mode.cable_lc": "Cable",
+      "item.capital_mode.cable_lcc": "Cable",
+      "item.capital_mode.cable_lt": "Cable",
+      "item.capital_mode.cable_ltc": "Cable",
+      "item.capital_mode.cable_t": "Cable",
+      "item.capital_mode.cable_tc": "Cable",
+      "item.capital_mode.cable_tx": "Cable",
+      "item.capital_mode.cable_txc": "Cable",
+      "item.capital_mode.cable_txcc": "Cable",
+      "item.capital_mode.cable_x": "Cable",
+      "item.capital_mode.cable_xc": "Cable",
+      "item.capital_mode.cable_f": "Cable",
+      "item.capital_mode.cable_s": "Cable",
+      "item.capital_mode.lumiere": "Lumiere"
     },
     "fr_fr": {
       "block.capital_mode.autel_demoniaque": "Autel Demoniaque",
       "item.capital_mode.coeur_8_spawn_egg": "Coeur 7 Spawn Egg",
       "item.capital_mode.bourredefleches": "Bourré de flèches",
       "item.capital_mode.rubi_axe": "Cobalt Axe",
-      "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
       "gui.capital_mode.capitaledeposer.button_100eu": " 100€ ",
+      "gui.capital_mode.capitalewhat.label_la_capitale_est_le_centre_du_ser": "La capitale est le centre du serveur, quand elle évolue,",
       "advancements.ingenieur.title": "Ingénieur",
       "item.capital_mode.capital_outils_pickaxe": "Capital Pickaxe",
-      "item.capital_mode.cobgdague": "Cobalt dague",
       "gui.capital_mode.g_gguerier.label_recompense": "RECOMPENSE :",
+      "item.capital_mode.cobgdague": "Cobalt dague",
       "item.capital_mode.ameliorastone": "Améliorastone",
       "block.capital_mode.atm": "ATM",
       "block.capital_mode.cable_x": "Cable",
@@ -10126,8 +10663,119 @@
       "item.capital_mode.super_cobalt_old_sword": "Cobalt Old sword 64x64",
       "item.capital_mode.batoniriduim": "Iridium stick",
       "item.capital_mode.capital": "Capital ingot",
-      "block.capital_mode.duramachine": "Duramachine"
+      "block.capital_mode.duramachine": "Duramachine",
+      "item.capital_mode.capital_ore": "Capital ore",
+      "item.capital_mode.cablock": "Capital Block",
+      "item.capital_mode.coblock": "Cobalt Block",
+      "item.capital_mode.capital_machine": "Capital Machine",
+      "item.capital_mode.sugilite_block": "Iridium Block",
+      "item.capital_mode.fonderie": "Fonderie",
+      "fluid_type.capital_mode.capitalfondu": "Capital fondu",
+      "item.capital_mode.condensedstone": "Condensed stone",
+      "item.capital_mode.ultracondensed": "Ultracondensed",
+      "fluid_type.capital_mode.cobaltfondu": "Cobalt fondu",
+      "fluid_type.capital_mode.iridfondu": "Iridium fondu",
+      "item.capital_mode.invocateur": "Invocateur démoniaque",
+      "item.capital_mode.grandcoeur.description_0": "Vous donne 2 coeurs suplémentaire",
+      "block.capital_mode.fandecapital.description_0": "Donne un capital de plus quand vous en minez",
+      "item.capital_mode.fandecapital": "Fan de capital",
+      "item.capital_mode.bourredefleches.description_0": "Vous donne accès à la commande /arrow qui vous donne 64 flèches",
+      "item.capital_mode.hyperactif_1.description_0": "Vous donne l\u0027effet haste 1",
+      "item.capital_mode.hyperactif_2.description_0": "Vous donne l\u0027effet haste 2",
+      "item.capital_mode.hyperactif_3.description_0": "Vous donne l\u0027effet haste 3",
+      "item.capital_mode.yeuxdechat.description_0": "Vous permet de voir dans le noir",
+      "item.capital_mode.grandcoeur_2.description_0": "Vous donne 6 coeurs suplémentaire",
+      "item.capital_mode.grandcoeur_3.description_0": "Vous donne 10 coeurs suplémentaire",
+      "item.capital_mode.petitssoins.description_0": "Crée une explosion de niveau 4 ne cassent aucun blocs toutes les 15 minutes",
+      "item.capital_mode.chutelibre.description_0": "Vous retire tout les dégâts de chutes",
+      "item.capital_mode.capitalplant": "Capital plant",
+      "item.capital_mode.capitalplant_2": "Capital plant",
+      "item.capital_mode.capitalplant_3": "Capital plant",
+      "item.capital_mode.capitalplant_4": "Capital plant",
+      "item.capital_mode.invisiblearmor_leggings.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_helmet.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_boots.description_0": "Cosmétique épique",
+      "item.capital_mode.invisiblearmor_chestplate.description_0": "Cosmétique épique",
+      "item.capital_mode.dolomiteore": "Dolomite ore",
+      "item.capital_mode.soul_sword.description_0": "Cosmétique rare",
+      "item.capital_mode.electricfurnace": "Electric Furnace",
+      "item.capital_mode.super_cobalt_old_sword.description_0": "Cosmétique commun",
+      "item.capital_mode.panneausolair": "Panneau solaire",
+      "item.capital_mode.dimensionalmachine": "Dimensional machine",
+      "item.capital_mode.boxcommune": "Box commune",
+      "item.capital_mode.puissancedemoniaque.description_0": "Vous retire les effets néfastes dans le Démon World",
+      "item.capital_mode.dynamo": "Dynamo",
+      "item.capital_mode.mineralyser": "Mineralyser",
+      "item.capital_mode.batterie": "Batterie",
+      "item.capital_mode.coal_rank.description_0": "Vous devez avoir : 20€ et Les succès Acquire Hardware et Monster Hunter",
+      "item.capital_mode.iridium_rank.description_0": "Vous devez avoir : 10000€ et Les succès La mort et Lvl 10",
+      "item.capital_mode.gold_rank.description_0": "Vous devez avoir : 100€ et Les succès L\u0027énergie verte et Into Fire",
+      "item.capital_mode.cobalt_rank.description_0": "Vous devez avoir : 600€ et Les succès Ingenieur et Demon World",
+      "item.capital_mode.diamond_rank.description_0": "Vous devez avoir : 200€ et Les succès Demon Slayer et Capital Craft",
+      "item.capital_mode.iron_rank.description_0": "Vous devez avoir : 50€ et Les succès DIAMOND! et Into The Nether",
+      "item.capital_mode.netherite_rank.description_0": "Vous devez avoir : 400€ et Les succès le bloc de trop et Cover me in debris",
+      "item.capital_mode.capital_rank.description_0": "Vous devez avoir : 700€ et Les succès Puissant et Ultime",
+      "item.capital_mode.autel_demoniaque": "Autel Demoniaque",
+      "item.capital_mode.atm": "ATM",
+      "item.capital_mode.cobaltplant": "Cobalt plant",
+      "item.capital_mode.cobaltplant_2": "Cobalt plant",
+      "item.capital_mode.cobaltplant_3": "Cobalt plant",
+      "item.capital_mode.cobaltplant_4": "Cobalt plant",
+      "item.capital_mode.iridiumplant": "Iridium plant",
+      "item.capital_mode.iridiumplant_2": "Iridium plant",
+      "item.capital_mode.iridiumplant_3": "Iridium plant",
+      "item.capital_mode.iridiumplant_4": "Iridium plant",
+      "item.capital_mode.dolomite_farmland": "Dolomite farmland",
+      "item.capital_mode.quarry": "Quarry",
+      "item.capital_mode.limites": "Limites",
+      "item.capital_mode.capitale": "Capitale",
+      "item.capital_mode.buegrass": "Blue grass",
+      "item.capital_mode.cable": "Cable",
+      "item.capital_mode.cablee": "Cable",
+      "item.capital_mode.cablei": "Cable",
+      "item.capital_mode.cablel": "Cable",
+      "item.capital_mode.cable_lc": "Cable",
+      "item.capital_mode.cable_lcc": "Cable",
+      "item.capital_mode.cable_lt": "Cable",
+      "item.capital_mode.cable_ltc": "Cable",
+      "item.capital_mode.cable_t": "Cable",
+      "item.capital_mode.cable_tc": "Cable",
+      "item.capital_mode.cable_tx": "Cable",
+      "item.capital_mode.cable_txc": "Cable",
+      "item.capital_mode.cable_txcc": "Cable",
+      "item.capital_mode.cable_x": "Cable",
+      "item.capital_mode.cable_xc": "Cable",
+      "item.capital_mode.cable_f": "Cable",
+      "item.capital_mode.cable_s": "Cable",
+      "item.capital_mode.lumiere": "Lumiere"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModBiomes.java",
+      "src/main/java/net/mcreator/capitalmode/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModFluids.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModFluidTypes.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModMenus.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModScreens.java",
+      "src/main/java/net/mcreator/capitalmode/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModBlocks.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModBlockEntities.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModItems.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModEntities.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModEntityRenderers.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModModels.java",
+      "src/main/resources/capital_mode.mixins.json",
+      "src/main/java/net/mcreator/capitalmode/CapitalModeMod.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/capital_mode/sounds.json",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/capitalmode/network/CapitalModeModVariables.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModSounds.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModTabs.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -10430,9 +11078,9 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.21.8",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.capitalmode"
   },
-  "mcreatorVersion": 202400342716
+  "mcreatorVersion": 202500345720
 }

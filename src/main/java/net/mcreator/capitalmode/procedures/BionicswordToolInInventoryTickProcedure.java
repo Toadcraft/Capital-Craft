@@ -11,6 +11,6 @@ public class BionicswordToolInInventoryTickProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("Vous avez une killstreak de " + (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Kill_streak)), true);
+			_player.displayClientMessage(Component.literal(("Vous avez une killstreak de " + entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Kill_streak)), true);
 	}
 }

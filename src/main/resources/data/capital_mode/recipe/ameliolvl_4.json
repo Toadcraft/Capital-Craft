@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:coblock",
+    "b": "capital_mode:ameliorateurlvl_3"
+  },
+  "result": {
+    "id": "capital_mode:ameliorateurlvl_4",
+    "count": 1
+  }
+}

@@ -1,40 +1,16 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+public class CobaltspeedpickaxeItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2100, 24f, 0, 16, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:cobaltspeedpickaxe_repair_items")));
 
-public class CobaltspeedpickaxeItem extends PickaxeItem {
-	public CobaltspeedpickaxeItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2100;
-			}
-
-			public float getSpeed() {
-				return 24f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 1f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 16;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.COBALT.get()));
-			}
-		}, 1, -3f, new Item.Properties());
+	public CobaltspeedpickaxeItem(Item.Properties properties) {
+		super(properties.pickaxe(TOOL_MATERIAL, 2f, -3f));
 	}
 }

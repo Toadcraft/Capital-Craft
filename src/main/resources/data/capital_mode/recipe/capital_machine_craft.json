@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "capital_mode:cablock",
+    "c": "minecraft:smithing_table"
+  },
+  "result": {
+    "id": "capital_mode:capital_machine",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "capital_mode:invisiblearmor_boots",
+    "capital_mode:travel_boots",
+    "capital_mode:sugilite_armor_boots",
+    "capital_mode:rubi_armor_boots",
+    "capital_mode:capitale_armor_boots"
+  ]
+}

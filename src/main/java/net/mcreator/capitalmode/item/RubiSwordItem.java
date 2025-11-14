@@ -1,55 +1,22 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+public class RubiSwordItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2100, 9.5f, 0, 16, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:rubi_sword_repair_items")));
 
-public class RubiSwordItem extends SwordItem {
-	public RubiSwordItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2100;
-			}
-
-			public float getSpeed() {
-				return 9.5f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 5f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 16;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.COBALT.get()));
-			}
-		}, 3, -3f, new Item.Properties().fireResistant());
+	public RubiSwordItem(Item.Properties properties) {
+		super(properties.sword(TOOL_MATERIAL, 8f, -3f).fireResistant().setNoCombineRepair());
 	}
 
 	@Override
-	public boolean hasCraftingRemainingItem(ItemStack stack) {
-		return true;
-	}
-
-	@Override
-	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainder(ItemStack itemstack) {
 		return new ItemStack(this);
-	}
-
-	@Override
-	public boolean isRepairable(ItemStack itemstack) {
-		return false;
 	}
 }

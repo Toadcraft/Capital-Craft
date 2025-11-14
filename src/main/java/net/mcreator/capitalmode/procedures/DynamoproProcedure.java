@@ -1,9 +1,11 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.energy.IEnergyStorage;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -11,92 +13,37 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.capitalmode.init.CapitalModeModItems;
 
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class DynamoproProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Items.WATER_BUCKET || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Items.LAVA_BUCKET
+				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == CapitalModeModItems.CAPITALFONDU_BUCKET.get()
+				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == CapitalModeModItems.COBALTFONDU_BUCKET.get()
+				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == CapitalModeModItems.IRIDFONDU_BUCKET.get()) {
+			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+				int _slotid = 0;
+				ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+				_stk.shrink(1);
+				_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Items.WATER_BUCKET || (new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
+			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+				ItemStack _setstack = new ItemStack(Items.BUCKET).copy();
+				_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
+				_itemHandlerModifiable.setStackInSlot(1, _setstack);
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Items.LAVA_BUCKET || (new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
-			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == CapitalModeModItems.CAPITALFONDU_BUCKET.get() || (new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
-			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == CapitalModeModItems.COBALTFONDU_BUCKET.get() || (new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
-			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == CapitalModeModItems.IRIDFONDU_BUCKET.get()) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final int _amount = 1;
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
-							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
-						}
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 1;
-					final ItemStack _setstack = new ItemStack(Items.BUCKET).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = 300;
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+			if (world instanceof ILevelExtension _ext) {
+				IEnergyStorage _entityStorage = _ext.getCapability(Capabilities.EnergyStorage.BLOCK, BlockPos.containing(x, y, z), null);
+				if (_entityStorage != null)
+					_entityStorage.receiveEnergy(300, false);
 			}
 		}
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

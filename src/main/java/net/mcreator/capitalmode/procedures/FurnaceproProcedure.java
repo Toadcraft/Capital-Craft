@@ -1,27 +1,24 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.SimpleContainer;
+import net.minecraft.server.level.ServerLevel;
 
 public class FurnaceproProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (world instanceof Level _level1 && _level1.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SimpleContainer((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)), _level1).isPresent()
+		if (world instanceof ServerLevel _level1 && _level1.recipeAccess().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)), _level1).isPresent()
 				&& (entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 10) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = (world instanceof Level _lvlSmeltResult
-						? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SimpleContainer((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)), _lvlSmeltResult)
-								.map(recipe -> recipe.getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-						: ItemStack.EMPTY).copy();
+				ItemStack _setstack = (getItemStackFromItemStackSlot(world, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -32,5 +29,13 @@ public class FurnaceproProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}
+	}
+
+	private static ItemStack getItemStackFromItemStackSlot(LevelAccessor level, ItemStack input) {
+		SingleRecipeInput recipeInput = new SingleRecipeInput(input);
+		if (level instanceof ServerLevel serverLevel) {
+			return serverLevel.recipeAccess().getRecipeFor(RecipeType.SMELTING, recipeInput, serverLevel).map(recipe -> recipe.value().assemble(recipeInput, serverLevel.registryAccess()).copy()).orElse(ItemStack.EMPTY);
+		}
+		return ItemStack.EMPTY;
 	}
 }

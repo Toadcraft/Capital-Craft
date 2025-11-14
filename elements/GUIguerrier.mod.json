@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "guerrier.png",
           "use1Xscale": true,
           "x": 98,
-          "y": 55
+          "y": 55,
+          "locked": false
         }
       }
     ],

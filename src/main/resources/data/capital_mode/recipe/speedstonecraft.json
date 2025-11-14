@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "minecraft:nether_wart",
+    "c": "minecraft:sugar",
+    "d": "capital_mode:demon_hears",
+    "e": "minecraft:glass_bottle"
+  },
+  "result": {
+    "id": "capital_mode:speedstone",
+    "count": 1
+  }
+}

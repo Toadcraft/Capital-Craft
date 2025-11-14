@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "def",
+    "ghi"
+  ],
+  "key": {
+    "a": "capital_mode:diamond_rank",
+    "b": "capital_mode:fonderie",
+    "c": "minecraft:emerald",
+    "d": "minecraft:iron_ingot",
+    "e": "capital_mode:batterie",
+    "f": "minecraft:gold_ingot",
+    "g": "capital_mode:capital",
+    "h": "capital_mode:cobalt",
+    "i": "capital_mode:dolomiteingot"
+  },
+  "result": {
+    "id": "capital_mode:mineralyser",
+    "count": 1
+  }
+}

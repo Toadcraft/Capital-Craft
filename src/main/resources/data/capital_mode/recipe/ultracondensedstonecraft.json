@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:condensedstone"
+  },
+  "result": {
+    "id": "capital_mode:ultracondensed",
+    "count": 1
+  }
+}

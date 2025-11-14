@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -22,7 +22,8 @@
             "name": "Competense01"
           },
           "x": 204,
-          "y": 26
+          "y": 26,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "name": "Competense02"
           },
           "x": 132,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "name": "Competense03"
           },
           "x": 204,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -67,7 +70,8 @@
             "name": "Competense04"
           },
           "x": 177,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -82,7 +86,8 @@
             "name": "Competense05"
           },
           "x": 177,
-          "y": 134
+          "y": 134,
+          "locked": false
         }
       },
       {
@@ -97,7 +102,8 @@
             "name": "Competense06"
           },
           "x": 231,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -112,7 +118,8 @@
             "name": "Competense07"
           },
           "x": 60,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -127,7 +134,8 @@
             "name": "Competense08"
           },
           "x": 60,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -142,7 +150,8 @@
             "name": "Competense09"
           },
           "x": 60,
-          "y": 125
+          "y": 125,
+          "locked": false
         }
       },
       {
@@ -157,7 +166,8 @@
             "name": "Competense10"
           },
           "x": 276,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -172,7 +182,8 @@
             "name": "Competense11"
           },
           "x": 303,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -181,7 +192,8 @@
           "image": "qerzft.png",
           "use1Xscale": false,
           "x": 26,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -196,7 +208,8 @@
             "falpha": 0.0
           },
           "x": 357,
-          "y": 26
+          "y": 26,
+          "locked": false
         }
       },
       {
@@ -211,7 +224,8 @@
           "width": 56,
           "height": 20,
           "x": 339,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       },
       {
@@ -227,7 +241,8 @@
             "falpha": 0.0
           },
           "x": 33,
-          "y": 26
+          "y": 26,
+          "locked": false
         }
       }
     ],

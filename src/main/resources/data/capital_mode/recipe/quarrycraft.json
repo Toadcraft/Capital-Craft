@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "capital_mode:rubi_pickaxe",
+    "capital_mode:batterie",
+    "minecraft:diamond_pickaxe",
+    "capital_mode:capital_outils_pickaxe",
+    "minecraft:netherite_pickaxe",
+    "capital_mode:sugilite_pickaxe"
+  ],
+  "result": {
+    "id": "capital_mode:quarry",
+    "count": 1
+  }
+}

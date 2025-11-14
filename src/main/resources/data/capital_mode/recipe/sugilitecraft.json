@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "capital_mode:cablock",
+    "minecraft:netherite_block",
+    "capital_mode:cablock",
+    "minecraft:netherite_block",
+    "capital_mode:ultimastone",
+    "minecraft:netherite_block",
+    "capital_mode:cablock",
+    "minecraft:netherite_block",
+    "capital_mode:cablock"
+  ],
+  "result": {
+    "id": "capital_mode:sugilite",
+    "count": 1
+  }
+}

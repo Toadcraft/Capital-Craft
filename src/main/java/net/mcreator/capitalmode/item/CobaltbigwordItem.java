@@ -1,37 +1,16 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-public class CobaltbigwordItem extends SwordItem {
-	public CobaltbigwordItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 2100;
-			}
+public class CobaltbigwordItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2100, 9.5f, 0, 16, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:cobaltbigword_repair_items")));
 
-			public float getSpeed() {
-				return 9.5f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 15f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 16;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
-			}
-		}, 3, -3.2f, new Item.Properties());
+	public CobaltbigwordItem(Item.Properties properties) {
+		super(properties.sword(TOOL_MATERIAL, 18f, -3.2f));
 	}
 }

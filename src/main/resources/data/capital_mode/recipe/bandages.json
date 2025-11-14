@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "afa"
+  ],
+  "key": {
+    "a": "minecraft:string",
+    "b": "minecraft:cooked_mutton",
+    "c": "minecraft:cooked_beef",
+    "d": "minecraft:golden_apple",
+    "e": "minecraft:cooked_porkchop",
+    "f": "minecraft:cooked_rabbit"
+  },
+  "result": {
+    "id": "capital_mode:bandage",
+    "count": 1
+  }
+}

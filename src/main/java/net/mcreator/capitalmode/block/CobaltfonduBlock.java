@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.block;
 
 import net.minecraft.world.level.material.PushReaction;
@@ -10,7 +9,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.mcreator.capitalmode.init.CapitalModeModFluids;
 
 public class CobaltfonduBlock extends LiquidBlock {
-	public CobaltfonduBlock() {
-		super(() -> CapitalModeModFluids.COBALTFONDU.get(), BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+	public CobaltfonduBlock(BlockBehaviour.Properties properties) {
+		super(CapitalModeModFluids.COBALTFONDU.get(), properties.mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
 	}
 }

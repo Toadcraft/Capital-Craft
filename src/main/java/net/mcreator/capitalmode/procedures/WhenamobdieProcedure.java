@@ -1,35 +1,14 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.piglin.PiglinBrute;
 import net.minecraft.world.entity.monster.piglin.Piglin;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
-import net.minecraft.world.entity.monster.ZombieVillager;
-import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.WitherSkeleton;
-import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.monster.Vindicator;
-import net.minecraft.world.entity.monster.Slime;
-import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.entity.monster.Silverfish;
-import net.minecraft.world.entity.monster.Shulker;
-import net.minecraft.world.entity.monster.Ravager;
-import net.minecraft.world.entity.monster.Pillager;
-import net.minecraft.world.entity.monster.Phantom;
-import net.minecraft.world.entity.monster.MagmaCube;
-import net.minecraft.world.entity.monster.Husk;
-import net.minecraft.world.entity.monster.Guardian;
-import net.minecraft.world.entity.monster.Ghast;
-import net.minecraft.world.entity.monster.Evoker;
-import net.minecraft.world.entity.monster.Endermite;
-import net.minecraft.world.entity.monster.ElderGuardian;
-import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.entity.monster.Blaze;
+import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.Entity;
@@ -38,11 +17,11 @@ import net.mcreator.capitalmode.network.CapitalModeModVariables;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class WhenamobdieProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity(), event.getSource().getEntity());
 		}
 	}
@@ -56,236 +35,184 @@ public class WhenamobdieProcedure {
 			return;
 		if (entity instanceof Zombie && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 10;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 10;
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof Skeleton && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 15;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 15;
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof Creeper && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Phantom && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 5) {
+		if (entity instanceof Phantom && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 5) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 30;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 30;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Blaze && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 25) {
+		if (entity instanceof Blaze && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 25) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 35;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 35;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof ElderGuardian && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 40) {
+		if (entity instanceof ElderGuardian && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 40) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 300;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 300;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof EnderDragon && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 40) {
+		if (entity instanceof EnderDragon && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 40) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 300;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 300;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Endermite && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 30) {
+		if (entity instanceof Endermite && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 30) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 10;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 10;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Evoker && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 20) {
+		if (entity instanceof Evoker && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 25;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 25;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Ghast && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 25) {
+		if (entity instanceof Ghast && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 25) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 40;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 40;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Guardian && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 30) {
+		if (entity instanceof Guardian && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 30) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 25;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 25;
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof Husk && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof MagmaCube && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 25) {
+		if (entity instanceof MagmaCube && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 25) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof PiglinBrute && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 1) {
+		if (entity instanceof PiglinBrute && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 1) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Pillager && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 20) {
+		if (entity instanceof Pillager && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 30;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 30;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Piglin && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 25) {
+		if (entity instanceof Piglin && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 25) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 25;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 25;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Ravager && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_mineur >= 20) {
+		if (entity instanceof Ravager && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_mineur >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 60;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 60;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Shulker && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 35) {
+		if (entity instanceof Shulker && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 35) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 30;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 30;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Silverfish && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 10) {
+		if (entity instanceof Silverfish && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 10) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 5;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 5;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Slime && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 10) {
+		if (entity instanceof Slime && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 10) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Vindicator && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 20) {
+		if (entity instanceof Vindicator && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 40;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 40;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof Witch && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 20) {
+		if (entity instanceof Witch && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof WitherBoss && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 40) {
+		if (entity instanceof WitherBoss && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 40) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 300;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 300;
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof WitherSkeleton && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (entity instanceof ZombifiedPiglin && sourceentity instanceof Player && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_guerrier >= 20) {
+		if (entity instanceof ZombifiedPiglin && sourceentity instanceof Player && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_guerrier >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + 15;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + 15;
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof ZombieVillager && sourceentity instanceof Player) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier + -20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_guerrier = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_guerrier = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier + -20;
+				_vars.markSyncDirty();
 			}
 		}
 	}

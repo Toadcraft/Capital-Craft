@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aaa",
+    " a "
+  ],
+  "key": {
+    "a": "capital_mode:milleeuro"
+  },
+  "result": {
+    "id": "capital_mode:achatchunk",
+    "count": 1
+  }
+}

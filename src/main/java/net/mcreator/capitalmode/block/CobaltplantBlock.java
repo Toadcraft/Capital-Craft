@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -17,17 +16,17 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.capitalmode.procedures.CobaltplantupProcedure;
 
 public class CobaltplantBlock extends Block {
-	public CobaltplantBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(1f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public CobaltplantBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.GRASS).strength(1f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 
@@ -45,10 +44,7 @@ public class CobaltplantBlock extends Block {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		CobaltplantupProcedure.execute(world, x, y, z);
+		CobaltplantupProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 1);
 	}
 }

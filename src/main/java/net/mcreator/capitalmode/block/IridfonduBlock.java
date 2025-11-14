@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.block;
 
 import net.minecraft.world.level.material.PushReaction;
@@ -10,7 +9,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.mcreator.capitalmode.init.CapitalModeModFluids;
 
 public class IridfonduBlock extends LiquidBlock {
-	public IridfonduBlock() {
-		super(() -> CapitalModeModFluids.IRIDFONDU.get(), BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+	public IridfonduBlock(BlockBehaviour.Properties properties) {
+		super(CapitalModeModFluids.IRIDFONDU.get(), properties.mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
 	}
 }

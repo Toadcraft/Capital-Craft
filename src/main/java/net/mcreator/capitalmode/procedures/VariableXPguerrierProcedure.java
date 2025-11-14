@@ -8,6 +8,6 @@ public class VariableXPguerrierProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Vous avez " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_guerrier) + " d'xp";
+		return "Vous avez " + new java.text.DecimalFormat("##.##").format(entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_guerrier) + " d'xp";
 	}
 }

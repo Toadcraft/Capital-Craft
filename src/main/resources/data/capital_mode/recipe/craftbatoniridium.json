@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": "capital_mode:capitalstick",
+  "addition": "capital_mode:sugilite",
+  "result": {
+    "id": "capital_mode:batoniriduim"
+  }
+}

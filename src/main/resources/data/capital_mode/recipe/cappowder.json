@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gunpowder",
+    "capital_mode:capital",
+    "minecraft:gunpowder"
+  ],
+  "result": {
+    "id": "capital_mode:capitalpowder",
+    "count": 2
+  }
+}

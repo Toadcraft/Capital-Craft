@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "capital_mode:demonplains",
+  "features": "capital_mode:invocateur",
+  "step": "underground_ores"
+}

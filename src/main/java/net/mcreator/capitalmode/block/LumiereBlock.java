@@ -1,4 +1,3 @@
-
 package net.mcreator.capitalmode.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -14,18 +13,32 @@ import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.BlockPos;
 
+import com.mojang.serialization.MapCodec;
+
 public class LumiereBlock extends FallingBlock {
-	public LumiereBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.GRAVEL).strength(1f, 10f).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public static final MapCodec<LumiereBlock> CODEC = simpleCodec(LumiereBlock::new);
+
+	@Override
+	public MapCodec<LumiereBlock> codec() {
+		return CODEC;
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public int getDustColor(BlockState blockstate, BlockGetter world, BlockPos pos) {
+		return blockstate.getMapColor(world, pos).col;
+	}
+
+	public LumiereBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.GRAVEL).strength(1f, 10f).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
+	}
+
+	@Override
+	public boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 

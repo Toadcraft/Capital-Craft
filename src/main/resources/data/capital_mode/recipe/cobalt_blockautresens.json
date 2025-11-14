@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "capital_mode:coblock"
+  ],
+  "result": {
+    "id": "capital_mode:cobalt",
+    "count": 9
+  }
+}

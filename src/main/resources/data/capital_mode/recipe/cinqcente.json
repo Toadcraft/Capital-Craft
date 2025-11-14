@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "capital_mode:milleeuro"
+  ],
+  "result": {
+    "id": "capital_mode:cinqcen_eu",
+    "count": 2
+  }
+}

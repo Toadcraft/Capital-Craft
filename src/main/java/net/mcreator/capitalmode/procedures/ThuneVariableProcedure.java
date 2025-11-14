@@ -8,6 +8,6 @@ public class ThuneVariableProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Vous avez" + new java.text.DecimalFormat("##.##").format((entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent) + "\u20AC";
+		return "Vous avez" + new java.text.DecimalFormat("##.##").format(entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent) + "\u20AC";
 	}
 }

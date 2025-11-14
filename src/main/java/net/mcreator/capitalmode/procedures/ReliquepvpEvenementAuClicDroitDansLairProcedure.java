@@ -12,12 +12,12 @@ public class ReliquepvpEvenementAuClicDroitDansLairProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 4));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 600, 4));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 4));
+			_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 600, 4));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 600, 4));
+			_entity.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 600, 4));
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(itemstack.getItem(), 6000);
+			_player.getCooldowns().addCooldown(itemstack, 6000);
 	}
 }

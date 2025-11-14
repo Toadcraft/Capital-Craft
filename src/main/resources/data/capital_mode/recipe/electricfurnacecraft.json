@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cde",
+    "faf"
+  ],
+  "key": {
+    "a": "capital_mode:capital",
+    "b": "minecraft:blast_furnace",
+    "c": "minecraft:furnace",
+    "d": "capital_mode:batterie",
+    "e": "minecraft:smoker",
+    "f": "minecraft:air"
+  },
+  "result": {
+    "id": "capital_mode:electricfurnace",
+    "count": 1
+  }
+}

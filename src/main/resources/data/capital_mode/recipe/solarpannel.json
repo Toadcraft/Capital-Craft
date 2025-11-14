@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    "ddd"
+  ],
+  "key": {
+    "a": "minecraft:daylight_detector",
+    "b": "minecraft:iron_block",
+    "c": "capital_mode:batterie",
+    "d": "capital_mode:capital"
+  },
+  "result": {
+    "id": "capital_mode:panneausolair",
+    "count": 1
+  }
+}

@@ -1,7 +1,7 @@
-
 package net.mcreator.capitalmode.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -10,14 +10,27 @@ import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.capitalmode.entity.DemonEntity;
 
-public class DemonRenderer extends HumanoidMobRenderer<DemonEntity, HumanoidModel<DemonEntity>> {
+public class DemonRenderer extends HumanoidMobRenderer<DemonEntity, HumanoidRenderState, HumanoidModel<HumanoidRenderState>> {
+	private DemonEntity entity = null;
+
 	public DemonRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
+		super(context, new HumanoidModel<HumanoidRenderState>(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getEquipmentRenderer()));
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(DemonEntity entity) {
-		return new ResourceLocation("capital_mode:textures/entities/demon.png");
+	public HumanoidRenderState createRenderState() {
+		return new HumanoidRenderState();
+	}
+
+	@Override
+	public void extractRenderState(DemonEntity entity, HumanoidRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(HumanoidRenderState state) {
+		return ResourceLocation.parse("capital_mode:textures/entities/demon.png");
 	}
 }

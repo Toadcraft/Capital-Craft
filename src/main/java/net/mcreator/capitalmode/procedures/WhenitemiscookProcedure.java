@@ -1,9 +1,9 @@
 package net.mcreator.capitalmode.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +13,7 @@ import net.mcreator.capitalmode.network.CapitalModeModVariables;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class WhenitemiscookProcedure {
 	@SubscribeEvent
 	public static void onItemSmelted(PlayerEvent.ItemSmeltedEvent event) {
@@ -27,49 +27,39 @@ public class WhenitemiscookProcedure {
 	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (Items.IRON_INGOT == itemstack.getItem() && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_mineur >= 10) {
+		if (Items.IRON_INGOT == itemstack.getItem() && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_mineur >= 10) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_mineur + 10;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_mineur = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_mineur = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_mineur + 10;
+				_vars.markSyncDirty();
 			}
 		}
-		if (Items.GOLD_INGOT == itemstack.getItem() && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_mineur >= 20) {
+		if (Items.GOLD_INGOT == itemstack.getItem() && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_mineur >= 20) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_mineur + 20;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_mineur = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_mineur = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_mineur + 20;
+				_vars.markSyncDirty();
 			}
 		}
-		if (Items.NETHERITE_SCRAP == itemstack.getItem() && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_mineur >= 35) {
+		if (Items.NETHERITE_SCRAP == itemstack.getItem() && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_mineur >= 35) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_mineur + 200;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_mineur = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_mineur = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_mineur + 200;
+				_vars.markSyncDirty();
 			}
 		}
-		if (Items.COOKED_COD == itemstack.getItem() && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_paysan >= 30) {
+		if (Items.COOKED_COD == itemstack.getItem() && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_paysan >= 30) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_paysan + 75;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_paysan = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_paysan = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_paysan + 75;
+				_vars.markSyncDirty();
 			}
 		}
-		if (Items.COOKED_SALMON == itemstack.getItem() && (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).lvl_paysan >= 30) {
+		if (Items.COOKED_SALMON == itemstack.getItem() && entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).lvl_paysan >= 30) {
 			{
-				double _setval = (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).xp_paysan + 75;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.xp_paysan = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.xp_paysan = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).xp_paysan + 75;
+				_vars.markSyncDirty();
 			}
 		}
 	}

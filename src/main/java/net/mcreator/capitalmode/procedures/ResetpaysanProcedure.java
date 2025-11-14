@@ -9,18 +9,10 @@ public class ResetpaysanProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 0;
-			entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.xp_paysan = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			double _setval = 0;
-			entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.lvl_paysan = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+			_vars.xp_paysan = 0;
+			_vars.lvl_paysan = 0;
+			_vars.markSyncDirty();
 		}
 	}
 }

@@ -1,28 +1,27 @@
 package net.mcreator.capitalmode.client.gui;
 
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.capitalmode.world.inventory.CapitalewhatMenu;
 import net.mcreator.capitalmode.network.CapitalewhatButtonMessage;
-import net.mcreator.capitalmode.CapitalModeMod;
+import net.mcreator.capitalmode.init.CapitalModeModScreens;
 
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
-public class CapitalewhatScreen extends AbstractContainerScreen<CapitalewhatMenu> {
-	private final static HashMap<String, Object> guistate = CapitalewhatMenu.guistate;
+public class CapitalewhatScreen extends AbstractContainerScreen<CapitalewhatMenu> implements CapitalModeModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_deposer;
+	private boolean menuStateUpdateActive = false;
+	private Button button_deposer;
 
 	public CapitalewhatScreen(CapitalewhatMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -35,22 +34,23 @@ public class CapitalewhatScreen extends AbstractContainerScreen<CapitalewhatMenu
 		this.imageHeight = 500;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("capital_mode:textures/screens/capitalewhat.png");
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	private static final ResourceLocation texture = ResourceLocation.parse("capital_mode:textures/screens/capitalewhat.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		RenderSystem.disableBlend();
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 	}
 
 	@Override
@@ -74,12 +74,13 @@ public class CapitalewhatScreen extends AbstractContainerScreen<CapitalewhatMenu
 	public void init() {
 		super.init();
 		button_deposer = Button.builder(Component.translatable("gui.capital_mode.capitalewhat.button_deposer"), e -> {
+			int x = CapitalewhatScreen.this.x;
+			int y = CapitalewhatScreen.this.y;
 			if (true) {
-				CapitalModeMod.PACKET_HANDLER.sendToServer(new CapitalewhatButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new CapitalewhatButtonMessage(0, x, y, z));
 				CapitalewhatButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 213, this.topPos + 237, 61, 20).build();
-		guistate.put("button:button_deposer", button_deposer);
 		this.addRenderableWidget(button_deposer);
 	}
 }

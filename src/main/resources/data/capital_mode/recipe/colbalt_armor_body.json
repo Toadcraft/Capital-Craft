@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "capital_mode:cobalt"
+  },
+  "result": {
+    "id": "capital_mode:rubi_armor_chestplate",
+    "count": 1
+  }
+}

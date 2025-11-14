@@ -12,13 +12,11 @@ public class Retire1eProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(CapitalModeModItems.UN_EU.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(CapitalModeModItems.UN_EU.get()))) {
 			{
-				double _setval = 1 + (entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CapitalModeModVariables.PlayerVariables())).Argent;
-				entity.getCapability(CapitalModeModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Argent = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				CapitalModeModVariables.PlayerVariables _vars = entity.getData(CapitalModeModVariables.PLAYER_VARIABLES);
+				_vars.Argent = 1 + entity.getData(CapitalModeModVariables.PLAYER_VARIABLES).Argent;
+				_vars.markSyncDirty();
 			}
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(CapitalModeModItems.UN_EU.get());
@@ -28,5 +26,11 @@ public class Retire1eProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("VOUS N'AVEZ PAS DE BILLET DE 1\u20AC !"), false);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

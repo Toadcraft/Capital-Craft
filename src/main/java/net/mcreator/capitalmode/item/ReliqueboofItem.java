@@ -1,43 +1,31 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+
+import net.minecraft.world.item.component.UseRemainder;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.component.DataComponents;
 
 import net.mcreator.capitalmode.init.CapitalModeModItems;
 
+@EventBusSubscriber
 public class ReliqueboofItem extends Item {
-	public ReliqueboofItem() {
-		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(100).saturationMod(100f).alwaysEat().build()));
+	public ReliqueboofItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.EPIC).stacksTo(1).fireResistant().food((new FoodProperties.Builder()).nutrition(100).saturationModifier(100f).alwaysEdible().build()));
+	}
+
+	@SubscribeEvent
+	public static void modifyItemComponents(ModifyDefaultComponentsEvent event) {
+		event.modify(CapitalModeModItems.RELIQUEBOOF.get(), builder -> builder.set(DataComponents.USE_REMAINDER, new UseRemainder(new ItemStack(CapitalModeModItems.RELIQUEBOOF.get()))));
 	}
 
 	@Override
-	public boolean hasCraftingRemainingItem() {
-		return true;
-	}
-
-	@Override
-	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainder(ItemStack itemstack) {
 		return new ItemStack(this);
-	}
-
-	@Override
-	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(CapitalModeModItems.RELIQUEBOOF.get());
-		super.finishUsingItem(itemstack, world, entity);
-		if (itemstack.isEmpty()) {
-			return retval;
-		} else {
-			if (entity instanceof Player player && !player.getAbilities().instabuild) {
-				if (!player.getInventory().add(retval))
-					player.drop(retval, false);
-			}
-			return itemstack;
-		}
 	}
 }

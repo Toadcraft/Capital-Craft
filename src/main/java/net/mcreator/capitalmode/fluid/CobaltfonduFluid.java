@@ -1,7 +1,8 @@
-
 package net.mcreator.capitalmode.fluid;
 
-import net.minecraftforge.fluids.ForgeFlowingFluid;
+import org.apache.logging.log4j.core.util.Source;
+
+import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluid;
@@ -13,8 +14,8 @@ import net.mcreator.capitalmode.init.CapitalModeModFluids;
 import net.mcreator.capitalmode.init.CapitalModeModFluidTypes;
 import net.mcreator.capitalmode.init.CapitalModeModBlocks;
 
-public abstract class CobaltfonduFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> CapitalModeModFluidTypes.COBALTFONDU_TYPE.get(), () -> CapitalModeModFluids.COBALTFONDU.get(),
+public abstract class CobaltfonduFluid extends BaseFlowingFluid {
+	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> CapitalModeModFluidTypes.COBALTFONDU_TYPE.get(), () -> CapitalModeModFluids.COBALTFONDU.get(),
 			() -> CapitalModeModFluids.FLOWING_COBALTFONDU.get()).explosionResistance(100f).bucket(() -> CapitalModeModItems.COBALTFONDU_BUCKET.get()).block(() -> (LiquidBlock) CapitalModeModBlocks.COBALTFONDU.get());
 
 	private CobaltfonduFluid() {

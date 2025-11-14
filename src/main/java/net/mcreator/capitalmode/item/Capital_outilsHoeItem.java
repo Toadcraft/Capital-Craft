@@ -1,40 +1,17 @@
-
 package net.mcreator.capitalmode.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
-
-import net.mcreator.capitalmode.init.CapitalModeModItems;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 public class Capital_outilsHoeItem extends HoeItem {
-	public Capital_outilsHoeItem() {
-		super(new Tier() {
-			public int getUses() {
-				return 3000;
-			}
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3000, 11f, 0, 20, TagKey.create(Registries.ITEM, ResourceLocation.parse("capital_mode:capital_outils_hoe_repair_items")));
 
-			public float getSpeed() {
-				return 11f;
-			}
-
-			public float getAttackDamageBonus() {
-				return 0f;
-			}
-
-			public int getLevel() {
-				return 4;
-			}
-
-			public int getEnchantmentValue() {
-				return 20;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CapitalModeModItems.CAPITAL.get()));
-			}
-		}, 0, -3f, new Item.Properties());
+	public Capital_outilsHoeItem(Item.Properties properties) {
+		super(TOOL_MATERIAL, 0f, -3f, properties);
 	}
 }

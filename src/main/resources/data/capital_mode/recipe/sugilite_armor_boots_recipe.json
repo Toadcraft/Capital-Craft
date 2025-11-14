@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": "capital_mode:capitale_armor_boots",
+  "addition": "capital_mode:sugilite",
+  "result": {
+    "id": "capital_mode:sugilite_armor_boots"
+  }
+}
