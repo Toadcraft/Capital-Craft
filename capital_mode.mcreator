@@ -9438,6 +9438,19 @@
         ]
       },
       "path": "~/Commandes"
+    },
+    {
+      "name": "Infectedpotion",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infectedpotion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/capitalmode/potion/InfectedpotionMobEffect.java"
+        ]
+      },
+      "path": "~/Demons"
     }
   ],
   "variable_elements": [
@@ -10326,7 +10339,8 @@
       "item.capital_mode.cable_xc": "Cable",
       "item.capital_mode.cable_f": "Cable",
       "item.capital_mode.cable_s": "Cable",
-      "item.capital_mode.lumiere": "Lumiere"
+      "item.capital_mode.lumiere": "Lumiere",
+      "effect.capital_mode.infectedpotion": "Infected"
     },
     "fr_fr": {
       "block.capital_mode.autel_demoniaque": "Autel Demoniaque",
@@ -10747,13 +10761,15 @@
       "item.capital_mode.cable_xc": "Cable",
       "item.capital_mode.cable_f": "Cable",
       "item.capital_mode.cable_s": "Cable",
-      "item.capital_mode.lumiere": "Lumiere"
+      "item.capital_mode.lumiere": "Lumiere",
+      "effect.capital_mode.infectedpotion": "Infected"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/capitalmode/init/CapitalModeModBiomes.java",
       "src/main/java/net/mcreator/capitalmode/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/net/mcreator/capitalmode/init/CapitalModeModMobEffects.java",
       "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
       "src/main/java/net/mcreator/capitalmode/init/CapitalModeModFluids.java",
       "src/main/java/net/mcreator/capitalmode/init/CapitalModeModFluidTypes.java",

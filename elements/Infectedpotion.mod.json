@@ -1,0 +1,85 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Infected",
+    "icon": "rubi_head",
+    "color": {
+      "value": -65536,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": -2.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ATTACK_SPEED"
+        },
+        "amount": -1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "BLOCK_REACH"
+        },
+        "amount": -1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_REACH"
+        },
+        "amount": -1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": -1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "SWIM_SPEED"
+        },
+        "amount": -1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "MINING_EFFICIENCY"
+        },
+        "amount": -5.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ARMOR"
+        },
+        "amount": -5.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "CAMERA_DISTANCE"
+        },
+        "amount": -10.0,
+        "operation": "ADD_VALUE"
+      }
+    ]
+  }
+}

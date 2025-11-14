@@ -415,5 +415,6 @@
   "item.capital_mode.cable_xc": "Cable",
   "item.capital_mode.cable_f": "Cable",
   "item.capital_mode.cable_s": "Cable",
-  "item.capital_mode.lumiere": "Lumiere"
+  "item.capital_mode.lumiere": "Lumiere",
+  "effect.capital_mode.infectedpotion": "Infected"
 }
