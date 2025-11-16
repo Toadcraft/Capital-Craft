@@ -26,7 +26,6 @@ public class CapitalModeModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, CapitalModeMod.MODID);
 	public static final DeferredHolder<MenuType<?>, MenuType<CapmachineMenu>> CAPMACHINE = REGISTRY.register("capmachine", () -> IMenuTypeExtension.create(CapmachineMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<Fonderiegui2Menu>> FONDERIEGUI_2 = REGISTRY.register("fonderiegui_2", () -> IMenuTypeExtension.create(Fonderiegui2Menu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<ReliquesacGUIMenu>> RELIQUESAC_GUI = REGISTRY.register("reliquesac_gui", () -> IMenuTypeExtension.create(ReliquesacGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GUImineurMenu>> GU_IMINEUR = REGISTRY.register("gu_imineur", () -> IMenuTypeExtension.create(GUImineurMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsMenu>> JOBS_GUI = REGISTRY.register("jobs_gui", () -> IMenuTypeExtension.create(JobsMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GuipaysanMenu>> GUIPAYSAN = REGISTRY.register("guipaysan", () -> IMenuTypeExtension.create(GuipaysanMenu::new));

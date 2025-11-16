@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "capital_mode:rubi_armor_helmet",
-    "capital_mode:travel_helmet",
-    "capital_mode:invisiblearmor_helmet",
     "capital_mode:capitale_armor_helmet",
     "capital_mode:sugilite_armor_helmet"
   ]

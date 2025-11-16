@@ -50,10 +50,8 @@ public class CapitalModeMod {
 		CapitalModeModBlocks.REGISTRY.register(modEventBus);
 		CapitalModeModBlockEntities.REGISTRY.register(modEventBus);
 		CapitalModeModItems.REGISTRY.register(modEventBus);
-		CapitalModeModEntities.REGISTRY.register(modEventBus);
 		CapitalModeModTabs.REGISTRY.register(modEventBus);
 		CapitalModeModVariables.ATTACHMENT_TYPES.register(modEventBus);
-		CapitalModeModMobEffects.REGISTRY.register(modEventBus);
 		CapitalModeModMenus.REGISTRY.register(modEventBus);
 		CapitalModeModFluids.REGISTRY.register(modEventBus);
 		CapitalModeModFluidTypes.REGISTRY.register(modEventBus);

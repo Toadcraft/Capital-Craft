@@ -29,7 +29,7 @@ public class TpoverworldProcedure {
 		if (entity == null)
 			return;
 		if (getEnergyStored(world, BlockPos.containing(x, y, z), null) >= 10000
-				&& ((entity.level().dimension()) == Level.NETHER || (entity.level().dimension()) == Level.END || (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:demonworld")))) {
+				&& ((entity.level().dimension()) == Level.NETHER || (entity.level().dimension()) == Level.END || (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:deleted_mod_element")))) {
 			if (world instanceof ILevelExtension _ext) {
 				IEnergyStorage _entityStorage = _ext.getCapability(Capabilities.EnergyStorage.BLOCK, BlockPos.containing(x, y, z), null);
 				if (_entityStorage != null)
