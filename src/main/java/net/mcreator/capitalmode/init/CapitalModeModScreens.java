@@ -16,7 +16,6 @@ public class CapitalModeModScreens {
 	public static void clientLoad(RegisterMenuScreensEvent event) {
 		event.register(CapitalModeModMenus.CAPMACHINE.get(), CapmachineScreen::new);
 		event.register(CapitalModeModMenus.FONDERIEGUI_2.get(), Fonderiegui2Screen::new);
-		event.register(CapitalModeModMenus.RELIQUESAC_GUI.get(), ReliquesacGUIScreen::new);
 		event.register(CapitalModeModMenus.GU_IMINEUR.get(), GUImineurScreen::new);
 		event.register(CapitalModeModMenus.JOBS_GUI.get(), JobsScreen::new);
 		event.register(CapitalModeModMenus.GUIPAYSAN.get(), GuipaysanScreen::new);

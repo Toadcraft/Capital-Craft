@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "capital_mode:item/epee_des_ames_verts_sv"
-  }
-}

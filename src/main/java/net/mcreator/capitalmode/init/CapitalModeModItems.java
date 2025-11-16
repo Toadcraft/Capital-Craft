@@ -9,22 +9,18 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.fluids.capability.wrappers.FluidBucketWrapper;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import net.mcreator.capitalmode.item.inventory.ReliquesacInventoryCapability;
 import net.mcreator.capitalmode.item.*;
 import net.mcreator.capitalmode.block.FandecapitalBlock;
 import net.mcreator.capitalmode.CapitalModeMod;
 
 import java.util.function.Function;
 
-@EventBusSubscriber
 public class CapitalModeModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(CapitalModeMod.MODID);
 	public static final DeferredItem<Item> CAPITAL;
@@ -39,7 +35,6 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> CAPITALE_ARMOR_LEGGINGS;
 	public static final DeferredItem<Item> CAPITALE_ARMOR_BOOTS;
 	public static final DeferredItem<Item> CAPITALAPPLE;
-	public static final DeferredItem<Item> DEMON_HEARS;
 	public static final DeferredItem<Item> COBALT;
 	public static final DeferredItem<Item> RUBI_PICKAXE;
 	public static final DeferredItem<Item> RUBI_AXE;
@@ -97,8 +92,6 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> BATONIRIDUIM;
 	public static final DeferredItem<Item> ACHATCHUNK;
 	public static final DeferredItem<Item> PERFECT_COAL;
-	public static final DeferredItem<Item> CONDENSEDSTONE;
-	public static final DeferredItem<Item> ULTRACONDENSED;
 	public static final DeferredItem<Item> COBALTFONDU_BUCKET;
 	public static final DeferredItem<Item> CAPITALPOWDER;
 	public static final DeferredItem<Item> COBALTPOWDER;
@@ -113,16 +106,7 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> CAPITALSPEAR;
 	public static final DeferredItem<Item> IRIDIUMHAMMER;
 	public static final DeferredItem<Item> IRIDIUMSPEEDPICKAXE;
-	public static final DeferredItem<Item> RELIQUEEAU;
-	public static final DeferredItem<Item> RELIQUEBOOF;
-	public static final DeferredItem<Item> RELIQUESAC;
-	public static final DeferredItem<Item> RELIQUEFIRE;
-	public static final DeferredItem<Item> RELIQUEPVP;
-	public static final DeferredItem<Item> ROUEDUGARDIEN;
-	public static final DeferredItem<Item> JOUETMARTEAU;
 	public static final DeferredItem<Item> IRIDIUMBIGSWORD;
-	public static final DeferredItem<Item> INVOCATEUR;
-	public static final DeferredItem<Item> DEMONWORLD;
 	public static final DeferredItem<Item> GRANDCOEUR;
 	public static final DeferredItem<Item> FANDECAPITAL;
 	public static final DeferredItem<Item> BOURREDEFLECHES;
@@ -140,23 +124,12 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> CAPITALPLANT_3;
 	public static final DeferredItem<Item> CAPITALPLANT_4;
 	public static final DeferredItem<Item> DOLOMITEINGOT;
-	public static final DeferredItem<Item> INVISIBLEARMOR_HELMET;
-	public static final DeferredItem<Item> INVISIBLEARMOR_CHESTPLATE;
-	public static final DeferredItem<Item> INVISIBLEARMOR_LEGGINGS;
-	public static final DeferredItem<Item> INVISIBLEARMOR_BOOTS;
 	public static final DeferredItem<Item> DOLOMITEORE;
-	public static final DeferredItem<Item> SOUL_SWORD;
 	public static final DeferredItem<Item> ELECTRICFURNACE;
-	public static final DeferredItem<Item> SUPER_COBALT_OLD_SWORD;
-	public static final DeferredItem<Item> PANNEAUSOLAIR;
 	public static final DeferredItem<Item> DIMENSIONALMACHINE;
-	public static final DeferredItem<Item> BOXCOMMUNE;
 	public static final DeferredItem<Item> PUISSANCEDEMONIAQUE;
-	public static final DeferredItem<Item> DYNAMO;
-	public static final DeferredItem<Item> MINERALYSER;
 	public static final DeferredItem<Item> BATTERIE;
 	public static final DeferredItem<Item> COAL_RANK;
-	public static final DeferredItem<Item> MOUETTE_SPAWN_EGG;
 	public static final DeferredItem<Item> IRIDIUM_RANK;
 	public static final DeferredItem<Item> GOLD_RANK;
 	public static final DeferredItem<Item> COBALT_RANK;
@@ -165,9 +138,6 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> NETHERITE_RANK;
 	public static final DeferredItem<Item> CAPITAL_RANK;
 	public static final DeferredItem<Item> BANDAGE;
-	public static final DeferredItem<Item> DEMON_SPAWN_EGG;
-	public static final DeferredItem<Item> GARDIENDEMONIAQUE_SPAWN_EGG;
-	public static final DeferredItem<Item> AUTEL_DEMONIAQUE;
 	public static final DeferredItem<Item> ATM;
 	public static final DeferredItem<Item> COBALTSEED;
 	public static final DeferredItem<Item> COBALTPLANT;
@@ -183,29 +153,6 @@ public class CapitalModeModItems {
 	public static final DeferredItem<Item> QUARRY;
 	public static final DeferredItem<Item> LIMITES;
 	public static final DeferredItem<Item> CAPITALE;
-	public static final DeferredItem<Item> BUEGRASS;
-	public static final DeferredItem<Item> CABLE;
-	public static final DeferredItem<Item> CABLEE;
-	public static final DeferredItem<Item> CABLEI;
-	public static final DeferredItem<Item> CABLEL;
-	public static final DeferredItem<Item> CABLE_LC;
-	public static final DeferredItem<Item> CABLE_LCC;
-	public static final DeferredItem<Item> CABLE_LT;
-	public static final DeferredItem<Item> CABLE_LTC;
-	public static final DeferredItem<Item> CABLE_T;
-	public static final DeferredItem<Item> CABLE_TC;
-	public static final DeferredItem<Item> CABLE_TX;
-	public static final DeferredItem<Item> CABLE_TXC;
-	public static final DeferredItem<Item> CABLE_TXCC;
-	public static final DeferredItem<Item> CABLE_X;
-	public static final DeferredItem<Item> CABLE_XC;
-	public static final DeferredItem<Item> CABLE_F;
-	public static final DeferredItem<Item> CABLE_S;
-	public static final DeferredItem<Item> TRAVEL_HELMET;
-	public static final DeferredItem<Item> TRAVEL_CHESTPLATE;
-	public static final DeferredItem<Item> TRAVEL_LEGGINGS;
-	public static final DeferredItem<Item> TRAVEL_BOOTS;
-	public static final DeferredItem<Item> LUMIERE;
 	public static final DeferredItem<Item> BIONICSWORD;
 	public static final DeferredItem<Item> BATTERIEEXTERNE;
 	static {
@@ -221,7 +168,6 @@ public class CapitalModeModItems {
 		CAPITALE_ARMOR_LEGGINGS = register("capitale_armor_leggings", CapitaleArmorItem.Leggings::new);
 		CAPITALE_ARMOR_BOOTS = register("capitale_armor_boots", CapitaleArmorItem.Boots::new);
 		CAPITALAPPLE = register("capitalapple", CapitalappleItem::new);
-		DEMON_HEARS = register("demon_hears", DemonHearsItem::new);
 		COBALT = register("cobalt", RubyItem::new);
 		RUBI_PICKAXE = register("rubi_pickaxe", RubiPickaxeItem::new);
 		RUBI_AXE = register("rubi_axe", RubiAxeItem::new);
@@ -279,8 +225,6 @@ public class CapitalModeModItems {
 		BATONIRIDUIM = register("batoniriduim", BatoniriduimItem::new);
 		ACHATCHUNK = register("achatchunk", AchatchunkItem::new);
 		PERFECT_COAL = register("perfect_coal", PerfectCoalItem::new);
-		CONDENSEDSTONE = block(CapitalModeModBlocks.CONDENSEDSTONE);
-		ULTRACONDENSED = block(CapitalModeModBlocks.ULTRACONDENSED);
 		COBALTFONDU_BUCKET = register("cobaltfondu_bucket", CobaltfonduItem::new);
 		CAPITALPOWDER = register("capitalpowder", CapitalpowderItem::new);
 		COBALTPOWDER = register("cobaltpowder", CobaltpowderItem::new);
@@ -295,16 +239,7 @@ public class CapitalModeModItems {
 		CAPITALSPEAR = register("capitalspear", CapitalspearItem::new);
 		IRIDIUMHAMMER = register("iridiumhammer", IridiumhammerItem::new);
 		IRIDIUMSPEEDPICKAXE = register("iridiumspeedpickaxe", IridiumspeedpickaxeItem::new);
-		RELIQUEEAU = register("reliqueeau", ReliqueeauItem::new);
-		RELIQUEBOOF = register("reliqueboof", ReliqueboofItem::new);
-		RELIQUESAC = register("reliquesac", ReliquesacItem::new);
-		RELIQUEFIRE = register("reliquefire", ReliquefireItem::new);
-		RELIQUEPVP = register("reliquepvp", ReliquepvpItem::new);
-		ROUEDUGARDIEN = register("rouedugardien", GiverreliqueItem::new);
-		JOUETMARTEAU = register("jouetmarteau", JouetmarteauItem::new);
 		IRIDIUMBIGSWORD = register("iridiumbigsword", IridiumbigswordItem::new);
-		INVOCATEUR = block(CapitalModeModBlocks.INVOCATEUR);
-		DEMONWORLD = register("demonworld", DemonworldItem::new);
 		GRANDCOEUR = register("grandcoeur", GrandcoeurItem::new);
 		FANDECAPITAL = register("fandecapital", FandecapitalBlock.Item::new);
 		BOURREDEFLECHES = register("bourredefleches", BourredeflechesItem::new);
@@ -322,23 +257,12 @@ public class CapitalModeModItems {
 		CAPITALPLANT_3 = block(CapitalModeModBlocks.CAPITALPLANT_3);
 		CAPITALPLANT_4 = block(CapitalModeModBlocks.CAPITALPLANT_4);
 		DOLOMITEINGOT = register("dolomiteingot", DolomiteingotItem::new);
-		INVISIBLEARMOR_HELMET = register("invisiblearmor_helmet", InvisiblearmorItem.Helmet::new);
-		INVISIBLEARMOR_CHESTPLATE = register("invisiblearmor_chestplate", InvisiblearmorItem.Chestplate::new);
-		INVISIBLEARMOR_LEGGINGS = register("invisiblearmor_leggings", InvisiblearmorItem.Leggings::new);
-		INVISIBLEARMOR_BOOTS = register("invisiblearmor_boots", InvisiblearmorItem.Boots::new);
 		DOLOMITEORE = block(CapitalModeModBlocks.DOLOMITEORE);
-		SOUL_SWORD = register("soul_sword", SoulSwordItem::new);
 		ELECTRICFURNACE = block(CapitalModeModBlocks.ELECTRICFURNACE);
-		SUPER_COBALT_OLD_SWORD = register("super_cobalt_old_sword", CosmetiquecobspeedswordItem::new);
-		PANNEAUSOLAIR = block(CapitalModeModBlocks.PANNEAUSOLAIR);
 		DIMENSIONALMACHINE = block(CapitalModeModBlocks.DIMENSIONALMACHINE);
-		BOXCOMMUNE = block(CapitalModeModBlocks.BOXCOMMUNE);
 		PUISSANCEDEMONIAQUE = register("puissancedemoniaque", PuissancedemoniaqueItem::new);
-		DYNAMO = block(CapitalModeModBlocks.DYNAMO);
-		MINERALYSER = block(CapitalModeModBlocks.MINERALYSER);
 		BATTERIE = block(CapitalModeModBlocks.BATTERIE);
 		COAL_RANK = register("coal_rank", CoalrankItem::new);
-		MOUETTE_SPAWN_EGG = register("mouette_spawn_egg", properties -> new SpawnEggItem(CapitalModeModEntities.MOUETTE.get(), properties));
 		IRIDIUM_RANK = register("iridium_rank", IridiumrankItem::new);
 		GOLD_RANK = register("gold_rank", GoldRankItem::new);
 		COBALT_RANK = register("cobalt_rank", CobaltrankItem::new);
@@ -347,9 +271,6 @@ public class CapitalModeModItems {
 		NETHERITE_RANK = register("netherite_rank", NetheriterankItem::new);
 		CAPITAL_RANK = register("capital_rank", CapitalrankItem::new);
 		BANDAGE = register("bandage", BandageItem::new);
-		DEMON_SPAWN_EGG = register("demon_spawn_egg", properties -> new SpawnEggItem(CapitalModeModEntities.DEMON.get(), properties));
-		GARDIENDEMONIAQUE_SPAWN_EGG = register("gardiendemoniaque_spawn_egg", properties -> new SpawnEggItem(CapitalModeModEntities.GARDIENDEMONIAQUE.get(), properties));
-		AUTEL_DEMONIAQUE = block(CapitalModeModBlocks.AUTEL_DEMONIAQUE);
 		ATM = block(CapitalModeModBlocks.ATM);
 		COBALTSEED = register("cobaltseed", CobaltseedItem::new);
 		COBALTPLANT = block(CapitalModeModBlocks.COBALTPLANT);
@@ -365,29 +286,6 @@ public class CapitalModeModItems {
 		QUARRY = block(CapitalModeModBlocks.QUARRY);
 		LIMITES = block(CapitalModeModBlocks.LIMITES);
 		CAPITALE = block(CapitalModeModBlocks.CAPITALE);
-		BUEGRASS = block(CapitalModeModBlocks.BUEGRASS);
-		CABLE = block(CapitalModeModBlocks.CABLE);
-		CABLEE = block(CapitalModeModBlocks.CABLEE);
-		CABLEI = block(CapitalModeModBlocks.CABLEI);
-		CABLEL = block(CapitalModeModBlocks.CABLEL);
-		CABLE_LC = block(CapitalModeModBlocks.CABLE_LC);
-		CABLE_LCC = block(CapitalModeModBlocks.CABLE_LCC);
-		CABLE_LT = block(CapitalModeModBlocks.CABLE_LT);
-		CABLE_LTC = block(CapitalModeModBlocks.CABLE_LTC);
-		CABLE_T = block(CapitalModeModBlocks.CABLE_T);
-		CABLE_TC = block(CapitalModeModBlocks.CABLE_TC);
-		CABLE_TX = block(CapitalModeModBlocks.CABLE_TX);
-		CABLE_TXC = block(CapitalModeModBlocks.CABLE_TXC);
-		CABLE_TXCC = block(CapitalModeModBlocks.CABLE_TXCC);
-		CABLE_X = block(CapitalModeModBlocks.CABLE_X);
-		CABLE_XC = block(CapitalModeModBlocks.CABLE_XC);
-		CABLE_F = block(CapitalModeModBlocks.CABLE_F);
-		CABLE_S = block(CapitalModeModBlocks.CABLE_S);
-		TRAVEL_HELMET = register("travel_helmet", TravelItem.Helmet::new);
-		TRAVEL_CHESTPLATE = register("travel_chestplate", TravelItem.Chestplate::new);
-		TRAVEL_LEGGINGS = register("travel_leggings", TravelItem.Leggings::new);
-		TRAVEL_BOOTS = register("travel_boots", TravelItem.Boots::new);
-		LUMIERE = block(CapitalModeModBlocks.LUMIERE);
 		BIONICSWORD = register("bionicsword", BionicswordItem::new);
 		BATTERIEEXTERNE = register("batterieexterne", BatterieexterneItem::new);
 	}
@@ -408,7 +306,6 @@ public class CapitalModeModItems {
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new ReliquesacInventoryCapability(stack), RELIQUESAC.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), CAPITALFONDU_BUCKET.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), COBALTFONDU_BUCKET.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), IRIDFONDU_BUCKET.get());

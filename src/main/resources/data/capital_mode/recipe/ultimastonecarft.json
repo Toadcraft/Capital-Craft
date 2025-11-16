@@ -12,7 +12,7 @@
     "c": "minecraft:emerald_block",
     "d": "minecraft:netherite_ingot",
     "e": "capital_mode:coblock",
-    "f": "capital_mode:demon_hears"
+    "f": "capital_mode:deleted_mod_element"
   },
   "result": {
     "id": "capital_mode:ultimastone",

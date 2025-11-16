@@ -1,10 +1,8 @@
 {
   "replace": false,
   "values": [
-    "capital_mode:invisiblearmor_leggings",
     "capital_mode:rubi_armor_leggings",
     "capital_mode:capitale_armor_leggings",
-    "capital_mode:sugilite_armor_leggings",
-    "capital_mode:travel_leggings"
+    "capital_mode:sugilite_armor_leggings"
   ]
 }

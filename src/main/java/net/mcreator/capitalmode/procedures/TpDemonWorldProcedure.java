@@ -35,7 +35,7 @@ public class TpDemonWorldProcedure {
 					_entityStorage.extractEnergy(10000, false);
 			}
 			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:demonworld"));
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:deleted_mod_element"));
 				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);

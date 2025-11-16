@@ -7,10 +7,10 @@
     "aaa"
   ],
   "key": {
-    "a": "capital_mode:condensedstone"
+    "a": "capital_mode:deleted_mod_element"
   },
   "result": {
-    "id": "capital_mode:ultracondensed",
+    "id": "capital_mode:deleted_mod_element",
     "count": 1
   }
 }

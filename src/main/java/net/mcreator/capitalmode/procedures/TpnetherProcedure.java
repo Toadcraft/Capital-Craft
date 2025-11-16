@@ -28,8 +28,8 @@ public class TpnetherProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (getEnergyStored(world, BlockPos.containing(x, y, z), null) >= 10000
-				&& ((entity.level().dimension()) == Level.OVERWORLD || (entity.level().dimension()) == Level.END || (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:demonworld")))) {
+		if (getEnergyStored(world, BlockPos.containing(x, y, z), null) >= 10000 && ((entity.level().dimension()) == Level.OVERWORLD || (entity.level().dimension()) == Level.END
+				|| (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("capital_mode:deleted_mod_element")))) {
 			if (world instanceof ILevelExtension _ext) {
 				IEnergyStorage _entityStorage = _ext.getCapability(Capabilities.EnergyStorage.BLOCK, BlockPos.containing(x, y, z), null);
 				if (_entityStorage != null)

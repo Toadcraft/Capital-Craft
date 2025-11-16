@@ -66,7 +66,7 @@ public class WarpsScreen extends AbstractContainerScreen<WarpsMenu> implements C
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.warps.label_warps"), 67, 17, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.capital_mode.warps.label_warps"), 72, 18, -12829636, false);
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class WarpsScreen extends AbstractContainerScreen<WarpsMenu> implements C
 				ClientPacketDistributor.sendToServer(new WarpsButtonMessage(0, x, y, z));
 				WarpsButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 57, this.topPos + 49, 51, 20).build();
+		}).bounds(this.leftPos + 60, this.topPos + 34, 51, 20).build();
 		this.addRenderableWidget(button_spawn);
 		button_nether = Button.builder(Component.translatable("gui.capital_mode.warps.button_nether"), e -> {
 			int x = WarpsScreen.this.x;
@@ -88,7 +88,7 @@ public class WarpsScreen extends AbstractContainerScreen<WarpsMenu> implements C
 				ClientPacketDistributor.sendToServer(new WarpsButtonMessage(1, x, y, z));
 				WarpsButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 55, this.topPos + 85, 56, 20).build();
+		}).bounds(this.leftPos + 57, this.topPos + 62, 56, 20).build();
 		this.addRenderableWidget(button_nether);
 		button_random_tp = Button.builder(Component.translatable("gui.capital_mode.warps.button_random_tp"), e -> {
 			int x = WarpsScreen.this.x;
@@ -97,7 +97,7 @@ public class WarpsScreen extends AbstractContainerScreen<WarpsMenu> implements C
 				ClientPacketDistributor.sendToServer(new WarpsButtonMessage(2, x, y, z));
 				WarpsButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 50, this.topPos + 120, 72, 20).build();
+		}).bounds(this.leftPos + 50, this.topPos + 88, 72, 20).build();
 		this.addRenderableWidget(button_random_tp);
 	}
 }

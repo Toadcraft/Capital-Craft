@@ -18,7 +18,7 @@
     "dw_0": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "to": "capital_mode:demonworld"
+        "to": "capital_mode:deleted_mod_element"
       }
     }
   },

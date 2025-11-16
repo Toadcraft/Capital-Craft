@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "capital_mode:panneausolair"
+      "id": "capital_mode:deleted_mod_element"
     },
     "title": {
       "translate": "advancements.lenergievert.title"
@@ -21,7 +21,7 @@
         "location": [
           {
             "condition": "minecraft:block_state_property",
-            "block": "capital_mode:panneausolair"
+            "block": "capital_mode:deleted_mod_element"
           }
         ]
       }

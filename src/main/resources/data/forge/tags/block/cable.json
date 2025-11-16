@@ -1,30 +1,10 @@
 {
   "replace": false,
   "values": [
-    "capital_mode:cable_tx",
-    "capital_mode:cable_lt",
-    "capital_mode:cable_lcc",
-    "capital_mode:cable",
-    "capital_mode:cable_tc",
-    "capital_mode:dimensionalmachine",
-    "capital_mode:cable_f",
-    "capital_mode:cable_lc",
-    "capital_mode:fonderie",
-    "capital_mode:cable_s",
-    "capital_mode:dynamo",
-    "capital_mode:mineralyser",
-    "capital_mode:cable_t",
-    "capital_mode:cable_txc",
-    "capital_mode:cable_x",
-    "capital_mode:cable_xc",
-    "capital_mode:cable_ltc",
-    "capital_mode:cablee",
     "capital_mode:electricfurnace",
-    "capital_mode:cablei",
-    "capital_mode:cable_txcc",
-    "capital_mode:cablel",
+    "capital_mode:dimensionalmachine",
     "capital_mode:quarry",
-    "capital_mode:panneausolair",
+    "capital_mode:fonderie",
     "capital_mode:capital_machine"
   ]
 }
